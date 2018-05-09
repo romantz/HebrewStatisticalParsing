@@ -1,0 +1,3591 @@
+Infinity	NNPP	NNPP PP
+Infinity	PP	IN NP yyCM NP
+Infinity	NP	NP PP yyCM SBAR PRN
+Infinity	CDTP	CD CDT
+Infinity	VP	VB PRN NP
+Infinity	S	INTJ yyCM PP yyCM NP VP ADVP
+Infinity	S	NP yyCM AUX PREDP
+Infinity	VP	VB PP PRN PP
+Infinity	S	PP NP VP ADVP NP yyCM PP yyDOT
+Infinity	PP	PP CC PP PRN
+Infinity	FRAG	NP SBAR yyDOT
+Infinity	S	VP PP yyDOT
+Infinity	S	VP PP ADVP PP yyCM PP
+Infinity	S	NP yyCM VP INTJ SBAR yyDOT
+Infinity	PRN	yyCM PP PP yyCM
+Infinity	S	NP yyCM VP VP yyCM PP yyDOT
+Infinity	ADJP	JJ PP
+Infinity	S	INTJ PRN S yyDOT
+Infinity	S	PP VP PP VP
+Infinity	S	PP VP AUX NP VP
+Infinity	S	NP yyCM ADVP AUX VP VP
+Infinity	S	VP PRN
+Infinity	S	ADVP PRN VP ADVP NP
+Infinity	PRN	yyLRB NP yyCM NP yyRRB
+Infinity	S	PP ADVP VP PP yyDOT
+Infinity	PRN	yyLRB FRAG yyRRB
+Infinity	S	NP PP PREDP PP
+Infinity	S	PP VP SBAR
+Infinity	VP	VB NP yyCM PP PP
+Infinity	S	PP ADVP VP
+Infinity	NP	NP ADJP ADJP ADJP
+Infinity	NNPP	NNPP NN
+Infinity	NNPP	NNPP NP
+Infinity	ADVP	PRP CC RB
+Infinity	S	NP ADVP AUX PREDP PP yyDOT
+Infinity	VP	VB NP yyCM NP yyCM PP
+Infinity	S	NP yyCM ADVP VP NP PRN yyDOT
+Infinity	S	NP yyCM VP PP NP
+Infinity	VP	VB PRN PP
+Infinity	S	NP AUX VP PP yyCM SBAR
+Infinity	S	NP yyCM PP yyDASH VP PP yyCM SBAR
+Infinity	NP	NP yyCM NP yyCM SBAR
+Infinity	S	S PRN SBAR yyDOT
+Infinity	S	VP INTJ yyCM SBAR
+Infinity	SQ	SBAR NP AUX PREDP
+Infinity	S	ZVLP yyCM NP yyCM VP ADVP PP yyCM NP yyDOT
+Infinity	S	NP INTJ PREDP PP yyDOT
+Infinity	SBAR	RB COM S
+Infinity	S	VP VP FRAG
+Infinity	PRN	CC S
+Infinity	S	NP ADVP AUX PREDP yyCM PP
+Infinity	S	ADVP VP ADVP SQBAR
+Infinity	S	VP NP yyCM VP
+Infinity	S	NP VP VP SBAR
+Infinity	NP	VB
+Infinity	PREDP	AGR yyCM SBAR
+Infinity	S	S yyCLN S yyDOT
+Infinity	S	INTJ NP ADVP VP PP yyDOT
+Infinity	S	NP VP PP ADVP yyDOT
+Infinity	ADVP	DT COM RBR
+Infinity	S	INTJ yyCM SBAR yyCM NP VP PP
+Infinity	NP	NP yyCLN NP
+Infinity	S	S S
+Infinity	S	ADVP VP NP PP NP yyDOT
+Infinity	S	NP PREDP yyCM PP
+Infinity	S	PP yyCM PP yyCM ADVP VP VP yyDOT
+Infinity	FRAGQ	ADVP ADVP yyCM INTJ yyQM
+Infinity	NP	yyLRB NP yyRRB
+Infinity	S	NP yyCM VP PP PP
+Infinity	S	ADVP AUX NP PREDP yyDOT
+Infinity	S	AUX PREDP PP NP
+Infinity	SBAR	IN COM S
+Infinity	S	PP PRN ADVP VP NP PP PP yyDOT
+Infinity	S	VP PP yyCM SBAR yyDOT
+Infinity	NP	NP PP yyCM SBAR
+Infinity	NNPP	NNPP NNPP
+Infinity	S	ADVP VP NP yyCM PP
+Infinity	SQ	NP VP
+Infinity	S	VP yyCM PREDP NP PP
+Infinity	SQ	ADVP VP PP NP
+Infinity	PP	RBR PP
+Infinity	NX	NN JJ
+Infinity	ADVP	RB JJ RB
+Infinity	FRAGQ	CC SQ
+Infinity	S	ZVL NP PREDP yyDOT
+Infinity	VP	VB ADVP NP
+Infinity	S	PP PRN NP VP VP yyDOT
+Infinity	S	NP VP ADJP
+Infinity	VP	VP yyCM VP
+Infinity	VP	VP yyCM VP yyCM VP
+Infinity	NP	NP MOD
+Infinity	NP	NP VP VP
+Infinity	VP	VB PRN yyCM PP yyCM SBAR
+Infinity	S	NP ADVP AUX VP INTJ SBAR yyDOT
+Infinity	S	PP VP yyCM INTJ yyCM SBAR yyDOT
+Infinity	S	yyQUOT SBAR yyQUOT
+Infinity	S	SBAR yyCM NP VP PP PP
+Infinity	S	NP AUX NP PREDP yyDOT
+Infinity	NP	RBR IN DT IN NP
+Infinity	PRN	yyCM CC NP yyCM
+Infinity	S	S yyCLN S yyCM S yyCM S yyCM CC S yyCM CC S CC S yyCM CC S CC S yyCM CC S yyDOT
+Infinity	S	AUX PREDP PP PP
+Infinity	S	PP S
+Infinity	S	ADVP ADVP AUX VP VP
+Infinity	NP	NP ADJP yyCM ADJP yyCM SBAR
+Infinity	S	INTJ yyCM NP yyCM ADVP VP NP yyDOT
+Infinity	S	ADVP VP PP NP SBAR
+Infinity	SQ	SQ yyCM SQ yyCM SQ
+Infinity	PREDP	NP ADJP
+Infinity	SBAR	SBAR CC PP SBAR
+Infinity	S	PP VP PP PP
+Infinity	S	PP ADVP VP NP PP SBAR
+Infinity	S	PREDP PP yyCM SBAR
+Infinity	PRN	yyLRB NNPP yyRRB
+Infinity	S	NP yyCM VP PP yyCM SBAR yyDOT
+Infinity	S	NP yyCM AUX PREDP PP yyDOT
+Infinity	S	INTJ yyCM NP VP VP PP yyCM SBAR yyDOT
+Infinity	S	ADVP NP VP yyCM PP yyDOT
+Infinity	FRAG	ADVP SBAR yyDOT
+Infinity	S	SBAR VP PP NP
+Infinity	S	ADVP PRN VP PP
+Infinity	S	S yyCM CC COM S yyDOT
+Infinity	PREDP	PREDP yyCM CC PREDP
+Infinity	S	SBAR yyCM NP VP PP NP
+Infinity	ADJP	ADJP yyCM CC ADJP
+Infinity	S	PREDP AUX PP PP
+Infinity	NP	NNT yyDASH NP
+Infinity	FRAGQ	PP
+Infinity	S	PP VP NP NP PRN yyDOT
+Infinity	S	ADVP ADVP VP NP yyDOT
+Infinity	INTJ	PP
+Infinity	S	PP AUX PREDP yyDOT
+Infinity	SBAR	DT IN COM S
+Infinity	S	VP PP VP PP
+Infinity	NP	NP ADJP yyQUOT PRN
+Infinity	S	INTJ yyCM NP ADVP VP NP PP
+Infinity	S	PP VP PP NP
+Infinity	S	NP NP VP PP PP
+Infinity	SQ	NP PREDP yyQM
+Infinity	S	PP VP PP PP NP
+Infinity	S	NP yyCM VP PP VP
+Infinity	NNPP	NNT NP
+Infinity	S	VP yyCM SBAR yyCM VP
+Infinity	S	SBAR yyCM VP NP yyCM PP yyDOT
+Infinity	INTJ	RB
+Infinity	S	NP PP yyCM SBAR
+Infinity	FRAG	CC ADVP ADVP yyDOT
+Infinity	NP	NP yyCM INTJ yyCM POS NP
+Infinity	S	NP VP PP PP yyCM SBAR
+Infinity	S	NP AUX yyCM PREDP yyDOT
+Infinity	S	NP VP PP NP ADVP
+Infinity	NP	NX
+Infinity	SQ	PP VP NP
+Infinity	NP	NN
+Infinity	NP	NP
+Infinity	NP	NP yyCM NP yyCM NP yyCM SBAR
+Infinity	ADJP	NNT yyDASH NP
+Infinity	NP	NP PP PP PP PRN
+Infinity	PP	MOD NP
+Infinity	NP	NP NP PRN
+Infinity	PP	INP SBAR
+Infinity	NP	NP INTJ
+Infinity	PP	IN PRP IN PRP
+Infinity	S	PP yyCM PP VP PP NP PP yyDOT
+Infinity	S	ADVP yyCM PP yyCM NP VP VP
+Infinity	S	S yyCM S yyCM S yyCM S yyCM CC S yyDOT
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP CC NP
+Infinity	S	ADVP VP NP SBAR
+Infinity	NP	NP ADJP PP yyCM SBAR
+Infinity	S	NP yyCM AUX PREDP yyDOT
+Infinity	S	S yyCM CC S yyCM CC S yyDOT
+Infinity	NNPP	H NNP
+Infinity	PP	IN NNT NN
+Infinity	S	NP VP NP PP yyCM SBAR
+Infinity	S	PP yyCM VP NP SBAR
+Infinity	NP	NP ADJP yyCM INTJ yyCM PP PP
+Infinity	S	ADVP PP VP PP PP
+Infinity	NP	PP
+Infinity	S	NP yyCM VP PP ADJP yyDOT
+Infinity	S	S CC S yyCM CC CC S
+Infinity	S	VP NP ADJP PP
+Infinity	S	ADVP VP NP VP yyQUOT yyDOT
+Infinity	PP	IN yyDASH PRP
+Infinity	S	ZVLP PP VP NP yyCM SBAR
+Infinity	SQ	NP VP NP PP
+Infinity	S	INTJ yyCLN NP PRN PREDP yyDOT
+Infinity	S	NP ADVP VP VP yyCM NP
+Infinity	PREDP	ADJP PP
+Infinity	VP	VB ADVP NP PP
+Infinity	NP	NP VP PP
+Infinity	S	PP PP VP NP yyCM NP PP yyDOT
+Infinity	S	ADVP VP NP PP yyCM SBAR
+Infinity	S	PP SBAR yyCM AUX NP yyCM PREDP
+Infinity	S	NP yyCM VP PP yyCM ADVP PP yyDOT
+Infinity	S	ADVP yyCM PP yyCM AUX NP VP PP
+Infinity	S	NP ADVP PREDP yyDOT
+Infinity	S	PP NP VP NP PP
+Infinity	S	PP yyQUOT NP PREDP
+Infinity	NP	NP yyCM SBAR yyCM PP
+Infinity	INTJ	NN
+Infinity	INTJ	NP
+Infinity	S	NP ADVP ADVP VP PP yyCM PP yyDOT
+Infinity	S	PP VP PP VP yyDOT
+Infinity	NNPP	NNP yyDASH CD
+Infinity	S	S CC S yyCM S yyCM CC S yyDOT
+Infinity	S	NP VP NP yyCM INTJ yyCM VP yyCM PP yyDOT
+Infinity	S	NP AUX VP PP NP
+Infinity	NP	NP ADJP PP FRAG
+Infinity	NP	QW
+Infinity	S	ADVP PREDP SBAR
+Infinity	S	NP VP yyCM INTJ yyCM SBAR yyCM SBAR yyDOT
+Infinity	VP	VP CC VP
+Infinity	S	ADVP VP NP yyCM PP yyDOT
+Infinity	NP	H NNT
+Infinity	S	PP ADVP VP VP yyDOT
+Infinity	S	NP ADVP VP PP ADVP
+Infinity	S	ADVP VP PP NP yyCM PP
+Infinity	VP	VB PP PP NP PRN
+Infinity	VP	VB PP PP
+Infinity	S	NP VP yyCM INTJ yyCM NP PP
+Infinity	S	INTJ VP NP yyDOT
+Infinity	ADVP	RB RB PRP
+Infinity	VP	VB SBAR yyCM SBAR
+Infinity	S	NP yyCM VP NP PP yyCM PP yyDOT
+Infinity	S	VP AUX SBAR
+Infinity	S	NP VP ADVP
+Infinity	S	NP yyCM VP NP yyCM PRN yyDOT
+Infinity	S	INTJ yyCM NP yyCM VP PP yyDOT
+Infinity	S	VP NP PRN
+Infinity	S	VP ADVP SBAR yyDOT
+Infinity	PREDP	AGR ADJP
+Infinity	NP	NP PP yyCM NP SBAR
+Infinity	S	NP AUX VP PP PP
+Infinity	S	NP VP PP CC NP yyDOT
+Infinity	S	PP VP NP VP PP
+Infinity	NP	H NNP
+Infinity	PRN	yyLRB S ZVL yyRRB
+Infinity	S	S yyCM CC FRAG
+Infinity	SBAR	yyCLN SQ
+Infinity	S	NP VP PP ADVP yyCM SBAR yyDOT
+Infinity	S	PP yyCM ADVP VP PP SBAR yyDOT
+Infinity	S	NP VP ADVP NP
+Infinity	VP	VB PP NP
+Infinity	ADVP	CD PRP
+Infinity	FRAG	PRN VP yyDOT
+Infinity	NP	SBAR
+Infinity	VP	VB PP NP yyCM PP
+Infinity	S	VP PP yyCM ADVP
+Infinity	S	SBAR yyCM VP NP yyCM SBAR yyDOT
+Infinity	S	ADVP VP PP SBAR CC VP
+Infinity	S	PREDP NP yyDOT
+Infinity	NP	NNPP ADJP
+Infinity	S	VP PP ADVP NP yyDOT
+Infinity	S	PP yyCM ADVP NP VP VP yyDOT
+Infinity	S	ADVP AUX VP VP
+Infinity	S	SBAR ADVP VP NP NP
+Infinity	S	PP NP VP yyCM PP yyCM PP
+Infinity	S	ADVP VP ADVP PP yyDOT
+Infinity	PP	MOD VP
+Infinity	PRN	yyLRB PP CC ADVP yyRRB
+Infinity	S	NP yyCM ADVP AUX VP PP PP
+Infinity	S	PP ADVP VP PP NP
+Infinity	S	NP yyCM PREDP PP PP yyCM ADVP
+Infinity	S	PP SBAR NP VP PP
+Infinity	S	SBAR VP AUX VP yyDOT
+Infinity	SQ	NP VP SBAR yyQM
+Infinity	PRN	yyCM NP yyCM NP
+Infinity	S	ADVP NP VP ADVP PP
+Infinity	S	ADVP PRN VP VP yyCM SBAR yyDOT
+Infinity	S	PP ADVP VP ADVP NP
+Infinity	S	ADVP NP ADVP VP yyDOT
+Infinity	NP	NP yyCM ADJP
+Infinity	S	ADVP VP VP PRN
+Infinity	NP	NP ADJP yyCM NP yyCM SBAR
+Infinity	S	NP VP NP NP yyDOT
+Infinity	S	NP VP INTJ NP PP
+Infinity	ADVP	IN CD DT CC DT
+Infinity	S	ZVL NP VP VP PP yyDOT
+Infinity	S	PP ZVLP yyCM NP VP NP PP
+Infinity	S	NP yyCM VP yyCM SBAR yyDOT
+Infinity	NP	NP ADVP ADVP
+Infinity	NNPP	NP PP NP
+Infinity	S	SBAR yyCM AUX NP PREDP yyDOT
+Infinity	NP	NP yyCM ZVL PP
+Infinity	S	NP ADVP ADVP PREDP
+Infinity	PP	MOD PP
+Infinity	S	SBAR yyCM INTJ NP VP SBAR
+Infinity	S	PP ADVP VP ADVP PP
+Infinity	S	NP yyCM VP SBAR
+Infinity	S	NP yyCM VP NP yyCM PP yyDOT
+Infinity	NP	NP yyCM SQBAR
+Infinity	NP	H CD
+Infinity	S	INTJ yyCM S yyDOT
+Infinity	S	ZVLP VP PP
+Infinity	NP	NNT ADVP
+Infinity	S	ADVP VP NP NP yyDOT
+Infinity	S	yyRRB yyDOT
+Infinity	S	yyQUOT yyCM S yyDOT
+Infinity	VP	VB NP ADVP PP
+Infinity	S	VP VP yyDOT
+Infinity	S	AUX PREDP
+Infinity	SQ	NP NP ADVP VP VP
+Infinity	NP	PP NP
+Infinity	NP	H NNPP
+Infinity	S	PP VP PP NP yyCM PP yyDOT
+Infinity	S	NP yyCM VP ADVP NP PP yyDOT
+Infinity	SQ	ADVP ADVP ADVP NP VP NP yyCM PP yyQM
+Infinity	VP	VB NP PP CC VP
+Infinity	NP	NP CC NP PRN CC NP
+Infinity	PREDP	AGR yyCLN NP
+Infinity	PREDP	AGR yyDASH NP
+Infinity	ADVP	IN COM
+Infinity	NP	CD IN PP
+Infinity	NP	NP yyCM CC INTJ yyCM NP
+Infinity	S	PP yyCM VP ADVP ADVP NP yyDOT
+Infinity	PP	IN CC IN PP
+Infinity	PP	PP ADVP
+Infinity	S	NP VP ADVP PP PRN
+Infinity	ADJP	PP ADJP
+Infinity	NP	NP ADJP PP PP yyCM SBAR
+Infinity	VP	VB PP NP ADVP
+Infinity	NX	NN yyQUOT NN
+Infinity	S	INTJ yyCM VP NP VP yyDOT
+Infinity	S	IN NP
+Infinity	S	ADVP VP VP yyDOT
+Infinity	NP	NP ADJP ADJP ADJP SBAR
+Infinity	PREDP	AGR yyCM NP
+Infinity	S	NP VP PP NP yyCM SBAR yyDOT
+Infinity	S	NP VP PP NP PP
+Infinity	S	PP PREDP NP yyDOT
+Infinity	S	INTJ VP ADVP PP
+Infinity	S	SBAR VP NP yyDOT
+Infinity	NP	NP ADJP PP yyCM PP
+Infinity	S	NP VP NP VP yyQUOT
+Infinity	FRAG	CC ADVP yyDOT
+Infinity	S	NP ADVP VP VP yyCM SBAR
+Infinity	S	S PRN yyDOT
+Infinity	S	ADVP ADVP VP NP SBAR
+Infinity	S	PP yyCM VP SBAR
+Infinity	S	ADVP NP VP ADVP VP
+Infinity	S	ADVP NP ADVP VP NP PP VP yyDOT
+Infinity	NP	CD IN NP
+Infinity	S	ADVP VP yyCM INTJ yyCM PP
+Infinity	S	NP VP NP ADVP PP yyDOT
+Infinity	PRN	yyCM NP yyCM
+Infinity	S	NP yyCM INTJ yyCM VP NP yyCM NP PP yyDOT
+Infinity	S	NP VP ADVP VP
+Infinity	S	ADVP yyCM PP yyCM NP yyCM VP NP PP
+Infinity	S	NP NP VP SBAR yyDOT
+Infinity	S	INTJ yyCM NP VP ADVP NP
+Infinity	S	SBAR yyCM ADVP VP NP VP yyDOT
+Infinity	INTJ	yyQUOT INTJ yyQUOT
+Infinity	S	ZVLP NP VP PP VP yyDOT
+Infinity	NP	NP NP yyCM NP yyCM NP
+Infinity	VP	VB ADVP PP
+Infinity	S	VP yyCM PP yyCM PP
+Infinity	NP	AT NP PP
+Infinity	S	VP NP PP PRN
+Infinity	NP	NP NP NP yyCM ADJP yyCM NP
+Infinity	S	NP VP PP PP VP yyDOT
+Infinity	NP	NP ADJP PP yyCM NP
+Infinity	CDP	H CD
+Infinity	SBAR	ADVP VP NP
+Infinity	NP	CD NP PP
+Infinity	NNPP	NNP NNP yyDASH NNP NNP
+Infinity	S	S FRAG
+Infinity	PRN	yyLRB PP
+Infinity	ADJP	RBR IN ADJP
+Infinity	S	SBAR ADVP VP ADVP NP yyDOT
+Infinity	S	NP VP ADVP PP
+Infinity	S	NP VP ADVP NP PP
+Infinity	S	ADVP VP PP NP yyDOT
+Infinity	NNPP	NNP NNPP
+Infinity	S	PP yyCM PP NP PREDP yyDOT
+Infinity	S	NP VP PP yyCM PP yyCM VP SBAR
+Infinity	S	S yyCM CC S CC S yyDOT
+Infinity	PP	IN COM PRP
+Infinity	PP	PP CC ADVP
+Infinity	S	PP ADVP NP VP VP yyCM SBAR
+Infinity	S	VP VP ADVP PP
+Infinity	SQ	ADVP NP VP SBAR yyDOT
+Infinity	S	PP VP NP PP yyCM NP
+Infinity	NP	H JJ
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM CC NP
+Infinity	CDP	CDT CD
+Infinity	S	PP ADVP VP PP PP
+Infinity	S	ADVP AUX VP PP
+Infinity	PREDP	AGR ADVP
+Infinity	S	VP NP PP yyCM NP
+Infinity	S	PP yyCM NP PREDP
+Infinity	CDTP	CDT CD
+Infinity	SQ	ADVP VP PP yyQM
+Infinity	S	PP yyCM INTJ yyCM VP PP NP yyDOT
+Infinity	S	PP NP VP yyCM SBAR
+Infinity	S	NP AUX PREDP yyDOT
+Infinity	S	SBAR yyCM VP SBAR
+Infinity	NP	NP ADJP NP yyCM SBAR
+Infinity	S	NP ADVP VP INTJ SBAR yyDOT
+Infinity	PRN	yyLRB CC SBAR yyRRB
+Infinity	S	FRAG yyCM VP NP PP ADJP
+Infinity	S	VP VP PP yyCM PP
+Infinity	PP	IN IN PRP
+Infinity	S	SBAR NP VP
+Infinity	VP	VB yyCM SBAR
+Infinity	S	INTJ VP ADVP NP
+Infinity	VP	VB PP PP yyCM PP yyCM PP
+Infinity	ADJP	ADJP SBAR
+Infinity	S	VP PP NP yyCM PP yyDOT
+Infinity	S	PP VP NP PP yyCM PP
+Infinity	S	VP PP NP SBAR
+Infinity	S	VP NP PP yyCM PP
+Infinity	NP	NP yyQUOT NP NP CC NP
+Infinity	S	yyQUOT S yyQUOT yyDOT
+Infinity	FRAG	yyQUOT NP yyQUOT
+Infinity	S	VP SBAR
+Infinity	ADJP	ADJP INTJ
+Infinity	S	NP PRN VP ADVP PP PP yyDOT
+Infinity	S	PP ADVP VP PP
+Infinity	S	NP ADVP yyCM INTJ yyCM PREDP
+Infinity	S	ADVP yyCM PP yyCM VP NP SBAR yyDOT
+Infinity	S	VP yyCM INTJ yyCM PP NP PP
+Infinity	PP	MOD yyDASH NP
+Infinity	S	NP yyCM ADVP PREDP yyDOT
+Infinity	NNPP	H NX
+Infinity	VP	VP SBAR
+Infinity	SBAR	COM S yyCM S yyCM FRAG
+Infinity	FRAG	ADVP
+Infinity	S	ADVP NP
+Infinity	S	NP VP PP PRN yyDOT
+Infinity	NP	NP NP NP
+Infinity	S	INTJ yyCM PREDP NP yyDOT
+Infinity	NP	NP SBAR yyCM PP
+Infinity	S	PP NP VP PP
+Infinity	SQ	ADVP ADVP NP VP NP
+Infinity	S	PREDP SBAR
+Infinity	S	PP PRN VP NP yyDOT
+Infinity	NP	H NN
+Infinity	NP	H NP
+Infinity	NNPP	NNT yyDASH NNP
+Infinity	S	NP VP
+Infinity	S	PP VP NP NP yyDOT
+Infinity	FRAG	ZVLP yyDOT
+Infinity	S	NP VP PP yyCM NP yyDOT
+Infinity	NP	H NX
+Infinity	S	NP VP NP VP yyCM SBAR yyDOT
+Infinity	S	VP PP yyCM PP PP
+Infinity	SQ	ADVP VP VP
+Infinity	PP	ADVP CC PP
+Infinity	S	PP yyCM INTJ yyCM VP PP yyDOT
+Infinity	SQ	HAM S
+Infinity	VP	VB NP ADJP PP
+Infinity	S	NP PP VP SBAR yyDOT
+Infinity	NP	NP yyQUOT NP
+Infinity	S	PP ADVP VP NP PP yyDOT
+Infinity	S	PP ADVP VP NP
+Infinity	ADJP	JJ yyDASH JJ
+Infinity	S	NP VP PP ADJP yyDOT
+Infinity	VP	VP yyCM VP CC VP
+Infinity	S	PP NP VP ADVP
+Infinity	NP	NP yyCM INTJ SBAR
+Infinity	S	PREDP
+Infinity	S	PP VP NP yyCM PP
+Infinity	S	PP VP ADVP PP NP
+Infinity	PP	PP SBAR
+Infinity	ADVP	IN yyDASH PRP
+Infinity	NP	PRN NP
+Infinity	S	NP ADVP AUX PREDP
+Infinity	S	PP NP VP PP yyCM PP
+Infinity	ADVP	ADVP ADJP
+Infinity	NP	NP NP PP
+Infinity	S	NP VP SBAR CC PP yyDOT
+Infinity	NP	NP SBAR yyCM NP
+Infinity	S	PP VP NP PP PP yyCM NP
+Infinity	S	INTJ yyCM CC S yyCLN S yyDOT
+Infinity	S	NP ADVP VP SBAR yyDOT
+Infinity	NP	NP yyDASH PP PP
+Infinity	S	ADVP yyCM NP VP NP yyDOT
+Infinity	S	SBAR yyCM ADVP AUX NP PREDP
+Infinity	SQBAR	S
+Infinity	S	SBAR NP ADVP VP VP
+Infinity	SQ	PP VP NP PP
+Infinity	PP	INP VP
+Infinity	VP	ADVP VP
+Infinity	NP	NP yyCM PP yyCM SBAR
+Infinity	S	PP NP VP PP PP yyDOT
+Infinity	NNPP	NP yyDASH PP
+Infinity	S	PP VP yyCM SBAR yyDOT
+Infinity	VP	VB PP SBAR
+Infinity	ADJP	RB
+Infinity	NP	NP ADJP PP PP
+Infinity	S	ADVP NP PREDP yyDOT
+Infinity	NP	PRN PP
+Infinity	S	ZVLP VP ADVP PP PP yyDOT
+Infinity	S	ADVP NP VP PP NP
+Infinity	ADJP	ADJP yyCM CC INTJ ADJP
+Infinity	FRAG	ZVLP PP yyCLN NP yyDOT
+Infinity	S	NP VP NP ADVP VP
+Infinity	S	SBAR yyCM PREDP yyDOT
+Infinity	S	ADVP yyCM PP yyCM ADVP ADVP VP VP yyDOT
+Infinity	S	ADVP PP NP VP NP yyDOT
+Infinity	S	ZVLP yyCM ZVLP yyCM NP yyCM VP PP yyDOT
+Infinity	S	NP ADVP VP PP yyCLN NP yyDOT
+Infinity	PP	PP CC PP CC PP CC PP
+Infinity	PREDP	NNT NP
+Infinity	S	NP PRN ADVP AUX VP PP yyDOT
+Infinity	S	VP VP yyQM
+Infinity	SBAR	yyCLN FRAG
+Infinity	ADVP	ADVP CC ADVP
+Infinity	S	INTJ yyCLN NP VP NP yyDOT
+Infinity	S	NP yyCM ADVP VP yyDOT
+Infinity	S	PP yyCLN S yyDOT
+Infinity	S	PREDP NP yyCM SBAR
+Infinity	S	NP VP PRN
+Infinity	S	ADVP NP VP PP NP PP yyDOT
+Infinity	S	PP yyCM AUX ADVP VP VP
+Infinity	NP	NP ADJP PP NP
+Infinity	SBAR	S
+Infinity	NP	NP CC NP CC NP
+Infinity	S	INTJ yyCM NP VP PP VP yyDOT
+Infinity	S	PP yyCM NP VP PP SBAR yyDOT
+Infinity	S	NP VP PP VP yyCM FRAG yyDOT
+Infinity	S	PP NP VP VP
+Infinity	S	NP VP NP PP SBAR yyDOT
+Infinity	S	NP VP ADVP yyCM PP yyCM NP yyDOT
+Infinity	NNPP	H NN
+Infinity	ADJP	QW
+Infinity	S	NP VP PP CC S yyDOT
+Infinity	S	NP ADVP VP NP PP yyDOT
+Infinity	S	ZVLP PP yyCM VP NP yyCM SBAR yyDOT
+Infinity	S	SBAR yyCM VP PP PP NP yyDOT
+Infinity	S	PP yyCM VP ADVP NP PP NP NP PP yyDOT
+Infinity	INP	IN IN PRP
+Infinity	S	PP NP yyQUOT VP NP yyQUOT PP
+Infinity	S	PP PREDP VP yyDOT
+Infinity	S	NP AUX PP PRN PREDP
+Infinity	S	NP PRN ADVP PREDP
+Infinity	ADVP	ADVP ADVP
+Infinity	S	NP yyCM VP NP PP PP yyDOT
+Infinity	NP	CDT
+Infinity	NP	CDP
+Infinity	S	NP ADVP yyDASH VP VP
+Infinity	SQ	NP VP FRAG
+Infinity	NP	H VB
+Infinity	S	NP ADVP NP
+Infinity	VP	VP PP PP
+Infinity	S	ADVP VP
+Infinity	S	NP NP
+Infinity	SQ	ADVP VP VP yyDOT
+Infinity	NP	PP PP
+Infinity	NP	NP SBAR SBAR
+Infinity	S	PP NP yyDOT
+Infinity	NP	NP NP yyCM SBAR
+Infinity	S	PP ADVP NP VP NP PP yyDOT
+Infinity	S	NP VP PP NP yyDOT
+Infinity	NNPP	NNP yyQUOT NNP
+Infinity	SQ	ADVP VP PP
+Infinity	S	NP VP yyCM PP yyCM VP
+Infinity	S	NP VP yyCM PP yyCM SBAR
+Infinity	S	SBAR VP NP PP yyDOT
+Infinity	NNPP	NNP CC NN
+Infinity	S	INTJ NP yyCM VP PP yyDOT
+Infinity	CDP	NNT CD
+Infinity	NP	NP ADJP PP yyCLN NP
+Infinity	S	INTJ yyCM ADVP VP NP yyDOT
+Infinity	NNPP	NP yyDASH NP
+Infinity	VP	VB PP VP
+Infinity	PP	INP PP
+Infinity	FRAG	PP yyDOT
+Infinity	S	PP VP NP SBAR
+Infinity	NP	NP yyCM CC NP yyCM CC NP
+Infinity	NP	NP yyCM SBAR yyQUOT yyCM PP
+Infinity	S	PP yyCM NP VP ADVP PP
+Infinity	ADVP	RB IN H PRP
+Infinity	ADVP	RB COM RB
+Infinity	S	NP yyCM VP ADVP NP yyDOT
+Infinity	S	NP VP PRN yyDOT
+Infinity	S	NP PREDP PP yyCM SBAR
+Infinity	SQ	ADVP VP NP
+Infinity	S	NP VP NP yyCM NP
+Infinity	S	VP AUX yyCM SBAR
+Infinity	S	NP VP VP yyCM PP yyCM PP
+Infinity	S	NP VP NP yyCM SBAR PRN yyDOT
+Infinity	SQ	ADVP yyCM PP yyCM VP NP NP PP
+Infinity	SQ	PP NP VP
+Infinity	S	INTJ yyCM PP yyCM NP VP ADVP VP yyDOT
+Infinity	S	INTJ VP PP
+Infinity	NP	NP yyCM ADJP yyCM ADJP
+Infinity	S	ADVP yyCM PP yyCM VP NP yyCM PP yyCM VP yyDOT
+Infinity	S	NP PREDP PRN yyDOT
+Infinity	NP	NP PP PP SBAR
+Infinity	ADJX	NN JJ
+Infinity	S	INTJ VP PP NP
+Infinity	S	PP VP PP VP yyCM PP
+Infinity	PP	INP NP
+Infinity	S	ADVP AUX VP AUX NP VP
+Infinity	S	NP NP ADVP VP NP yyDOT
+Infinity	S	VP PP yyCM SBAR
+Infinity	SBAR	QW IN COM S
+Infinity	S	NP yyCM PP yyCM VP NP PP yyDOT
+Infinity	NP	NP ADJP yyCLN NP
+Infinity	S	AUX yyCM PREDP
+Infinity	S	NP yyCM VP PP ADVP NP yyCM PP yyDOT
+Infinity	NP	NP CC yyDASH NP
+Infinity	FRAG	S yyQUOT yyDOT
+Infinity	PP	IN NNT H NN
+Infinity	S	NP VP PP PP yyCLN PP
+Infinity	NP	AT SBAR
+Infinity	S	NP NP VP PP yyDOT
+Infinity	S	NP yyCM VP ADVP PP PP yyDOT
+Infinity	S	NP yyQUOT PREDP
+Infinity	S	VP yyCM NP yyCM PP
+Infinity	S	PP yyCM NP VP PP yyDOT
+Infinity	S	INTJ PP NP AUX PREDP yyDOT
+Infinity	S	NP VP NP yyCM PP
+Infinity	S	NP VP yyCM SBAR yyCM CC S yyDOT
+Infinity	S	ADVP yyCM NP PRN INTJ yyCM PREDP yyDOT
+Infinity	S	NP VP PP PP SBAR yyDOT
+Infinity	NNPP	NNP NNP
+Infinity	S	INTJ VP NP
+Infinity	S	NP VP PP PP yyCM INTJ
+Infinity	S	NP yyCM AUX PREDP PP yyCM SBAR yyDOT
+Infinity	S	PP VP ADVP NP PP yyCM PP yyDOT
+Infinity	S	NP ADVP ADVP VP PP
+Infinity	SQ	PP VP NP VP
+Infinity	SQ	SQ yyQUOT yyCM CC SQ
+Infinity	S	VP PP PP yyCM SBAR
+Infinity	S	S yyCM S CC CC S yyDOT
+Infinity	S	VP PP PP PP yyCM PP
+Infinity	PRN	PP
+Infinity	SBAR	COM SQ
+Infinity	S	AUX NP PREDP PP SBAR yyDOT
+Infinity	NNPP	NP ADJP
+Infinity	NP	NP NP SBAR
+Infinity	FRAG	VP yyDOT
+Infinity	S	PP VP NP PRN PP yyDOT
+Infinity	S	NP ADVP
+Infinity	ADJX	ADVP JJ
+Infinity	S	PP VP NP NP SBAR
+Infinity	S	S yyCM CC S yyCM S CC S
+Infinity	FRAG	FRAG yyCM CC S yyDOT
+Infinity	NPP	NNP NNP
+Infinity	SQ	ADVP VP SBAR yyQM
+Infinity	S	NP PP
+Infinity	ADVP	WDT
+Infinity	S	NP PRP IN NNT NN JJ IN NNT NN CC NN CC IN NNT NNP JJ
+Infinity	S	NP VP PP PP yyCM NP yyDOT
+Infinity	S	PP PREDP NP
+Infinity	S	PP NP VP NP
+Infinity	S	PP yyCM PP VP ADVP ADVP
+Infinity	S	ADVP VP ADVP SBAR
+Infinity	S	AUX VP ADVP
+Infinity	S	NP AUX PREDP yyCM PP
+Infinity	NNPP	NNP PRN NNP
+Infinity	S	NP VP ADVP PP ADVP VP
+Infinity	S	S yyCLN SQ yyQM
+Infinity	S	NP VP NP PP PP
+Infinity	S	NP VP ADVP yyCLN NP yyDOT
+Infinity	S	NP yyCM VP NP SBAR yyDOT
+Infinity	S	PREDP NP PRN
+Infinity	SQ	PP VP NP ADVP NP
+Infinity	NP	NP SBAR yyCM ADVP
+Infinity	S	SBAR yyCM PREDP SBAR
+Infinity	S	yyQUOT S yyDOT
+Infinity	S	ADVP NP VP PP NP NP
+Infinity	NP	NP yyCM CC ADJP CC ADJP
+Infinity	ZVLP	NNP
+Infinity	S	NP ADVP ADVP VP VP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP CC NP
+Infinity	PRN	NP
+Infinity	PRN	yyLRB CC PP yyRRB
+Infinity	S	ADVP VP INTJ PP yyDOT
+Infinity	S	PP yyCM NP VP PP NP yyDOT
+Infinity	S	VP NP NP yyCM PP
+Infinity	PRN	yyLRB S
+Infinity	NP	NP ADJP ADJP PRN
+Infinity	S	INTJ yyCM PP VP NP PP yyDOT
+Infinity	S	PP yyCM VP PP VP
+Infinity	S	NP PREDP yyCM INTJ
+Infinity	S	SBAR yyCM ADVP AUX NP VP PP
+Infinity	S	ADVP VP VP yyCM PP
+Infinity	S	PP yyCM PP yyCM VP PP
+Infinity	S	SBAR yyCM ADVP VP SBAR yyDOT
+Infinity	S	NP ADVP AUX VP PP
+Infinity	FRAG	PP VP NP
+Infinity	S	ADVP NP VP NP SBAR yyDOT
+Infinity	S	PREDP ADVP VP yyDOT
+Infinity	S	NP ADVP VP
+Infinity	S	PREDP INTJ NP
+Infinity	S	PP yyCM NP VP ADVP SBAR
+Infinity	S	SBAR yyCM VP VP yyDOT
+Infinity	FRAG	NP NP
+Infinity	FRAG	PP PRN PP yyDOT
+Infinity	S	PP VP NP PP yyCM PP yyCM PP yyDOT
+Infinity	FRAG	CC S
+Infinity	NP	NP yyLRB yyRRB PP
+Infinity	S	PP VP NP NP NP PP
+Infinity	NP	NP yyCM NP yyCM NP PRN
+Infinity	NP	NP ADJP PRN
+Infinity	S	NP PP AUX PREDP yyDOT
+Infinity	S	NP INTJ VP PRN SBAR yyDOT
+Infinity	FRAG	yyQUOT ADVP yyQUOT
+Infinity	S	INTJ yyCM NP PREDP yyDOT
+Infinity	NP	NP yyCM VB NP CC NP
+Infinity	S	PP yyCM VP PP PP NP yyDOT
+Infinity	S	ZVLP VP PP PP yyCM SBAR yyDOT
+Infinity	S	PP VP VP CC SBAR
+Infinity	NP	NP ADJP NP SBAR
+Infinity	NP	NP MOD MOD
+Infinity	NP	NP yyCM NP PRN FRAG
+Infinity	SQBAR	yyQUOT SQBAR yyQUOT
+Infinity	S	ADVP VP PP
+Infinity	S	PP yyCM ADVP VP PP NP
+Infinity	S	ADVP yyDASH VP VP PP
+Infinity	S	NP ADVP PREDP
+Infinity	PP	IN PRP
+Infinity	VP	VB PP NP PP
+Infinity	S	SBAR yyCM AUX VP NP SBAR yyDOT
+Infinity	S	NP VP SBAR
+Infinity	S	ADVP ADVP VP NP
+Infinity	PP	RBR IN PP
+Infinity	S	VB PP
+Infinity	S	ADVP VP NP SBAR PP yyDOT
+Infinity	S	NP VP VP SBAR yyDOT
+Infinity	SQ	SQ yyQUOT yyCM INTJ yyCM SQ
+Infinity	S	PP yyCM VP ADVP
+Infinity	S	ZVLP NP VP NP PP yyDOT
+Infinity	S	NP VP PP PP yyCM PP
+Infinity	PP	IN PRN
+Infinity	S	PP yyCM VP NP PP PP yyCM SBAR yyDOT
+Infinity	NP	NP yyCM CC INTJ NP
+Infinity	S	IN NN VB COM PRP NNT NNP REL VB IN NNT NNP yyDASH NNP yyDOT
+Infinity	NP	NP PP yyCM ADJP PP
+Infinity	S	PP yyCM VP PP NP NP yyDOT
+Infinity	S	NP yyCM VP NP NP yyDOT
+Infinity	S	PP AUX ADVP VP VP yyDOT
+Infinity	S	PP ADVP VP NP PRN
+Infinity	S	PREDP VP yyCM SBAR yyDOT
+Infinity	NP	NP CC INTJ NP
+Infinity	S	NP ADVP COM ADVP VP
+Infinity	VP	VP yyCM CC VP
+Infinity	S	NP VP INTJ NP yyDOT
+Infinity	PP	RBR IN NP
+Infinity	S	NP ADVP VP ADVP VP yyDOT
+Infinity	S	ADVP VP VP
+Infinity	S	PP yyCM NP ADVP VP SBAR yyDOT
+Infinity	ADJP	NP PRN PP
+Infinity	S	NP yyCM INTJ yyCM VP PP PP
+Infinity	S	ADVP PREDP NP yyDOT
+Infinity	S	PP yyCM AUX PREDP
+Infinity	S	ADVP ADVP VP PP
+Infinity	S	PP VP ZVLP NP PP yyDOT
+Infinity	S	INTJ yyCM NP yyQUOT ADVP PREDP yyQUOT
+Infinity	SBAR	REL S
+Infinity	S	PP VP NP NP PP PP yyDOT
+Infinity	S	VP ADVP PP PRN
+Infinity	INTJ	VP
+Infinity	NP	NP yyDASH SBAR
+Infinity	PP	PP yyCM PP yyCM PP yyCM PP ADVP
+Infinity	S	VP ADVP NP yyCM SBAR
+Infinity	S	PP VP NP ADVP PP yyCM PP yyDOT
+Infinity	S	VP PP VP PRN
+Infinity	S	PP PREDP VP
+Infinity	S	NP ADVP PP
+Infinity	S	PP VP SBAR yyCM CC S yyDOT
+Infinity	NNPP	NNP yyDASH NNP
+Infinity	S	VP INTJ PP PRN
+Infinity	FRAG	CC ZVL yyCLN S yyDOT
+Infinity	FRAGQ	yyQUOT FRAGQ yyQM
+Infinity	S	NP yyCM VP yyCLN SBAR yyDOT
+Infinity	FRAG	SBAR yyDOT
+Infinity	S	NP VP PP yyCM SBAR
+Infinity	VP	VB NP PP PRN
+Infinity	ADJP	NN
+Infinity	S	PP NP VP ADVP NP
+Infinity	PP	PP yyDASH PP
+Infinity	FRAG	CC CC yyCM S yyDOT
+Infinity	S	NP INTJ VP NP PP
+Infinity	NNPP	NP CC NP
+Infinity	S	SBAR CC COM NP PREDP yyDOT
+Infinity	S	INTJ yyEXCL S
+Infinity	VP	VB SBAR
+Infinity	S	PREDP yyCM PP yyCM PP
+Infinity	S	SBAR yyCM ADVP NP PREDP
+Infinity	S	INTJ yyCM NP VP PP PP yyDOT
+Infinity	S	PREDP yyCM NP
+Infinity	S	NP yyCM NP VP
+Infinity	ADVP	JJ IN NN
+Infinity	NX	NN NN
+Infinity	S	S yyCM FRAG yyDOT
+Infinity	S	ADVP VP PP yyDOT
+Infinity	S	NP yyCM VP NP PP PP yyCM PP yyDOT
+Infinity	S	INTJ yyCLN VP PP yyDOT
+Infinity	S	ZVL PP VP PP NP yyDOT
+Infinity	ADVP	RB SBAR
+Infinity	S	PP yyCM VP PP NP
+Infinity	S	NP VP NP yyCM NP yyCM SBAR yyDOT
+Infinity	S	PP yyCM VP NP PP PP
+Infinity	S	FRAG yyCLN S yyDOT
+Infinity	S	NP VP NP yyCM PP yyCM NP yyDOT
+Infinity	S	NP PREDP yyQM
+Infinity	S	PP NP ADVP AUX VP VP yyDOT
+Infinity	NP	NP VP yyCM PP
+Infinity	S	NP ADVP ADVP yyCM PREDP yyDOT
+Infinity	S	PP VP NP yyCM PP yyCM VP
+Infinity	S	PREDP VP PP yyDOT
+Infinity	ADJP	ADJP yyCM ADJP yyCM ADJP CC ADJP
+Infinity	S	SBAR yyCM AUX NP ADVP PREDP
+Infinity	S	PP VP PP yyCLN NP yyDOT
+Infinity	S	PRN
+Infinity	S	PP NP VP ADVP PP
+Infinity	S	NP ADVP AUX PREDP yyCM SBAR
+Infinity	SQ	NP ADVP yyQM
+Infinity	FRAG	NP VP
+Infinity	S	INTJ yyCM PP AUX NP PREDP yyDOT
+Infinity	S	ADVP VP PP NP PP
+Infinity	S	NP yyCM VP SBAR PP
+Infinity	S	VP NP NP yyDOT
+Infinity	PRN	yyLRB PP yyRRB
+Infinity	S	PP yyCM SBAR yyCM VP NP SBAR yyDOT
+Infinity	NP	NP yyQUOT ADJP PRN
+Infinity	S	NP ADVP AUX PREDP SBAR yyDOT
+Infinity	S	PP yyCM VP NP NP yyCM PP yyDOT
+Infinity	NP	NP PP yyCLN PRN NP
+Infinity	S	PP yyCM VP NP yyCM NP yyDOT
+Infinity	S	FRAG yyEXCL S CC S yyQUOT yyDOT
+Infinity	S	INTJ yyCM VP PP PP yyDOT
+Infinity	S	ADVP AUX PREDP
+Infinity	S	PP yyCM VP PP PP
+Infinity	S	S CC S yyQM
+Infinity	NP	NP yyCLN VP
+Infinity	S	PP ADVP VP ADVP NP yyDOT
+Infinity	S	PP yyCM NP yyCM PREDP PP
+Infinity	S	NP ADVP AUX VP VP
+Infinity	S	NP VP ADVP PP yyCM PP yyDOT
+Infinity	SQ	INTJ yyCM SBAR NP VP
+Infinity	S	ADVP NP yyCLN NP yyDOT
+Infinity	S	ADVP ADVP VP VP
+Infinity	NP	NP yyCM PP SBAR
+Infinity	S	ADVP PREDP PP SBAR yyDOT
+Infinity	ADJP	JJ
+Infinity	PRN	yyLRB ADJP yyRRB
+Infinity	S	VP NP NP PP
+Infinity	NP	NP yyQUOT PP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP
+Infinity	NP	yyQUOT ADJP yyQUOT
+Infinity	NP	NP ADJP PP yyCM ADJP
+Infinity	S	VP PP NP yyDOT
+Infinity	SBAR	yyQUOT S
+Infinity	S	PP VP AUX NP VP yyDOT
+Infinity	S	ADVP VP PP NP NP
+Infinity	S	NP PP NP
+Infinity	S	NP yyCM ADVP VP ADVP VP yyDOT
+Infinity	NP	NN yyQUOT NN
+Infinity	S	ZVLP NP yyCM yyCM VP PP NP yyDOT
+Infinity	S	ADVP VP NP
+Infinity	S	VP yyCM SBAR
+Infinity	S	NP yyCM PREDP
+Infinity	S	PP yyCM PP VP NP
+Infinity	S	INTJ yyCM NP VP
+Infinity	S	FRAG yyCM VP PP INTJ NP yyDOT
+Infinity	S	NP INTJ PREDP
+Infinity	S	VP NP yyCM PP
+Infinity	S	NP yyCM VP PP yyCM PP
+Infinity	SBAR	IN CC IN S
+Infinity	INP	IN yyDASH IN
+Infinity	S	yyQM
+Infinity	SQ	ADVP VP
+Infinity	S	PP yyCM NP AUX PREDP PP yyDOT
+Infinity	S	PP NP ADVP VP NP yyDOT
+Infinity	S	ADVP NP VP PP yyDOT
+Infinity	NX	DT yyDASH NN
+Infinity	S	ADVP VP VP yyCM SBAR yyDOT
+Infinity	S	ZVLP NP VP PP PP yyDOT
+Infinity	S	PP PREDP VP yyCM SBAR
+Infinity	NP	NP NNPP
+Infinity	S	NP PP ADVP VP ADVP PP yyDOT
+Infinity	S	ADVP VP PP NP yyCM SBAR
+Infinity	S	ZVL ADVP PP VP NP PP yyDOT
+Infinity	S	NP yyCM VP PP NP yyDOT
+Infinity	S	INTJ VP ADVP NP yyDOT
+Infinity	SQ	VP PP yyQM
+Infinity	S	SBAR yyCM NP VP PP yyDOT
+Infinity	S	ADVP VP ADVP VP yyDOT
+Infinity	S	NP INTJ ADVP VP
+Infinity	S	AUX PP PREDP
+Infinity	S	VP PP ADVP PRN
+Infinity	NP	NP ADJP yyCM NP NP
+Infinity	S	NP yyCM PP yyCM ADVP VP NP PP yyDOT
+Infinity	S	FRAG CC S yyDOT
+Infinity	PRN	yyLRB CC S yyRRB
+Infinity	S	INTJ yyCM NP VP PP
+Infinity	S	NP VP ADVP PP yyCM PP yyCM PP yyDOT
+Infinity	VP	PP VB NP PP
+Infinity	S	NP VP NP NP PP yyDOT
+Infinity	NNPP	NN yyDASH RB
+Infinity	S	INTJ yyCM ADVP VP NP NP PP yyDOT
+Infinity	NP	H ZVLP NN
+Infinity	S	NP yyQUOT ADVP VP NP yyDOT
+Infinity	S	ADVP VP ADVP NP yyDOT
+Infinity	S	ZVL PP VP PP yyDOT
+Infinity	NP	H ZVLP NX
+Infinity	S	PP VP NP yyCLN PP yyDOT
+Infinity	PRN	yyLRB CC NP yyRRB
+Infinity	S	VP ADVP VP yyDOT
+Infinity	S	ADVP ADVP VP AUX VP yyDOT
+Infinity	S	NP yyCM PREDP SBAR
+Infinity	S	PP yyCM PP yyCM NP ADVP VP VP
+Infinity	S	NP VP NP ADVP
+Infinity	VP	INTJ yyCLN VB NP
+Infinity	NNPP	NNT NNPP
+Infinity	VP	VP yyCM VP ADVP
+Infinity	PRN	yyCM ADVP PP PP yyCM
+Infinity	S	SBAR VP VP
+Infinity	FRAG	yyCM NP yyDOT
+Infinity	S	NP VP yyCM INTJ yyCM PP yyDOT
+Infinity	S	VP NP ADVP PP
+Infinity	S	NP PP VP PP NP yyDOT
+Infinity	S	INTJ yyCM NP VP NP
+Infinity	PP	POS PP
+Infinity	S	NP PREDP ADVP PP
+Infinity	S	REL S
+Infinity	S	PP yyCM NP VP INTJ PP yyDOT
+Infinity	NP	DT MOD
+Infinity	INP	IN NNT
+Infinity	NP	NP PP PP yyCM PP
+Infinity	S	ADVP VP NP VP PP
+Infinity	PRN	yyLRB S yyRRB
+Infinity	FRAG	ADJP yyDOT
+Infinity	S	PP yyCM PP yyCM VP NP yyDOT
+Infinity	S	PP VP ADVP NP ZVLP
+Infinity	S	NP ADVP VP ADVP VP
+Infinity	S	S yyCM S yyCM CC S
+Infinity	S	SBAR yyCM AUX NP PREDP SBAR
+Infinity	S	PP NP VP VP PP yyDOT
+Infinity	S	ZVLP yyCM ZVLP CC FRAG yyCM CC S yyDOT
+Infinity	NP	NP NP yyCM NP CC NP
+Infinity	PREDP	AGR SQBAR
+Infinity	VP	VP yyCM VP yyCM VP yyCM PP
+Infinity	S	PP ADVP VP NP NP yyCM PP yyDOT
+Infinity	PP	POS NP
+Infinity	PP	PRP
+Infinity	S	NP AUX yyQUOT VP NP PP PP yyQUOT
+Infinity	S	PP NP ADVP VP
+Infinity	NP	NP ADJP yyCM NP
+Infinity	S	PP yyCM INTJ NP VP NP VP yyCM PP yyDOT
+Infinity	S	SBAR yyCM NP VP PP NP yyDOT
+Infinity	S	NP AUX PREDP PP yyDOT
+Infinity	S	NP yyCM NP VP ADVP NP
+Infinity	S	PP VP ADVP yyCM SBAR yyDOT
+Infinity	S	VP ADVP
+Infinity	NP	RBR MOD NP
+Infinity	SQ	ADVP NP VP PP yyCM SBAR
+Infinity	S	ADVP VP yyCM PP yyCM SBAR yyDOT
+Infinity	S	NP AUX VP
+Infinity	ADVP	CC RB
+Infinity	S	VP VP
+Infinity	S	AUX PREDP yyELPS
+Infinity	S	NP yyDOT
+Infinity	VP	VB yyCM PP
+Infinity	S	INTJ NP yyCM VP SBAR
+Infinity	S	PP NP PP
+Infinity	NP	NP ADJP yyCM PP
+Infinity	S	NP VP ADVP PP PP PP yyDOT
+Infinity	S	SBAR ADVP VP NP yyDOT
+Infinity	SBAR	yyQUOT SBAR yyQUOT
+Infinity	PRN	yyCM ADVP yyCM
+Infinity	S	S CC S
+Infinity	S	VP PP yyQUOT PP
+Infinity	NP	NPP yyCM NP yyCM NP
+Infinity	S	NP yyQUOT VP NP yyQUOT
+Infinity	S	SBAR yyCM AUX NP yyCM PREDP
+Infinity	S	PP VP ADVP NP PRN yyDOT
+Infinity	ADVP	RBR
+Infinity	ADVP	MOD DT COM PRP
+Infinity	S	NP ADVP VP NP yyCM PP yyDOT
+Infinity	S	NP NP VP PP
+Infinity	VP	VB yyCM PP yyCM VP
+Infinity	SQ	ADVP NP VP
+Infinity	NP	NP yyDASH ADJP
+Infinity	NP	NP ADJP SBAR
+Infinity	S	INTJ PREDP
+Infinity	S	NP yyCM VP NP PP NP yyDOT
+Infinity	S	VP INTJ PP NP
+Infinity	CDP	CD IN CD
+Infinity	S	NP VP ADVP yyDOT
+Infinity	S	SBAR NP PREDP yyCM SBAR yyDOT
+Infinity	S	INTJ yyCM NP VP PP VP
+Infinity	S	ADVP PREDP
+Infinity	S	ADVP ADVP VP NP PP
+Infinity	S	ADVP ADVP VP SBAR
+Infinity	SBAR	SBAR yyCM SBAR
+Infinity	ADJP	MOD ADJP
+Infinity	S	PP VP VP yyDOT
+Infinity	S	PP AUX NP VP VP yyDOT
+Infinity	S	S yyCLN S yyCM CC S
+Infinity	VP	VB PRN
+Infinity	S	SBAR VP AUX PP SBAR yyDOT
+Infinity	S	PP VP ADVP NP yyCM PP yyDOT
+Infinity	S	VP PP yyCM NP
+Infinity	S	S yyCLN SQ yyDOT
+Infinity	S	PP VP PP yyCM SBAR yyDOT
+Infinity	S	S CC SBAR
+Infinity	S	NP yyCM VP ADVP NP yyCM PP yyDOT
+Infinity	S	PP yyCM INTJ ADVP VP NP yyDOT
+Infinity	S	ADVP VP NP yyDOT
+Infinity	S	ZVLP NP VP ADVP PP yyDOT
+Infinity	PP	PP VP NP PP
+Infinity	NP	yyQUOT S yyQUOT
+Infinity	NP	NP PRN yyCM NP
+Infinity	NP	NP yyCM NP CC NP
+Infinity	S	INTJ yyCM NP AUX PREDP PP yyDOT
+Infinity	S	PP VP PP PP SBAR
+Infinity	VP	VB CC VB
+Infinity	S	PP yyCM VP NP NP PP yyDOT
+Infinity	NNPP	NNPP NNP
+Infinity	S	NP yyCM PP yyCM VP NP ADVP PP yyDOT
+Infinity	VP	VB ADVP PP NP yyCM PP
+Infinity	S	INTJ yyCM VP NP PP yyCM PP yyDOT
+Infinity	S	ADVP ADVP VP NP NP
+Infinity	S	PREDP ADVP
+Infinity	S	NP VP PP ADVP PP yyDOT
+Infinity	S	ADVP PP ADVP VP ADVP NP VP
+Infinity	NP	NP ADJP PRN ADJP yyCM SBAR
+Infinity	VP	NNP IN CD NN
+Infinity	NP	NP yyDOT PRN
+Infinity	PP	POS
+Infinity	S	PP ADVP VP ADVP VP yyDOT
+Infinity	S	NP INTJ PREDP yyDOT
+Infinity	S	ADVP VP PP yyCM PP
+Infinity	S	VP PP yyCM PP
+Infinity	S	NP VP NP VP yyDOT
+Infinity	ADVP	CC PP
+Infinity	S	VP PP
+Infinity	NP	NP yyCM NP CC PP
+Infinity	S	INTJ yyCM SBAR NP VP VP
+Infinity	S	PP VP NP PP NP yyDOT
+Infinity	NP	NN IN NP
+Infinity	FRAG	CC yyCM S yyDOT
+Infinity	ADJP	ADJP MOD
+Infinity	S	NP yyCLN SBAR yyDOT
+Infinity	S	PP yyCM ADVP NP VP NP PP yyCM SBAR yyDOT
+Infinity	S	NP yyCM ADVP VP ADVP NP yyDOT
+Infinity	FRAGQ	CC SBAR yyCM ADVP ADVP ADVP NP yyQM
+Infinity	S	PP yyCM NP VP ADJP
+Infinity	S	ADVP NP ADVP PREDP
+Infinity	VP	VP yyCM CC ADVP VP
+Infinity	S	yyQUOT FRAG
+Infinity	NP	NP CC NP CC NP CC NP CC NP CC NP CC NP CC NP CC NP CC NP
+Infinity	S	ADVP VP PP PP yyDOT
+Infinity	S	PREDP NP
+Infinity	S	ADVP yyCM INTJ yyCM NP VP PP PP yyDOT
+Infinity	S	PP yyCM VP NP yyCM PP yyCM NP yyDOT
+Infinity	FRAG	ZVLP ZVLP NP ADJP ADJP
+Infinity	S	ADVP AUX NP PREDP
+Infinity	S	ADVP ADVP AUX VP
+Infinity	S	NP PREDP yyCM ADVP yyDOT
+Infinity	S	NP VP ADVP NP yyCM SBAR yyDOT
+Infinity	S	INTJ NP VP
+Infinity	NP	NP ADJP yyCM VP
+Infinity	S	NP VP NP ADJP
+Infinity	S	VP NP
+Infinity	NNPP	NNP yyDASH NNP NNP
+Infinity	S	NP ADVP VP VP PP
+Infinity	PRN	yyLRB INTJ yyCM NP yyRRB
+Infinity	S	NP PRN ADVP VP VP
+Infinity	S	SBAR AUX VP VP
+Infinity	PRN	FRAG
+Infinity	S	FRAG yyQUOT yyCM VP PP PP yyCM PP yyCM SBAR yyDOT
+Infinity	S	SBAR VP NP VP yyDOT
+Infinity	S	NP VP ADVP NP PRN yyDOT
+Infinity	NP	NP yyCM MOD
+Infinity	S	NP VP NP PP PP yyCM PP yyDOT
+Infinity	S	NP PREDP ADVP yyDOT
+Infinity	S	INTJ SBAR yyCM VP ADVP PP NP
+Infinity	S	PP NP ADVP
+Infinity	S	NP VP AUX VP
+Infinity	NP	NP yyCM CC PP NP
+Infinity	S	VP ADJP
+Infinity	S	PREDP PP
+Infinity	S	SBAR yyCM ADVP VP PP NP yyDOT
+Infinity	FRAG	FRAG yyCM CC SBAR
+Infinity	S	NP VP ADJP SBAR yyDOT
+Infinity	S	PP NP VP ADVP PP yyDOT
+Infinity	S	PP PP yyCM VP NP
+Infinity	NNPP	NNT yyDASH NP
+Infinity	S	NP yyCM VP PP PP PP
+Infinity	ADJP	ADJP CC INTJ ADJP
+Infinity	NP	ZVLP NP yyCM NP
+Infinity	S	ADVP NP yyCM VP NP
+Infinity	S	FRAG yyCM S yyDOT
+Infinity	PRN	yyCM SBAR yyCM
+Infinity	S	S yyCLN S CC S yyDOT
+Infinity	S	FRAG yyCM S
+Infinity	S	S yyCLN yyQUOT S yyDOT
+Infinity	PRN	yyLRB ADVP PP yyRRB
+Infinity	S	PP yyCM VP NP ADVP PP yyDOT
+Infinity	S	NP VP NP yyCM SBAR yyDOT
+Infinity	S	NP PP VP NP PP yyDOT
+Infinity	S	INTJ VP ADVP NP PP yyCM PP yyDOT
+Infinity	S	NP INTJ VP PP
+Infinity	S	VP PP NP yyCM PP
+Infinity	S	PP yyCM VP NP NP NP PP yyCM SBAR yyDOT
+Infinity	S	PP yyCM SBAR yyCM NP VP PP yyCM SBAR yyDOT
+Infinity	S	S yyCM S yyCM CC S yyDOT
+Infinity	S	INTJ yyCM VP SBAR
+Infinity	PP	PP CC PP CC PP
+Infinity	CDP	CDT CDP
+Infinity	S	S yyCM S yyCM S CC S
+Infinity	S	PP VP yyCM NP
+Infinity	PRN	NP SBAR
+Infinity	S	VP PP yyCM INTJ
+Infinity	NP	NP yyDASH CC NP
+Infinity	S	NP yyCM VP PP
+Infinity	S	NP VP VP yyQM
+Infinity	ADJX	yyQUOT JJ yyQUOT
+Infinity	S	NP AUX VP VP yyDOT
+Infinity	VP	VB ADVP PP yyCM NP yyCM PP
+Infinity	S	ADVP yyCM INTJ yyCM VP NP
+Infinity	NP	NP IN NP
+Infinity	S	ADVP VP NP yyCM PP yyCM NP yyDOT
+Infinity	S	INTJ VP PP SBAR
+Infinity	PREDP	AGR VP
+Infinity	S	VP PP yyCM VP
+Infinity	NP	NP INTJ yyCM SBAR
+Infinity	S	PP AUX VP PP SBAR yyDOT
+Infinity	S	PP NP ADVP VP NP PP
+Infinity	S	S CC S yyCLN S yyDOT
+Infinity	S	PP VP NP PP yyDOT
+Infinity	NP	H PRP
+Infinity	S	VP VP yyCM NP
+Infinity	NP	NP yyDASH NP yyDASH NP yyDASH NP
+Infinity	S	FRAG yyCLN PP yyCM PREDP VP yyDOT
+Infinity	S	NP ADVP VP SBAR
+Infinity	NP	MOD yyCM NP
+Infinity	NP	NP ADJP PP PP yyCM PP
+Infinity	S	AUX PREDP yyCM PP
+Infinity	S	NP AUX PREDP ADVP PP yyDOT
+Infinity	S	ADVP ADVP VP PP yyCM PP
+Infinity	SBAR	IN NP
+Infinity	ADJP	ADJP ADJP PRN
+Infinity	FRAG	CC SBAR yyDOT
+Infinity	S	NP yyCM AUX VP VP yyDOT
+Infinity	S	NP VP VP yyQUOT
+Infinity	S	NP ADVP ADVP PREDP PP
+Infinity	SBAR	SBAR yyCM CC PP
+Infinity	S	PP ADVP yyDASH VP PP
+Infinity	FRAGQ	yyQUOT FRAGQ yyQUOT
+Infinity	NP	NP ADJP ADJP SBAR
+Infinity	ADVP	MOD ADVP
+Infinity	S	NP VP ADVP PP yyCM PP
+Infinity	VP	VB ADVP yyCM SBAR
+Infinity	S	NP ADVP VP VP yyCM PP yyDOT
+Infinity	S	ADVP yyCM PP yyCM PP yyCM VP NP yyDOT
+Infinity	ADVP	RBR IN PRP
+Infinity	NP	NP PRN PP PP
+Infinity	NP	NNT FRAG
+Infinity	S	PP NP PREDP
+Infinity	NP	NP yyCM INTJ yyCM NP
+Infinity	NP	NP yyCM VP
+Infinity	VP	VB ADVP
+Infinity	S	NP ADVP VP yyDOT
+Infinity	SBAR	IN PP
+Infinity	S	NP VP ADVP yyCM PP yyCM NP
+Infinity	NX	NN yyDASH MOD
+Infinity	VP	VB ADVP SBAR
+Infinity	S	ZVLP VP PP yyCM NP yyDOT
+Infinity	S	ADVP yyCM SBAR yyCM VP NP
+Infinity	S	NP AUX INTJ PREDP
+Infinity	FRAG	NP PP yyDOT
+Infinity	S	INTJ NP VP ADVP PP
+Infinity	S	ADVP VP PP ADVP
+Infinity	SQ	PREDP VP
+Infinity	S	NP yyCM VP ADJP PP yyDOT
+Infinity	S	ADVP NP VP
+Infinity	S	PP yyCM NP VP SBAR yyDOT
+Infinity	S	PP VP NP NP PP yyCM SBAR yyDOT
+Infinity	S	PP yyCM INTJ yyCM PREDP NP PP yyCM SBAR yyDOT
+Infinity	S	ZVLP ADVP NP VP NP PP yyDOT
+Infinity	SQ	ADVP NP ADVP VP NP VP yyQM
+Infinity	FRAG	ADVP ADVP PP
+Infinity	S	S yyCM S CC S
+Infinity	NP	NP PREDP
+Infinity	S	NP yyCM NP PREDP
+Infinity	S	NP VP yyCM PP
+Infinity	S	NP yyCM VP NP
+Infinity	S	ADVP VP NP SBAR yyDOT
+Infinity	S	ADVP VP NP ADVP
+Infinity	NP	yyQUOT NNPP yyQUOT
+Infinity	S	PP yyCM VP NP NP yyDOT
+Infinity	S	PP yyCM VP VP PP
+Infinity	NP	NP yyCLN SQBAR
+Infinity	S	ZVL VP PP ADVP NP
+Infinity	S	PP yyQUOT NP VP PP
+Infinity	S	VP NP SBAR
+Infinity	ADJP	QW ADJP
+Infinity	S	VP VP yyCM PP
+Infinity	S	PP NP VP PP yyDOT
+Infinity	S	NP yyCM VP NP PP yyCM SBAR yyDOT
+Infinity	S	PREDP VP SBAR yyDOT
+Infinity	S	PP VP AUX VP
+Infinity	S	PP AUX PREDP SBAR
+Infinity	S	VP PP SBAR
+Infinity	S	SBAR yyCM NP VP VP yyDOT
+Infinity	S	FRAG CC S yyEXCL
+Infinity	S	ADVP AUX VP PP ADVP PP
+Infinity	NP	NP yyCM NP NP
+Infinity	S	ADVP yyCM PP VP SBAR yyDOT
+Infinity	S	yyQUOT S
+Infinity	S	VP ADVP PP NP
+Infinity	S	S CC S yyCLN S
+Infinity	PREDP	AGR NP
+Infinity	SBAR	yyCLN SBAR
+Infinity	S	PP ADVP VP SQBAR
+Infinity	S	PP yyCM PP yyCM VP NP yyCM PP yyCM NP yyDOT
+Infinity	S	S yyCM CC CC S
+Infinity	S	ADVP VP PP ADJP
+Infinity	PRN	S yyRRB
+Infinity	S	INTJ yyCM VP NP yyDOT
+Infinity	NP	NP yyCM SQ
+Infinity	VP	VP yyCM VP yyCM VP yyCM VP
+Infinity	S	NP VP ADVP PP PP yyDOT
+Infinity	S	ADVP yyCM INTJ yyCM VP VP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP ADVP
+Infinity	S	PP VP AUX yyCM INTJ yyCM VP NP yyDOT
+Infinity	NP	NP yyCM SBAR yyQUOT
+Infinity	S	PP NP VP NP PP yyDOT
+Infinity	S	NP ADVP ADVP VP SBAR
+Infinity	SQ	ADVP VP NP ADVP PP yyCM PP
+Infinity	NP	MOD yyDASH NP
+Infinity	NP	NP yyCM PP
+Infinity	S	PP yyCLN S
+Infinity	SBAR	COM S yyDOT
+Infinity	S	INTJ yyCM VP SBAR yyDOT
+Infinity	S	ADJP NP VP SBAR
+Infinity	S	NP yyCM ADVP VP PREDP yyDOT
+Infinity	PREDP	AGR PP
+Infinity	NP	NNPP
+Infinity	S	NP ADVP VP PP PP yyDOT
+Infinity	ADVP	MOD PRP
+Infinity	S	VP ADVP PP PP
+Infinity	S	S yyCM CC S yyDOT
+Infinity	S	PP VP NP PP PRN
+Infinity	NP	NP PRN
+Infinity	S	PP PREDP
+Infinity	FRAG	ADVP ADVP yyDOT
+Infinity	S	NP PRN VP VP yyDOT
+Infinity	PP	IN SBAR
+Infinity	S	PP yyCM ADVP VP VP
+Infinity	S	S yyCM CC COM S
+Infinity	PP	MOD PP yyCM
+Infinity	S	VP ADJP PP NP
+Infinity	S	PP VP PP NP PP PP PP
+Infinity	S	PP VP NP PRN
+Infinity	S	PP yyCM PP VP PP NP yyDOT
+Infinity	S	NP yyCM VP NP ADVP PP PP yyDOT
+Infinity	ADJP	ADJP yyDASH ADJP
+Infinity	S	PP yyCM VP NP PP yyDOT
+Infinity	PP	NN IN NN
+Infinity	NP	NP ADJP PP yyCM ADJP yyCM ADJP
+Infinity	SBAR	MOD COM S
+Infinity	S	PP NP VP
+Infinity	NP	NP yyCM NP
+Infinity	PP	PP CC PP yyCM PP
+Infinity	S	NP PREDP yyCM PP yyDOT
+Infinity	ZVLP	H
+Infinity	ADJP	ADJP yyCM CC ADJP CC ADJP
+Infinity	NNPP	NNT NNP
+Infinity	NP	NP ADVP yyCM SBAR
+Infinity	S	NP VP PP yyCM NP PP
+Infinity	S	PP yyCM ADVP VP NP
+Infinity	S	PP AUX NP PREDP CC S
+Infinity	NP	NP PP PP PRN
+Infinity	S	ADVP ADVP VP NP yyCM VP yyDOT
+Infinity	S	NP yyCM ADVP VP ADJP yyCM SBAR yyDOT
+Infinity	S	ADVP yyCM FRAG S yyDOT
+Infinity	SQ	PREDP NP
+Infinity	S	NP yyCM VP PP yyCM PP yyDOT
+Infinity	S	PP AUX PREDP
+Infinity	S	PP yyCM NP VP NP yyDOT
+Infinity	NP	CC NP yyCM CC VP
+Infinity	S	PP VP NP yyCM SBAR
+Infinity	S	INTJ yyCM SBAR yyCM NP VP VP yyDOT
+Infinity	S	NP AUX ADVP PREDP
+Infinity	S	yyQUOT S yyQUOT
+Infinity	S	NP VP ADVP NP yyDOT
+Infinity	NNPP	NP ADJP ADJP PP
+Infinity	PP	PRN PP
+Infinity	NP	NP CC INTJ yyCM NP
+Infinity	S	ADVP NP NP
+Infinity	PP	POS NNPP
+Infinity	ADJP	ADJP NP PP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP ADVP
+Infinity	S	NP PREDP yyCM INTJ yyDOT
+Infinity	S	NP yyCM PP yyCM VP SBAR
+Infinity	S	NP VP PP PP PP PP
+Infinity	S	NP yyCM VP VP
+Infinity	NP	NP POS
+Infinity	NP	NNT NN
+Infinity	S	PP VP ADVP PP yyDOT
+Infinity	NP	NNT NP
+Infinity	S	ADVP VP ADVP yyCM PP
+Infinity	S	PP VP VP NP
+Infinity	NP	NP yyCM ADJP yyCM
+Infinity	S	NP VP PP yyCM PP yyCM NP yyCM PP yyCM PP yyDOT
+Infinity	VP	VB yyCM PP yyCM NP
+Infinity	S	INTJ yyCM NP AUX NP VP VP yyDOT
+Infinity	SBAR	MOD SBAR
+Infinity	S	ADVP AUX NP VP ADVP PP
+Infinity	S	ZVLP NP VP PP NP PP yyDOT
+Infinity	VP	PP VB NP SBAR
+Infinity	S	PREDP PP NP
+Infinity	S	PP VP NP NP PRN PP yyDOT
+Infinity	PP	PP yyCM INTJ yyCLN PP
+Infinity	FRAGQ	CC NP NP yyQM
+Infinity	S	SBAR yyCM PP yyCM VP NP PP yyDOT
+Infinity	S	NP yyCM ADVP VP NP PP yyDOT
+Infinity	S	INTJ yyCM VP INTJ VP yyDOT
+Infinity	S	VP PP PP NP PP
+Infinity	S	NP AUX VP PP yyDOT
+Infinity	PP	PP yyCM PP yyCM PP yyCM CC PP
+Infinity	S	NP ADVP VP PP
+Infinity	PP	PP
+Infinity	S	INTJ yyCM PP yyCM VP NP yyDOT
+Infinity	S	ADVP VP NP yyCM NP yyDOT
+Infinity	NP	INTJ NP
+Infinity	ADJX	MOD yyDASH JJ yyDASH JJ
+Infinity	S	PP VP NP VP yyDOT
+Infinity	S	SBAR yyCM ADVP VP NP PP
+Infinity	S	NP PP VP PP yyDOT
+Infinity	S	INTJ yyCM VP NP NP
+Infinity	S	PP VP VP PP
+Infinity	S	SBAR yyCM VP NP VP yyDOT
+Infinity	SQBAR	QW S
+Infinity	PRN	yyLRB CC ADVP yyRRB
+Infinity	S	ADVP PP ADVP VP PP
+Infinity	FRAG	NP yyCM INTJ yyDOT
+Infinity	S	NP yyCM VP AUX VP yyDOT
+Infinity	S	INTJ yyCM VP ADVP NP yyCM PP
+Infinity	SBAR	QW MOD COM S
+Infinity	S	PP VP VP
+Infinity	PP	QW
+Infinity	S	PREDP PP PP
+Infinity	NP	DT MOD NP
+Infinity	S	PP PP VP NP yyCM SBAR yyDOT
+Infinity	NP	ZVLP NP ADJP
+Infinity	VP	VP CC VP CC VP
+Infinity	S	ADVP AUX VP VP yyCM PP
+Infinity	S	NP ADVP VP NP
+Infinity	S	INTJ yyCM NP VP ADVP PP yyDOT
+Infinity	SQ	PP yyCM NP VP PP yyDOT
+Infinity	S	NP VP PP VP
+Infinity	S	INTJ yyCM PP yyCM VP NP NP yyDOT
+Infinity	S	ADVP VP NP PP SBAR yyDOT
+Infinity	PP	IN ZVLP
+Infinity	S	PP yyCM NP VP NP yyCM PP
+Infinity	S	PP ADVP VP NP VP
+Infinity	PP	PP yyCM PP yyCM PP yyCM PP yyCM PP yyCM PP
+Infinity	PRN	yyLRB yyELPS yyRRB
+Infinity	SQ	PP VP NP PP yyQM
+Infinity	S	NP AUX VP NP
+Infinity	NP	NP SQBAR
+Infinity	SQ	SQ yyCM CC SQ
+Infinity	S	INTJ yyCLN NP VP PP PP yyDOT
+Infinity	S	ADVP PP ADVP VP NP
+Infinity	S	INTJ yyCM PP NP VP SBAR
+Infinity	S	NP ADVP VP ADJP
+Infinity	NX	MOD NN
+Infinity	NP	ADJP PP
+Infinity	ADJP	JJ yyCM SBAR
+Infinity	S	NP ADVP VP NP VP
+Infinity	S	ADVP SBAR
+Infinity	NNPP	NP ADJP PP
+Infinity	S	PP VP SBAR yyQUOT
+Infinity	S	NP VP PP PRN PP
+Infinity	S	PP VP ADVP
+Infinity	S	PP PREDP yyCM SBAR yyDOT
+Infinity	NNPP	NNP CC NNP
+Infinity	S	PP ADJP VP ADVP yyDOT
+Infinity	S	NP VP NP ADVP yyCM SBAR
+Infinity	S	INTJ yyCM PP yyCM VP NP
+Infinity	ZVLP	CD
+Infinity	S	PP ADVP VP NP PP
+Infinity	S	NP AUX VP PP
+Infinity	FRAG	ADVP yyCLN NP yyDOT
+Infinity	NP	NP yyDASH ADJP yyDASH PP
+Infinity	S	PP yyCM NP ADVP AUX VP VP SBAR
+Infinity	S	PP yyCM VP NP yyCM SBAR yyDOT
+Infinity	S	NP yyCM VP ADVP PP NP yyDOT
+Infinity	ZVLP	AT
+Infinity	S	ADVP yyCM INTJ yyCM VP NP SBAR yyDOT
+Infinity	S	S CC S CC S yyCM CC S
+Infinity	NP	yyQUOT PP yyQUOT
+Infinity	SQ	ADVP NP VP yyCM INTJ yyCM SBAR yyDOT
+Infinity	NP	NP PP SBAR PP
+Infinity	PRN	NP yyRRB
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP
+Infinity	VP	yyQUOT VP yyQUOT
+Infinity	NP	NP yyCM S
+Infinity	S	NP VP PP PP PP yyDOT
+Infinity	ADJP	ADJP ADVP
+Infinity	ADVP	RB yyDASH RB
+Infinity	PP	IN ADVP
+Infinity	NNPP	NP ADJP NP
+Infinity	PP	VB
+Infinity	S	SBAR yyCM VP PP NP SBAR
+Infinity	S	ADVP VP NP NP PP
+Infinity	S	NP ADVP VP ADVP SQBAR yyDOT
+Infinity	S	PP VP NP PP NP PP
+Infinity	S	INTJ yyCM PREDP VP yyDOT
+Infinity	S	NP yyDASH VP NP PP yyCM PP
+Infinity	PP	PP CC PP
+Infinity	S	NP PREDP PP yyDOT
+Infinity	SQ	PP yyCM PREDP NP
+Infinity	S	VP INTJ SBAR yyDOT
+Infinity	S	S yyCM CC SQ yyQM
+Infinity	NP	RBR
+Infinity	NP	NP ADJP NP yyCM PP
+Infinity	S	INTJ yyCM VP NP PP
+Infinity	NP	NNT VP
+Infinity	VP	ADVP VB NP PP
+Infinity	S	NP VP PP NP NP PRN yyDOT
+Infinity	S	INTJ NP ADVP VP NP PP
+Infinity	S	SQ yyCM S yyDOT
+Infinity	S	INTJ yyCM S S
+Infinity	NP	NP CC NP CC CC NP
+Infinity	S	S CC S CC S yyDOT
+Infinity	NP	NN yyDASH NN
+Infinity	S	ADVP PP ADVP VP yyCM PP yyCM PP yyDOT
+Infinity	S	SBAR yyCM VP NP NP
+Infinity	S	PP yyCM PP yyCM VP NP PP
+Infinity	NP	NN NP
+Infinity	S	VP NP PP yyCM SBAR
+Infinity	VP	VB NP yyDOT
+Infinity	S	PP VP PP NP NP yyDOT
+Infinity	VP	VB ADJP
+Infinity	ADJP	H ZVLP JJ
+Infinity	S	PP VP NP NP yyCM PP
+Infinity	S	PP VP SBAR yyDOT
+Infinity	S	FRAG yyCM CC S CC CC S yyDOT
+Infinity	S	yyCM INTJ yyCM VP NP
+Infinity	PP	PP ADJP SBAR
+Infinity	S	S PRN
+Infinity	S	NP INTJ AUX PREDP
+Infinity	PP	PP yyCM PP yyCM PP yyCM PP yyCM CC PP
+Infinity	S	PP VP NP ADVP VP yyDOT
+Infinity	S	INTJ yyCM VP NP NP yyDOT
+Infinity	PP	IN DT NN
+Infinity	S	NP ADVP VP NP PP
+Infinity	S	INTJ yyCM VP ADVP NP NP yyDOT
+Infinity	NP	CDP NP
+Infinity	S	PP VP NP VP PP yyCM NP yyDOT
+Infinity	NP	NP yyCM ADJP NP yyCM NP
+Infinity	S	NP yyCM VP PP SBAR
+Infinity	S	NP PRN ADVP PREDP yyCM SBAR yyDOT
+Infinity	PP	IN
+Infinity	S	SBAR yyCM VP NP PP
+Infinity	NP	NN PP
+Infinity	S	PP NP VP PP yyCM VP yyDOT
+Infinity	VP	VB PP PRN
+Infinity	VP	VP PP ADVP
+Infinity	S	ADVP VP NP yyCM SBAR yyDOT
+Infinity	S	PP yyCM NP PREDP yyDOT
+Infinity	SQ	VP VP
+Infinity	PP	IN yyDASH NP
+Infinity	ADVP	MOD DT
+Infinity	NP	NNP CC NN
+Infinity	S	NP ADVP VP VP
+Infinity	NP	ADJP SBAR
+Infinity	ADVP	PRP CC PRP
+Infinity	SBAR	REL S NN PRP
+Infinity	PP	MOD IN NNT PRP
+Infinity	S	NP PREDP FRAG yyDOT
+Infinity	S	NP AUX VP VP
+Infinity	NP	NP PP PP yyCM INTJ
+Infinity	S	NP VP NP PRN
+Infinity	S	ADVP VP yyCM SBAR yyDOT
+Infinity	ADVP	RB ADVP
+Infinity	PP	IN ADJP
+Infinity	S	NP ADVP VP NP NP
+Infinity	SBAR	FRAGQ
+Infinity	S	ADVP VP PP VP yyDOT
+Infinity	PP	REL PP
+Infinity	S	INTJ yyCM NP PREDP
+Infinity	ADJP	ADVP MOD
+Infinity	NP	NP yyCM SBAR yyCM INTJ
+Infinity	PRN	yyCLN NP
+Infinity	S	SBAR COM VP ADVP NP
+Infinity	PP	IN yyDASH PP
+Infinity	S	PP yyCM VP SBAR yyDOT
+Infinity	PRN	ADVP yyCM
+Infinity	S	NP yyCM VP NP PP yyDOT
+Infinity	FRAG	INTJ yyCM NP yyDOT
+Infinity	ADVP	ADVP MOD
+Infinity	NP	NP SBAR yyCM SBAR
+Infinity	S	VP PREDP ADVP VP yyDOT
+Infinity	S	PP yyCM NP VP VP yyDOT
+Infinity	S	PP NP ADVP VP yyCM PP yyDOT
+Infinity	SQ	ADVP NP AUX VP SBAR yyQM
+Infinity	NP	RBR NP
+Infinity	S	NP ADVP VP PP yyCM CC NP
+Infinity	S	VP PP VP yyDOT
+Infinity	ADJP	ADJP ADJP
+Infinity	S	NP VP SBAR yyDOT
+Infinity	S	NP VP yyCLN NP
+Infinity	S	PRN yyDOT
+Infinity	FRAGQ	QW yyQM
+Infinity	PP	IN yyDASH RB
+Infinity	S	PP VP ADVP NP yyCM PP
+Infinity	S	INTJ NP VP VP
+Infinity	S	NP VP ADVP yyCM INTJ yyCM NP yyDOT
+Infinity	S	VP ADVP PP ADVP
+Infinity	S	VP SBAR yyCM SBAR yyDOT
+Infinity	S	PP yyCM PP yyCM VP NP VP
+Infinity	S	S yyEXCL S yyDOT
+Infinity	S	PP yyCM NP yyDOT
+Infinity	S	ADVP yyCM PP VP PP NP yyDOT
+Infinity	ADVP	RB JJ RBR
+Infinity	PRN	yyLRB INTJ yyRRB
+Infinity	S	ADVP VP PP VP yyCM PP
+Infinity	S	NP VP VP PP yyDOT
+Infinity	PRN	yyQUOT NP yyQUOT
+Infinity	S	NP VP ADJP yyDOT
+Infinity	SBAR	DT IN S
+Infinity	S	ADVP ADVP VP ADVP ADVP PP PP yyDOT
+Infinity	S	VP yyCM PP NP
+Infinity	PP	NP
+Infinity	S	PP VP NP PRN yyDOT
+Infinity	FRAG	ZVLP ZVLP NP yyCM PP yyDOT
+Infinity	S	INTJ yyCM VP NP PP PP yyDOT
+Infinity	S	S CC S yyCM CC S
+Infinity	NP	NP ADJP yyQUOT PP
+Infinity	NP	NN VP
+Infinity	S	ADVP VP PP SBAR
+Infinity	PP	IN PRP CC IN PRP
+Infinity	S	VP NP yyCM SBAR yyDOT
+Infinity	NP	ADVP NP
+Infinity	S	PREDP PP VP
+Infinity	S	PP yyCM VP NP yyCM SQ
+Infinity	S	NP ADVP VP ADVP
+Infinity	NX	MOD JJ
+Infinity	FRAG	yyQUOT FRAG yyQUOT yyDOT
+Infinity	ADVP	RB yyDASH CD
+Infinity	PP	PP yyCM PP yyCM PP CC PP
+Infinity	S	VP INTJ PP VP
+Infinity	NP	ZVLP NP
+Infinity	ADJP	ADJP PP yyCM CC PP
+Infinity	NP	DT
+Infinity	NP	yyQUOT NP
+Infinity	NNPP	NNP
+Infinity	S	SBAR yyCM ADVP NP PREDP yyDOT
+Infinity	S	PP PP VP PP
+Infinity	S	PP yyCM NP PREDP yyCM INTJ yyDOT
+Infinity	S	NP AUX PREDP
+Infinity	NP	NP NP PP PP
+Infinity	NP	RBR IN NP
+Infinity	S	ADVP VP NP yyCM PP yyCM SBAR yyDOT
+Infinity	ZVLP	NN
+Infinity	S	PP VP NP VP yyCM SBAR
+Infinity	PRN	yyCM CC S yyCM
+Infinity	PRN	S
+Infinity	S	NP VP NP PP NP yyDOT
+Infinity	NNPP	CDT NP
+Infinity	S	INTJ yyCM PP yyCM VP NP PP SBAR yyDOT
+Infinity	S	VP NP PP
+Infinity	FRAG	yyQUOT FRAG yyDOT
+Infinity	S	VP NP ADVP
+Infinity	S	NP VP ADJP VP
+Infinity	NP	ZVLP PP
+Infinity	S	FRAG yyCM NP VP PP
+Infinity	S	NP AUX ADVP PREDP yyDOT
+Infinity	PRN	yyLRB ADJP yyEXCL yyRRB
+Infinity	S	PP VP ADVP NP PP yyCM SBAR yyDOT
+Infinity	S	NP yyCM VP ADVP
+Infinity	PP	PP yyCM SBAR
+Infinity	S	NP ADVP VP yyCM SBAR
+Infinity	S	NP ADVP ADVP ADVP PREDP
+Infinity	S	INTJ NP ADVP AUX PREDP
+Infinity	PRN	yyLRB INTJ yyCLN NP yyRRB
+Infinity	S	NP yyQUOT VP PP yyQUOT
+Infinity	S	PP yyCM VP ADVP NP SBAR yyDOT
+Infinity	NNPP	NP PP
+Infinity	S	PP PP VP NP
+Infinity	S	SQ PRN S yyDOT
+Infinity	PREDP	MOD NP
+Infinity	S	NP VP PP ADVP yyCM SBAR
+Infinity	NP	NP ADJP ADVP
+Infinity	PRN	yyLRB NNP yyRRB
+Infinity	VP	NP VB PP
+Infinity	S	FRAG PP VP NP yyDOT
+Infinity	S	PP yyCM VP NP VP yyDOT
+Infinity	S	NP ADVP VP yyCM SBAR yyDOT
+Infinity	INTJ	S
+Infinity	S	PP NP VP PP NP yyDOT
+Infinity	S	INTJ yyCM VP NP PP VP yyDOT
+Infinity	S	INTJ VP PP NP yyCM VP yyCM SBAR yyDOT
+Infinity	S	VP NP NP
+Infinity	S	VP PP PP yyDOT
+Infinity	S	SBAR yyCM NP VP SBAR yyDOT
+Infinity	SQ	VP PP
+Infinity	S	VP PP ADVP
+Infinity	S	ADVP VP PP NP
+Infinity	NP	NP ADJP yyCM SBAR
+Infinity	S	INTJ yyCM PP ADVP VP NP yyDOT
+Infinity	SQ	yyQUOT SQ yyDOT
+Infinity	S	NP VP NP SBAR yyDOT
+Infinity	NNPP	NNP AT NNP
+Infinity	S	PP VP NP NP PP
+Infinity	S	ZVLP NP VP PP yyDOT
+Infinity	VP	yyQUOT VB yyQUOT
+Infinity	S	PP yyCM NP VP NP
+Infinity	S	FRAG yyCLN PP PREDP NP yyDOT
+Infinity	S	NP yyCM VP PP PP yyCM ADVP yyDOT
+Infinity	S	ZVLP NP PREDP yyCM PP yyDOT
+Infinity	ZVLP	RB
+Infinity	S	SBAR yyCM VP SBAR yyDOT
+Infinity	S	PP VP ADVP NP yyCM SBAR
+Infinity	ADVP	MOD RB
+Infinity	S	NP yyCM ADVP VP ADVP
+Infinity	ZVLP	yyQUOT
+Infinity	S	INTJ NP VP PP
+Infinity	VP	PP VP
+Infinity	S	PP VP yyDOT
+Infinity	S	NP ADVP VP PP VP yyDOT
+Infinity	NP	NP ADJP ADJP yyCM SBAR
+Infinity	S	NP PRN VP NP PP yyDOT
+Infinity	NP	yyQUOT ADVP yyQUOT
+Infinity	VP	VB ADVP NP yyCM PP
+Infinity	NP	NP yyCM INTJ yyCM SBAR
+Infinity	S	PP yyCM AUX NP PREDP yyDOT
+Infinity	S	ADVP VP PP PP
+Infinity	VP	PP VB
+Infinity	ADVP	RB CC RB
+Infinity	S	NP yyCM PREDP PP PP
+Infinity	S	NP VP PP yyCM PP yyCM PP PP yyDOT
+Infinity	NP	JJ
+Infinity	FRAG	CC FRAG yyDOT
+Infinity	S	PP VP NP NP NP
+Infinity	S	NP VP VP ADVP PP yyDOT
+Infinity	S	PP yyCM NP VP PP
+Infinity	S	VP PP PP VP
+Infinity	S	NP ADVP VP NP yyCM PP
+Infinity	S	NP VP ADJP PP
+Infinity	S	NP yyCM VP ADVP PP yyDOT
+Infinity	S	VP PP yyQUOT
+Infinity	SQ	NP PREDP VP
+Infinity	S	INTJ yyCM NP AUX PP PREDP
+Infinity	PP	yyQUOT PP yyQUOT
+Infinity	S	INTJ NP VP NP
+Infinity	VP	VB PP yyCM INTJ yyCM VP
+Infinity	S	VP ADVP PP PP NP PP
+Infinity	VP	VB PP yyCM PP
+Infinity	ADJP	ADJX
+Infinity	S	VP NP yyCM SBAR
+Infinity	PP	IN NP yyDOT
+Infinity	S	NP VP ADVP yyCM PP
+Infinity	S	INTJ yyCM S
+Infinity	S	PP NP VP VP yyDOT
+Infinity	S	PP VP NP VP
+Infinity	S	PP PRN yyQUOT NP PREDP
+Infinity	VP	VB PP ADVP NP
+Infinity	S	FRAG VP SBAR yyDOT
+Infinity	S	INTJ yyCM NP VP SBAR
+Infinity	S	SBAR VP PP
+Infinity	S	PP VP NP yyDOT
+Infinity	S	NP VP ADVP ADVP NP
+Infinity	SBAR	H S
+Infinity	S	INTJ yyCM NP VP PP NP yyDOT
+Infinity	SQ	PREDP AUX NP SBAR
+Infinity	S	INTJ ADVP VP ADVP
+Infinity	PREDP	NP PP
+Infinity	S	PP VP NP
+Infinity	NP	NP ADJP NP yyCM NP
+Infinity	S	VP PP SBAR yyDOT
+Infinity	PP	PP CC ADVP PP
+Infinity	S	AUX VP PP PP yyDOT
+Infinity	S	NP ADVP ADVP ADVP VP NP yyDOT
+Infinity	S	NP VP ADVP PP PP SBAR yyDOT
+Infinity	VP	VB PP NP PP yyCM ADVP PP
+Infinity	FRAG	NP SBAR
+Infinity	S	ADVP AUX VP VP yyDOT
+Infinity	S	NP VP PP yyCM PP PP yyDOT
+Infinity	S	INTJ VP PP NP yyDOT
+Infinity	PP	PP PRN
+Infinity	S	PP VP ADVP VP yyDOT
+Infinity	S	NP VP PP NP
+Infinity	S	PP NP yyCM VP PP NP
+Infinity	ADVP	RB yyDASH NN
+Infinity	S	SBAR VP NP
+Infinity	S	PP VP NP yyCM PP yyCM NP yyDOT
+Infinity	VP	VB NP ADVP ADVP
+Infinity	S	NP VP ADVP ADVP PP
+Infinity	S	AUX
+Infinity	PRN	yyLRB ADVP yyRRB
+Infinity	ADJX	JJ yyDASH NN
+Infinity	S	MOD S
+Infinity	S	PP VP PP
+Infinity	SQ	PP NP VP VP
+Infinity	S	INTJ yyCM NP ADVP VP NP yyDOT
+Infinity	S	PP yyCM VP NP PP NP yyDOT
+Infinity	ADVP	RB IN PRP
+Infinity	VP	VB PP yyCM SBAR
+Infinity	S	PP VP NP PRN PP
+Infinity	S	NP PREDP PRN PP
+Infinity	NP	NP PRN yyCM SBAR
+Infinity	FRAG	NP yyCLN NP yyDOT
+Infinity	S	INTJ yyCM ADVP VP AUX VP
+Infinity	S	PP VP NP PP yyCM SBAR yyDOT
+Infinity	S	PP VP NP PP VP yyDOT
+Infinity	S	ADVP PP yyCM VP NP PP PP yyCM PP yyDOT
+Infinity	SQ	NP VP NP PP yyQM
+Infinity	S	PP NP PREDP yyDOT
+Infinity	NX	NN yyDASH CC NN
+Infinity	S	VP yyCM ADVP yyCM NP
+Infinity	S	PP VP AUX VP yyDOT
+Infinity	S	ADVP VP PP VP
+Infinity	S	PP ADVP VP SBAR yyDOT
+Infinity	S	S yyCM CC S yyCM CC S yyCM CC S yyDOT
+Infinity	S	PP VP AUX VP NP yyDOT
+Infinity	SQ	SBAR yyCM ADVP VP SBAR yyQM
+Infinity	VP	PP PP
+Infinity	S	NP VP INTJ PP yyCM NP
+Infinity	PRN	yyLRB NP yyQUOT yyRRB
+Infinity	S	PP VP NP PRN VP PP yyDOT
+Infinity	S	NP VP PP PP
+Infinity	ADJP	ADVP ADJP
+Infinity	VP	VB NP NP PP
+Infinity	S	INTJ PP yyCM VP NP VP yyCM PP
+Infinity	FRAG	SBAR
+Infinity	S	PP yyCM VP NP yyCM PP yyCM VP yyDOT
+Infinity	PRN	yyCM CC PP NP yyCM
+Infinity	S	VP PP PP PP
+Infinity	S	S yyCLN S yyCM CC S yyDOT
+Infinity	S	PP yyCM NP VP VP
+Infinity	ZVLP	IN
+Infinity	FRAG	CC VP yyQM
+Infinity	S	NP ADVP VP ADVP PP
+Infinity	S	VP SBAR yyCM SBAR
+Infinity	S	PREDP ADVP PP NP
+Infinity	S	S CC S yyCM CC S yyDOT
+Infinity	NNPP	NP NP
+Infinity	S	NP VP INTJ PP yyDOT
+Infinity	NP	NP PP NP yyCM SBAR
+Infinity	FRAG	NP NP NP
+Infinity	S	INTJ yyCM NP VP ADVP PP yyCM PP yyDOT
+Infinity	S	VP NP VP
+Infinity	S	INTJ yyCM VP ADVP
+Infinity	PP	PP NP
+Infinity	S	PP AUX NP PREDP PRN yyCLN PP yyCLN NP yyDOT
+Infinity	S	NP yyCM VP ADVP VP yyCM PP yyCM
+Infinity	S	SBAR yyCM ADVP NP VP SBAR
+Infinity	PP	MOD RBR IN NP
+Infinity	ZVLP	JJ
+Infinity	S	NP PRN VP PP yyCM SBAR yyDOT
+Infinity	NP	CD
+Infinity	S	PP VP NP PP
+Infinity	S	PP ZVL NP VP
+Infinity	S	ADVP yyCM SBAR yyCM AUX PREDP VP yyDOT
+Infinity	VP	VB PP yyCM VP
+Infinity	S	PP yyCM INTJ yyCM VP NP yyDOT
+Infinity	S	S yyCM CC CC S yyDOT
+Infinity	ADJP	ADJP NP yyCM PP
+Infinity	S	INTJ yyCM NP VP NP yyDOT
+Infinity	S	PP PREDP SBAR yyDOT
+Infinity	S	SBAR yyCM VP PP yyCM SBAR yyDOT
+Infinity	VP	ADVP VB NP PRN
+Infinity	SBAR	REL PP NP VP PP
+Infinity	VP	VB PP ADVP PP
+Infinity	S	SBAR ADVP VP AUX PP
+Infinity	FRAG	NP yyDOT
+Infinity	S	NP VP ADVP NP yyCM NP yyDOT
+Infinity	S	NP PREDP PP PP
+Infinity	ADJX	JJ yyDASH JJ
+Infinity	FRAG	PP yyCM PP yyCM S yyDOT
+Infinity	S	VP NP PP yyQM
+Infinity	S	ADVP NP VP VP ADVP NP yyCM PP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP CC NP
+Infinity	S	VP PP PP NP
+Infinity	NP	NP PP PRN PP
+Infinity	S	NP yyCM VP ADVP PP yyCM PP yyDOT
+Infinity	S	NP AUX VP PP yyCM PP
+Infinity	S	SBAR yyCM AUX VP NP PP
+Infinity	S	ADVP NP VP PP yyCM PP
+Infinity	NP	NNP yyDASH NNP
+Infinity	NP	NP ADJP ADJP
+Infinity	ADJP	ADJP
+Infinity	S	S CC CC S
+Infinity	PP	MOD RBR IN PP
+Infinity	PP	PP PP
+Infinity	S	VP ADVP NP yyDOT
+Infinity	S	NP VP PP PP PP
+Infinity	S	PP VP NP NP
+Infinity	S	ADVP NP PREDP
+Infinity	S	INTJ NP PREDP
+Infinity	S	SBAR VP ADVP NP yyDOT
+Infinity	S	ADVP VP PP PP NP yyDOT
+Infinity	PRN	yyCM FRAG yyCM
+Infinity	S	ZVLP NP yyCM ADVP VP PP yyDOT
+Infinity	S	PP VP ZVLP ZVLP yyCM ZVLP
+Infinity	NP	NP NP CC NP
+Infinity	S	PP yyCM PREDP PP SBAR yyDOT
+Infinity	S	NP yyCM VP PP VP yyCM PP yyDOT
+Infinity	S	ADVP ADVP NP PREDP
+Infinity	S	PP yyCM ADVP VP NP yyDOT
+Infinity	S	PP VP PP NP yyCM SBAR yyDOT
+Infinity	S	NP AUX VP PP NP PP yyDOT
+Infinity	S	PREDP AUX PP yyDOT
+Infinity	S	NP VP VP NP
+Infinity	PRN	yyLRB SQ yyRRB
+Infinity	FRAG	CC SQ
+Infinity	NP	NP ADJP yyCM ADJP yyCM PP PP
+Infinity	S	S CC SQ yyQM
+Infinity	NP	NP ADJP ADJP ADJP yyCM SBAR
+Infinity	S	ADVP VP ADVP NP
+Infinity	FRAG	NP yyCM NP
+Infinity	S	AUX PREDP VP
+Infinity	PP	IN IN NN
+Infinity	S	NP VP PP PP NP
+Infinity	SQ	HAM S yyDOT
+Infinity	S	VP PP PRN
+Infinity	S	PP yyCM VP NP NP yyCM PP PP
+Infinity	SQ	ADVP yyCM INTJ yyCM VP ADVP PP yyCM PP
+Infinity	ADJP	MOD yyDASH ADJP
+Infinity	PRN	yyLRB CC PP NP yyRRB
+Infinity	S	NP VP NP ADVP yyDOT
+Infinity	PREDP	PP AGR
+Infinity	S	PP yyCM NP VP ADVP SBAR yyDOT
+Infinity	S	SBAR yyCM VP PP PP PP
+Infinity	SQ	VP PP NP yyQM
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP
+Infinity	VP	VB NP PP PP yyCM PP
+Infinity	S	NP VP VP NP yyDOT
+Infinity	S	VP PP yyCM PP yyCM NP
+Infinity	ADJP	MOD RBR ADJP
+Infinity	S	ADVP VP NP NP yyCM PP yyDOT
+Infinity	ADJX	JJ yyDASH JJ yyDASH JJ
+Infinity	S	NP VP PRN SBAR
+Infinity	S	SBAR yyCM VP PP VP yyDOT
+Infinity	S	NP VP VP ADVP yyDOT
+Infinity	SQ	PP NP VP NP
+Infinity	SQ	ADVP NP AUX PREDP yyQM
+Infinity	S	NP VP VP PP PRN
+Infinity	S	PP VP NP FRAG
+Infinity	PP	IN RB
+Infinity	S	NP VP NP VP yyCM SBAR
+Infinity	NP	VP PP
+Infinity	S	NP PRN VP PP NP PP
+Infinity	NP	NP ADJP PP PP PP
+Infinity	NP	NP ADJP PP PP NP PRN
+Infinity	S	NP yyCM NP yyCM NP yyCM NP yyDOT
+Infinity	S	NP PRN VP PP NP yyDOT
+Infinity	S	NP yyCM VP VP yyCM PP
+Infinity	S	PP NP ADVP VP NP
+Infinity	S	NP VP NP ADVP yyCM PP
+Infinity	S	S CC CC S yyDOT
+Infinity	S	S CC FRAG yyDOT
+Infinity	FRAGQ	NP ADVP yyQM
+Infinity	S	SBAR yyCM NP ADVP VP VP yyDOT
+Infinity	S	PP SBAR yyCM VP PP NP yyDOT
+Infinity	NX	NN yyDASH NN
+Infinity	NP	H yyQUOT NN
+Infinity	S	NP ADVP yyQUOT VP PP yyQUOT
+Infinity	FRAG	PRN yyDOT
+Infinity	S	PP ADVP VP NP NP PP yyDOT
+Infinity	S	NP yyCM VP VP yyDOT
+Infinity	PP	IN yyCM NP
+Infinity	S	NP ADVP VP ADVP PP yyCM VP yyDOT
+Infinity	S	NP VP ADVP PP yyDOT
+Infinity	VP	VB AT H NN CC VB IN NN
+Infinity	SQ	NP ADVP VP PP PP
+Infinity	S	PP VP PP NP PP
+Infinity	S	PP VP NP yyCM PP yyCM NP PP yyDOT
+Infinity	NP	NP ADJP yyCM ADJP
+Infinity	PP	IN RB RB
+Infinity	PP	IN IN NP
+Infinity	SQ	PREDP NP SBAR yyQM
+Infinity	ADVP	RB
+Infinity	S	PP yyCM NP VP NP PP
+Infinity	S	SBAR yyCM VP yyDOT
+Infinity	S	VP yyDOT
+Infinity	S	ADVP NP VP yyDOT
+Infinity	ADVP	QW
+Infinity	S	NP VP VP PP
+Infinity	SQ	NP VP PP PP
+Infinity	PP	NP ADJP
+Infinity	NP	NNT NNP
+Infinity	S	S CC S CC S yyCM S CC CC S yyDOT
+Infinity	PP	IN VP
+Infinity	PP	IN VB
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM SBAR
+Infinity	S	ADVP VP ADVP PP
+Infinity	SBAR	SBAR CC SBAR CC SBAR CC SBAR CC SBAR
+Infinity	S	SBAR AUX PP VP VP yyDOT
+Infinity	PP	IN IN PP
+Infinity	NNPP	NNP yyDASH NNP yyDASH NNP
+Infinity	S	PP yyCM NP VP
+Infinity	SQ	SQ yyCM SQ yyCM SQ ADVP
+Infinity	S	PP VB NN REL IN NNT H NN POS H NN VB RB REL NN RB VB IN H NN IN NNT NNP yyDOT
+Infinity	SQ	NP PREDP PP yyQM
+Infinity	S	PP yyCM VP PP yyCM ADVP
+Infinity	S	NP yyCM ADVP VP PP yyCM SBAR
+Infinity	SQ	QW S
+Infinity	S	PP yyCM VP PP NP yyCM SBAR yyDOT
+Infinity	CDP	CD yyDASH CD
+Infinity	NP	NP ADJP ADVP PRN
+Infinity	VP	ADVP VB NP
+Infinity	NP	NP NP PP yyCM SBAR
+Infinity	S	NP PREDP PP yyCM PP yyDOT
+Infinity	S	NP PREDP
+Infinity	NP	NP yyQUOT ADJP
+Infinity	S	INTJ yyCM PP yyCM VP NP VP
+Infinity	S	PP AUX NP yyCM PREDP yyDOT
+Infinity	S	NP VP NP NP PP yyCM SBAR yyDOT
+Infinity	S	VP VP SBAR yyDOT
+Infinity	S	VP NP SBAR yyDOT
+Infinity	S	NP VP NP yyCM PP yyCM PP yyDOT
+Infinity	NP	NP yyCM SBAR yyCM SBAR
+Infinity	NP	AT NP yyCM SBAR
+Infinity	S	ADVP PP VP ADVP VP
+Infinity	PP	IN IN VP
+Infinity	S	NNP yyLRB NNP NNP yyRRB yyDOT
+Infinity	S	PP NP VP INTJ SBAR
+Infinity	S	VP NP PP yyCM SBAR yyDOT
+Infinity	S	ADVP AUX VP PP NP
+Infinity	S	S S yyCM CC S yyCM CC S yyDOT
+Infinity	SQ	ADVP VP NP PP
+Infinity	PP	MOD yyDASH IN yyDASH NNT yyDASH PRP
+Infinity	NP	NP ADJP PP yyCM ADJP yyCM SBAR
+Infinity	S	ADVP VP VP ADVP PP NP yyCM PP yyDOT
+Infinity	FRAG	NNP PRN yyDOT
+Infinity	NP	NP ADJP SBAR SBAR PRN
+Infinity	S	NP yyCM PP yyCM VP VP yyDOT
+Infinity	S	NP VP PP NP NP yyCM PP yyDOT
+Infinity	S	NP VP PP yyCM ADJP yyCM NP
+Infinity	S	VP PP ADJP SBAR yyDOT
+Infinity	PREDP	ADJP AGR
+Infinity	FRAGQ	NP yyQM
+Infinity	S	AUX NP VP PP
+Infinity	S	S PRN S yyDOT
+Infinity	VP	ADVP VB PP
+Infinity	PP	IN JJ
+Infinity	S	PP VP ADVP NP yyDOT
+Infinity	S	SBAR NP yyCM INTJ yyCM VP NP
+Infinity	S	NP PRN VP yyDOT
+Infinity	PREDP	ADVP
+Infinity	ADJP	ADJP yyCM ADVP
+Infinity	S	AUX PREDP PP
+Infinity	S	PP yyCM NP AUX VP PP
+Infinity	SQ	ADVP VP NP NP
+Infinity	PP	PP PP CC PP
+Infinity	S	ADVP ADVP VP
+Infinity	S	PP VP NP PP SBAR
+Infinity	NP	NP ZVL SBAR
+Infinity	S	PP VP ADVP PP
+Infinity	SQ	ADVP VP VP SBAR
+Infinity	S	NP VP ADJP PP PP
+Infinity	S	VP ADVP ADVP
+Infinity	SBAR	SQ
+Infinity	FRAG	ADJP CC ADJP yyDOT
+Infinity	S	S yyCM S yyCM S CC S yyDOT
+Infinity	S	NP VP NP yyDOT
+Infinity	S	PP NP VP ADJP PP PP
+Infinity	ADVP	RBR ADVP
+Infinity	S	NP VP yyCM INTJ yyCM PP PP yyDOT
+Infinity	PP	NNT ZVL NP
+Infinity	S	NP VP ADVP VP yyDOT
+Infinity	PP	IN PP
+Infinity	FRAG	VP PP PP
+Infinity	FRAG	NP yyQM
+Infinity	S	S CC S PRN yyCM CC S
+Infinity	PRN	yyCM ADVP
+Infinity	S	SBAR yyCM VP VP NP
+Infinity	NP	VP NP
+Infinity	SQ	ADVP yyCM VP VP yyQM
+Infinity	PP	PP yyCM PP yyCM PP ADVP
+Infinity	NP	NP SBAR PRN
+Infinity	ADJP	H ADJP
+Infinity	S	VP yyCM SBAR yyDOT
+Infinity	ADJP	H ADJX
+Infinity	S	SBAR VP NP NP
+Infinity	PP	RB PP
+Infinity	S	NP VP NP yyCM PP yyCM VP yyDOT
+Infinity	S	NP yyCM VP VP NP yyDOT
+Infinity	PP	IN yyCM ZVL NP
+Infinity	S	PP ADVP ADVP VP VP yyDOT
+Infinity	NP	NP PP PP yyCM SBAR
+Infinity	S	VP PP yyCM INTJ yyCM NP
+Infinity	NP	NP PP PRN
+Infinity	PP	yyCM PP yyCM
+Infinity	ADVP	RB DT
+Infinity	S	NP VP PP yyCM PP yyCM NP
+Infinity	NP	NNT ZVL NP
+Infinity	PRN	yyLRB NP yyRRB
+Infinity	S	PP yyCM ADVP yyCM VP NP yyDOT
+Infinity	NP	NP ADJP SBAR PP
+Infinity	PP	IN NN
+Infinity	PP	IN NP
+Infinity	S	ADVP ADVP NP AUX VP VP
+Infinity	S	ZVLP PREDP NP
+Infinity	NP	NP SBAR VP
+Infinity	NP	NP RBR
+Infinity	S	INTJ PRN ADVP ZVLP VP ADVP PP yyDOT
+Infinity	ADVP	RB CD
+Infinity	S	PP yyCM NP SBAR
+Infinity	S	S yyCM S yyCM S
+Infinity	ADVP	JJ
+Infinity	S	VP PP PP yyCM PP
+Infinity	NP	NP ADJP PRN SBAR
+Infinity	S	SBAR VP NP PP
+Infinity	S	INTJ VP ADVP NP PP yyDOT
+Infinity	NP	NP CC NP CC NP CC NP yyCM CC NP
+Infinity	S	yyQUOT CC S yyQUOT
+Infinity	S	S PRN yyQUOT CC FRAG yyDOT
+Infinity	ADJP	ADJP yyCM ADJP yyCM ADJP
+Infinity	S	NP yyCM VP PP SBAR yyDOT
+Infinity	S	S PP
+Infinity	ADVP	RB JJ
+Infinity	S	SBAR yyCM PREDP SBAR yyDOT
+Infinity	S	INTJ yyCM ADVP ADVP VP NP ADVP PP
+Infinity	S	SBAR NP AUX PREDP
+Infinity	S	FRAG yyQUOT yyDOT
+Infinity	S	PP VP NP PP yyCM PP yyCM PP yyCM SBAR yyDOT
+Infinity	S	INTJ yyCM PP yyCM SBAR yyCM VP NP yyDOT
+Infinity	S	S yyCLN FRAG yyDOT
+Infinity	S	ADVP VP NP ADVP yyCM PP yyCM PP yyDOT
+Infinity	PP	IN VB NN JJ IN NNT H NN IN H NN
+Infinity	S	ADVP VP SBAR
+Infinity	NP	NP SBAR PP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM CC NP
+Infinity	NP	ZVLP NP PP
+Infinity	VP	HAM VP
+Infinity	PREDP	INTJ yyCM NP
+Infinity	ADVP	IN PRP
+Infinity	S	ZVLP PP VP PP NP yyDOT
+Infinity	NP	NNPP NP PP
+Infinity	S	NP yyQUOT VP yyCLN yyQUOT NP
+Infinity	S	PP VP ADVP NP SBAR yyDOT
+Infinity	S	VP AUX VP
+Infinity	INTJ	ADVP PP
+Infinity	S	PP VP ADVP NP
+Infinity	S	ADVP VP PP SBAR PP
+Infinity	VP	VB NP NP yyCM PP
+Infinity	S	PP VP ADVP PRN NP yyDOT
+Infinity	SQ	NP VP SBAR yyDOT
+Infinity	S	SBAR yyCM VP NP yyDOT
+Infinity	S	PP yyCM ADVP NP yyCLN NP PRN yyDOT
+Infinity	NP	WDT IN NP
+Infinity	INTJ	SBAR
+Infinity	S	NP yyCM INTJ yyCM VP VP
+Infinity	NP	yyQUOT SQ yyQUOT
+Infinity	VP	VB NP yyCM SBAR
+Infinity	S	PP VP NP SBAR yyDOT
+Infinity	PP	IN NNPP
+Infinity	SQ	ADVP NP AUX PREDP
+Infinity	S	VP NP CC ADVP
+Infinity	S	INTJ VP NP yyCM INTJ yyCM NP yyDOT
+Infinity	S	SBAR yyCM VP ADVP NP
+Infinity	NP	NP yyCM NP PRN
+Infinity	NP	NP CD
+Infinity	ADVP	NP PP
+Infinity	S	ADVP yyCM VP NP PP PP yyDOT
+Infinity	S	PP NP PREDP PRN yyDOT
+Infinity	S	NP ADVP ADVP PREDP yyDOT
+Infinity	S	ADVP PP VP PP NP yyDOT
+Infinity	SQ	QW S yyQM
+Infinity	S	VP NP PP PRN PP yyDOT
+Infinity	S	ZVL NP VP NP yyDOT
+Infinity	S	PP NP VP NP yyCM SBAR yyDOT
+Infinity	S	S CC S CC S CC S yyDOT
+Infinity	S	NP PP VP ADVP yyCM PP yyDOT
+Infinity	S	NP PRN PREDP yyDOT
+Infinity	SBAR	MOD PRP MOD COM S
+Infinity	PRN	yyCM CC PP yyCM
+Infinity	S	SBAR yyCM AUX VP SBAR yyDOT
+Infinity	SBAR	yyQUOT S yyQUOT
+Infinity	NP	NP DT
+Infinity	S	PP ADVP NP VP VP yyDOT
+Infinity	S	SBAR NP VP PP PP
+Infinity	S	SBAR yyCM NP PREDP
+Infinity	S	INTJ yyCM PP yyCM NP VP PP yyDOT
+Infinity	ADJP	DT RBR ADJP
+Infinity	S	NP VP INTJ VP yyDOT
+Infinity	S	VP PP ADVP PP
+Infinity	NP	NP NP yyCM NP PRN
+Infinity	S	NP AUX PREDP PP yyCM PP yyDOT
+Infinity	S	ADVP ADVP NP PREDP ADVP yyCM SBAR yyCM SBAR
+Infinity	NP	WDT NP
+Infinity	PP	MOD yyCM PP
+Infinity	FRAG	yyQUOT NP yyDOT
+Infinity	S	PP VP AUX SBAR yyDOT
+Infinity	S	NP VP INTJ PP
+Infinity	S	NP NP VP NP yyDOT
+Infinity	S	PP yyCM VP PP ADVP PP
+Infinity	S	ADVP ADVP VP ADVP
+Infinity	ADVP	NN IN NN
+Infinity	S	NP yyCM PP yyCM VP PP yyDOT
+Infinity	NP	NP ADJP ADJP ADVP VP
+Infinity	NP	NP NP NP NP NP NP
+Infinity	S	NP PP yyCM VP NP
+Infinity	S	NP ADVP ADVP VP PP PP yyCM SBAR yyDOT
+Infinity	S	NP yyCM INTJ yyCM PREDP yyDOT
+Infinity	S	NP ADVP VP PRN
+Infinity	PREDP	AGR ADVP PRN NP
+Infinity	S	NP ADVP VP PP NP yyDOT
+Infinity	S	NP yyQUOT AUX PREDP
+Infinity	S	VP PP ADVP NP
+Infinity	S	PP yyCM NP ADVP VP
+Infinity	VP	VB yyCM INTJ yyCM NP
+Infinity	S	NP PP VP ADJP yyCM SBAR yyDOT
+Infinity	ADJP	ADJP yyCM ADJP
+Infinity	S	VP PP NP yyQUOT
+Infinity	NP	NP yyCM VP yyCM SBAR
+Infinity	S	ZVLP NP yyCM VP ADVP PP PP yyDOT
+Infinity	VP	VB NP PRN
+Infinity	S	SBAR yyCM NP PREDP yyDOT
+Infinity	S	NP VP VP PRN SBAR yyDOT
+Infinity	S	SBAR yyCM VP ADVP VP yyDOT
+Infinity	S	PP NP AUX VP PP
+Infinity	S	PP VP NP PP yyCM PP yyDOT
+Infinity	FRAGQ	CC SQ yyQM
+Infinity	S	ADVP yyCM PP NP PREDP
+Infinity	S	PP yyCM VP PP NP yyCM PP yyCM NP yyDOT
+Infinity	PRN	yyCM CC PP
+Infinity	NP	NP ADJP yyCM PP PP yyCM SBAR
+Infinity	PP	PP PP PP
+Infinity	NP	NP ADJP yyCM INTJ yyCM PP
+Infinity	S	PP yyCM VP VP yyCM PP yyDOT
+Infinity	ADJX	MOD yyDASH JJ
+Infinity	S	PP AUX NP PREDP yyDOT
+Infinity	S	NP yyCM ADVP PREDP
+Infinity	ADJP	RB ADJP
+Infinity	NP	REL S
+Infinity	S	NP AUX VP NP PP
+Infinity	S	NP PP yyDOT
+Infinity	SQ	yyQUOT SQ yyQUOT
+Infinity	NP	NP ADJP ADJP PP PP
+Infinity	S	ZVL NP VP PP PP PP yyDOT
+Infinity	S	AUX PREDP PP ADVP PP
+Infinity	NNPP	NNP yyCM NNP NNP NNP
+Infinity	PP	IN RB NP
+Infinity	S	COM VP PP yyDOT
+Infinity	S	VP VP SBAR
+Infinity	NP	NNP NNP
+Infinity	S	PP yyCM VP PP NP yyCM PP
+Infinity	ADVP	ADVP CC ADVP CC ADVP
+Infinity	S	SBAR yyCM AUX NP PREDP
+Infinity	S	PP yyCM AUX NP PRN PREDP yyDOT
+Infinity	S	VP VP NP
+Infinity	VP	VB
+Infinity	ADVP	RB RB
+Infinity	S	PP VP PP NP yyCM ADVP
+Infinity	VP	ADVP VB NP yyCM PP
+Infinity	VP	VB NP SBAR
+Infinity	S	SBAR PREDP yyDOT
+Infinity	NP	RBR IN yyDASH NP
+Infinity	S	S yyCM CC S
+Infinity	NP	AT S
+Infinity	S	NP yyCM INTJ yyCM VP NP
+Infinity	S	NP VP PP NP yyCM PP
+Infinity	FRAG	NP ADJP yyDOT
+Infinity	NP	ADVP yyCLN NP
+Infinity	S	ADVP VP NP NP PP yyDOT
+Infinity	S	NP VP NP SBAR
+Infinity	SQ	yyQUOT SQ yyQM
+Infinity	S	VP NP VP yyCM PP
+Infinity	ADVP	RB PP
+Infinity	SQ	NP VP PP PP yyQM
+Infinity	S	S yyCM CC FRAG yyDOT
+Infinity	S	ADVP VP PP NP PP yyCM PP yyDOT
+Infinity	NNPP	NNP JJ
+Infinity	S	INTJ ADVP AUX PREDP PP
+Infinity	S	PP yyCM VP ADVP NP VP yyDOT
+Infinity	PREDP	AGR S
+Infinity	NP	NP yyCM ADJP yyCM PP yyCM PP
+Infinity	PRN	yyCM NP
+Infinity	ADJX	RBR JJ
+Infinity	S	PP ADVP VP NP NP
+Infinity	NP	JJT NP
+Infinity	S	yyCM NP yyCM VP VP yyDOT
+Infinity	PP	IN RB PP
+Infinity	S	SBAR yyCM NP VP NP VP
+Infinity	NP	NP ZVLP NP ADJP
+Infinity	S	PP yyCM NP ADVP VP VP
+Infinity	NP	yyQUOT NNP yyQUOT
+Infinity	ADJP	JJT NP
+Infinity	S	yyRRB PP VP SBAR yyDOT
+Infinity	S	ADVP VP VP PP
+Infinity	SQ	PP VP
+Infinity	ADJP	ADJP ADJP CC ADJP
+Infinity	FRAG	NP yyCM PP yyDOT
+Infinity	FRAG	CC NP
+Infinity	INTJ	ADVP NP
+Infinity	S	PP yyCM AUX NP PP PREDP yyDOT
+Infinity	NP	DT IN NP
+Infinity	S	NP yyCM PREDP ADVP yyDOT
+Infinity	VP	VP PRN
+Infinity	PRN	yyCM PP yyCM
+Infinity	S	NP AUX PREDP NP yyCM SBAR yyDOT
+Infinity	PP	PP yyCM PP yyCM PP yyCM PP yyCM PP yyCM PP CC ADVP PP
+Infinity	S	ADVP AUX NP VP ADVP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP ADVP
+Infinity	S	INTJ ADVP NP VP PP NP
+Infinity	SQ	NP NP VP ADVP
+Infinity	NP	INTJ NP PP
+Infinity	PRN	yyCM PP
+Infinity	SQ	ADVP VP NP yyCM CC PP yyQM
+Infinity	VP	VB PRN SBAR
+Infinity	S	NP yyCM PREDP yyCM CC NP yyDOT
+Infinity	NP	NP yyCM NP ADJP PP
+Infinity	S	VP PP NP PP yyCM PP
+Infinity	S	NP yyCM VP ADVP SBAR yyDOT
+Infinity	S	SBAR yyCM NP ADVP PREDP
+Infinity	S	AUX NP PREDP SBAR
+Infinity	S	yyQUOT ADVP VP VP
+Infinity	S	PP yyCM VP PP PP yyDOT
+Infinity	ADJP	RBR ADJP
+Infinity	S	ADVP yyCM NP PREDP yyDOT
+Infinity	S	NP ADVP VP ADVP yyDOT
+Infinity	PRN	yyCM SQ
+Infinity	S	NP ADVP VP AUX VP
+Infinity	PRN	yyLRB PP yyQM yyRRB
+Infinity	FRAG	CC PP
+Infinity	S	NP VP PP NP SBAR yyDOT
+Infinity	S	INTJ S
+Infinity	NNPP	NP NP NP
+Infinity	S	ADVP yyCM PP yyCM NP VP NP SBAR yyDOT
+Infinity	NNPP	NNP NN
+Infinity	S	NP NP PREDP
+Infinity	FRAG	VP PP ADVP yyCM SBAR yyDOT
+Infinity	NNPP	NNP NP
+Infinity	S	NP PREDP yyCLN NP yyDOT
+Infinity	S	INTJ NP VP PP SBAR
+Infinity	S	ADVP NP ADVP VP VP yyCM PP yyDOT
+Infinity	S	NP VP PP VP yyCM PP yyDOT
+Infinity	NP	NP PP SQBAR
+Infinity	S	NP ADVP PREDP PP
+Infinity	NNPP	yyQUOT NNP yyQUOT
+Infinity	S	NP yyQUOT ADVP PREDP yyCM PP yyQUOT
+Infinity	PP	PP yyCM CC yyCM PP
+Infinity	SQ	ADVP ADVP VP
+Infinity	S	VP ADVP PP PP PP
+Infinity	S	PP yyCM ADVP VP AUX NP VP yyDOT
+Infinity	S	VP VP PP
+Infinity	SQ	SQ CC SQ
+Infinity	S	ADVP NP VP VP NP
+Infinity	S	PP VP NP PP PP yyDOT
+Infinity	S	PP yyCM SBAR VP NP PP
+Infinity	S	NP VP ADVP NP NP yyDOT
+Infinity	S	VP ADVP PP yyCM PP
+Infinity	NP	NP CC NP yyCM CC NP
+Infinity	INTJ	ADVP ADVP
+Infinity	S	NP NP PRN
+Infinity	S	PP yyCM VP NP PP yyCM PP yyDOT
+Infinity	S	PP yyCM VP NP ADVP NP yyDOT
+Infinity	FRAG	NP yyCM CC SBAR yyCM S yyDOT
+Infinity	VP	VP NP PP
+Infinity	S	NP ADVP VP yyCM INTJ yyCM VP yyDOT
+Infinity	NP	NP PRN SBAR
+Infinity	S	NP yyCM VP NP PP SBAR yyDOT
+Infinity	NP	NP PP
+Infinity	SBAR	CC REL S
+Infinity	S	NP AUX yyCM ADVP yyCM PREDP
+Infinity	PREDP	VB
+Infinity	S	INTJ yyCM NP PREDP PP yyDOT
+Infinity	VP	VB NP PP yyCM PP
+Infinity	PP	IN ZVL NP
+Infinity	S	SBAR yyCM NP AUX VP VP
+Infinity	PP	IN NP yyRRB
+Infinity	PP	IN NNT NNT NP IN NNT H NN IN NNT NN POS CD NNP NNT CD NNP IN NN
+Infinity	PREDP	VP
+Infinity	S	NP VP PP yyCM VP yyDOT
+Infinity	NP	NN yyCM SBAR
+Infinity	S	PP yyCM NP VP PP yyCM PP yyDOT
+Infinity	S	SBAR CC ADVP VP NP PP yyCM PP yyDOT
+Infinity	PRN	yyCM ADJP yyCM
+Infinity	S	PP yyCM S
+Infinity	ADVP	IN NN
+Infinity	NP	NP PP PP PP
+Infinity	SBAR	REL NP
+Infinity	NP	NP ADJP ADJP PP yyCM PP
+Infinity	S	PP AUX VP NP PP
+Infinity	S	ZVLP NP VP PP SBAR yyDOT
+Infinity	PREDP	SQ
+Infinity	S	INTJ yyCM VP NP yyCM SBAR yyDOT
+Infinity	S	PP VP NP yyCM SBAR yyDOT
+Infinity	VP	VB NP VP
+Infinity	S	PP yyCM PP yyCM VP PP NP yyDOT
+Infinity	NP	MOD RBR NP
+Infinity	NP	NP yyCM CC NP
+Infinity	NP	NP PP VP
+Infinity	S	NP yyCM PP yyCM VP PP PP
+Infinity	S	PP yyCM ADVP VP NP VP
+Infinity	S	PP yyCM VP NP VP yyCM NP yyDOT
+Infinity	S	PP PRN VP NP PP yyCM PP
+Infinity	PP	IN NN POS NN
+Infinity	S	NP yyCM ADVP VP PP yyDOT
+Infinity	S	NP
+Infinity	CDP	CD CC CD
+Infinity	S	ADJP VP NP PP yyDOT
+Infinity	S	ADVP VP NP PP yyDOT
+Infinity	INTJ	ADJP
+Infinity	S	PREDP ADVP PP
+Infinity	NP	NP NP PRN PP
+Infinity	ADVP	CC ADVP
+Infinity	S	NP VP VP yyCM SBAR
+Infinity	S	PP yyCM VP NP NP PP yyCM SBAR yyDOT
+Infinity	NP	NP ADJP ADJP ADVP yyCM SBAR
+Infinity	NP	NNT NNPP
+Infinity	NP	NP ADJP PP
+Infinity	S	SBAR VP yyDOT
+Infinity	S	ADVP NP ADVP VP NP
+Infinity	SBAR	REL PP
+Infinity	FRAG	NP PRN
+Infinity	ADJP	NP CC ADJP
+Infinity	ADVP	CC RB RB
+Infinity	S	PP VP NP NP NP yyDOT
+Infinity	CDTP	CDT CDT
+Infinity	SQ	NP VP PP SBAR
+Infinity	S	SBAR yyCM NP VP SBAR
+Infinity	S	PP VP NP ADVP PP
+Infinity	S	NP VP PRN SBAR yyDOT
+Infinity	S	NP VP NP PP yyDOT
+Infinity	S	NP VP NP PP PP yyCM PP
+Infinity	NP	NP ADJP VP
+Infinity	S	NP ADVP VP PP yyCLN VP yyDOT
+Infinity	NP	AT PP
+Infinity	FRAG	CC SQ yyDOT
+Infinity	S	S CC S CC S CC S yyCM CC S
+Infinity	S	ADVP AUX PREDP PP
+Infinity	NNPP	yyQUOT NNPP yyQUOT
+Infinity	S	VP VP yyCM SBAR
+Infinity	S	SBAR yyCM NP PREDP VP yyDOT
+Infinity	INP	MOD yyDASH IN yyDASH NNT
+Infinity	S	VP NP yyCM INTJ yyCM SBAR
+Infinity	S	PREDP ADVP NP
+Infinity	NP	NP VP
+Infinity	S	NP VP ADVP PP PP
+Infinity	ADVP	IN JJ
+Infinity	S	SBAR yyCM VP NP yyCM PP
+Infinity	SQ	ADVP VP SBAR
+Infinity	NP	NN NNP
+Infinity	PRN	yyCM VP yyCM
+Infinity	S	VP yyCM INTJ yyCM NP yyDOT
+Infinity	S	NP VP NP PP yyCM NP yyDOT
+Infinity	S	PREDP yyCM SBAR yyDOT
+Infinity	S	ADVP PREDP VP
+Infinity	CDP	CDP CD
+Infinity	S	PP AUX VP ADVP VP yyDOT
+Infinity	PP	IN yyDASH IN VP
+Infinity	S	ADVP NP VP VP
+Infinity	S	SQ FRAG
+Infinity	S	NP VP PRN VP yyDOT
+Infinity	PP	PP yyCLN PP
+Infinity	PP	POS SBAR
+Infinity	S	S CC S yyCM S yyCM CC FRAG yyDOT
+Infinity	S	S CC S yyCM S ADVP
+Infinity	CDP	CD CD
+Infinity	S	VP AUX VP NP yyCM PP
+Infinity	ADJP	ADJP CC ADJP CC ADJP
+Infinity	S	NP ADVP VP ADVP NP PP
+Infinity	S	S yyCLN S yyCM S yyCM CC S yyDOT
+Infinity	NP	AT NP
+Infinity	PREDP	PP
+Infinity	SBAR	SBAR SBAR
+Infinity	S	PP NP ADVP VP yyDOT
+Infinity	NP	NP PP PP NP
+Infinity	S	PP yyCM PREDP NP yyDOT
+Infinity	NP	NP ADJP PP SBAR
+Infinity	S	ADVP yyCM VP NP VP yyDOT
+Infinity	S	S yyCM CC CC yyCM S yyDOT
+Infinity	S	PP yyCM VP NP VP
+Infinity	S	NP yyCM VP INTJ PP yyDOT
+Infinity	PRN	yyLRB FRAG
+Infinity	VP	VB NP PP
+Infinity	S	PP NP VP NP yyDOT
+Infinity	S	VP PRN NP
+Infinity	VP	VB NP CC ADVP CC PP
+Infinity	S	NP yyCM VP INTJ VP yyDOT
+Infinity	S	PP NP yyCM INTJ yyCM PREDP
+Infinity	S	VP ADVP NP PP yyCM PP yyDOT
+Infinity	S	NP INTJ VP
+Infinity	S	PP VP ADVP SBAR yyDOT
+Infinity	S	PP VP PP yyDOT
+Infinity	FRAGQ	CC VP yyQM
+Infinity	S	NP yyQUOT VP PP yyDOT
+Infinity	NP	NP CC NP CC NP CC NP
+Infinity	NP	MOD MOD NP
+Infinity	S	PP AUX NP PREDP
+Infinity	S	NP PREDP PRN
+Infinity	PRN	yyCM INTJ ADJP yyCM
+Infinity	S	NP ADVP ADVP VP PP ADVP yyDOT
+Infinity	S	NP VP ADVP PP VP yyDOT
+Infinity	S	VP ADVP NP yyCM PP
+Infinity	S	NP ADVP AUX VP SBAR yyDOT
+Infinity	S	NP yyCM INTJ yyCM ADVP VP ADVP
+Infinity	S	NP VP ADVP SBAR
+Infinity	S	VP ADVP SBAR
+Infinity	NP	NP ADVP PP
+Infinity	S	S CC S yyDOT
+Infinity	S	PP VP NP yyCLN FRAG
+Infinity	PP	IN S
+Infinity	NP	NP ADJP yyCM SBAR yyCM SBAR
+Infinity	FRAG	CC SQ yyQM
+Infinity	PP	IN H NN
+Infinity	S	COM VP PP
+Infinity	S	AUX NP PREDP PP
+Infinity	VP	VB NP NP
+Infinity	S	VP
+Infinity	SBAR	DT COM S
+Infinity	S	S yyCM CC yyCM S yyDOT
+Infinity	ADJX	JJ JJ
+Infinity	S	PP yyCM ADVP VP NP NP
+Infinity	S	PP yyCM SBAR yyCM VP PRN NP
+Infinity	S	ADVP ADVP AUX PREDP yyCM PP
+Infinity	S	PP VP ADVP PP NP yyDOT
+Infinity	S	PP VP ADVP NP PP
+Infinity	S	SBAR NP PREDP
+Infinity	SQ	SQ yyCLN SQ yyCM SQ yyCM SQ CC SQ
+Infinity	S	VB
+Infinity	SBAR	SBAR yyCM CC SBAR
+Infinity	S	NP yyQUOT VP PP
+Infinity	S	S yyCM SBAR
+Infinity	S	NP VP INTJ NP
+Infinity	S	NP PREDP yyCM CC MOD VB VB IN NNT NNT NN CC H NN POS H NN IN DT NNT H NN IN H NN yyLRB IN H NN IN NNT NNT NNT NNT H NN H JJ IN PRP H JJ IN NNT NN H JJ yyRRB
+Infinity	S	INTJ yyCM SBAR NP VP NP yyDOT
+Infinity	S	FRAG PP ADVP VP PP yyDOT
+Infinity	S	PP ADVP VP ADVP SBAR yyDOT
+Infinity	ADVP	IN DT PRP
+Infinity	S	ADVP AUX VP PP ADVP yyDOT
+Infinity	S	PP VP NP yyCM ADJP
+Infinity	VP	PP VB PP
+Infinity	S	NP VP PP yyCM ADVP yyCM PP
+Infinity	S	PP yyCM VP NP PP VP yyDOT
+Infinity	NP	NP ADJP NP PP
+Infinity	S	INTJ NP VP PP PP
+Infinity	SBAR	ADVP SBAR
+Infinity	NP	NP yyCM NP yyCM NP NP yyCM NP yyCM NP CC NP
+Infinity	S	PP yyCM INTJ yyCM VP NP PP yyDOT
+Infinity	VP	VB NP ZVLP yyCM PP
+Infinity	S	NP ADVP VP PP yyCM PP
+Infinity	SBAR	yyCLN S
+Infinity	S	PP yyCM PP yyCM VP NP ADVP
+Infinity	ADVP	CC RBR
+Infinity	VP	VB ADJP yyCM SBAR
+Infinity	S	NP yyCM ADVP VP NP
+Infinity	S	VP PP PP VP yyCM PP
+Infinity	S	ADVP NP VP PP
+Infinity	S	NP AUX PREDP SBAR
+Infinity	S	PP NP VP SBAR yyDOT
+Infinity	S	PP yyCM ADVP VP PP CC VP
+Infinity	SQBAR	HAM S
+Infinity	NP	NP ADJP NP
+Infinity	S	VP PP yyCM NP NP
+Infinity	S	PP PRN NP ADVP VP PP PP yyDOT
+Infinity	S	PP NP AUX PREDP
+Infinity	S	VP NP VP ADVP
+Infinity	NP	NP NP
+Infinity	S	INTJ yyCM NP VP VP yyDOT
+Infinity	S	PP VP NP ADVP VP
+Infinity	S	ADVP PREDP NP
+Infinity	S	NP AUX PREDP yyCM PP yyDOT
+Infinity	S	NP PP PREDP yyDOT
+Infinity	S	INTJ yyCM INTJ yyCM VP ADVP NP SBAR yyDOT
+Infinity	S	NP ADVP PREDP yyCM PP yyDOT
+Infinity	FRAGQ	ADJP yyQM
+Infinity	S	PP VP
+Infinity	FRAG	ADVP PP yyDOT
+Infinity	S	INTJ NP ADVP VP VP
+Infinity	SBAR	NP VP NP
+Infinity	PP	IN RB PRP
+Infinity	S	NP VP PP PRN
+Infinity	S	PP yyCM INTJ yyCM NP VP PP
+Infinity	S	NP yyCM VP SBAR yyDOT
+Infinity	PRN	NP yyCM
+Infinity	S	ADVP NP VP NP
+Infinity	S	PP VP VP NP yyDOT
+Infinity	INP	IN yyDASH NNT
+Infinity	S	INTJ VP
+Infinity	S	NP AUX NP PREDP yyCLN NP yyDOT
+Infinity	NNPP	NP ADJP ADJP
+Infinity	S	VP ADVP VP PP
+Infinity	NP	NNT NP SBAR
+Infinity	S	PP yyCM VP NP NP
+Infinity	S	PP PP
+Infinity	NP	CD CC NN
+Infinity	SQBAR	yyCLN S
+Infinity	S	NP VP ADVP PP PP yyCM ADVP
+Infinity	PRN	yyLRB INTJ PP yyRRB
+Infinity	S	VP NP yyDOT
+Infinity	S	PP yyCM NP VP PP yyCM PP
+Infinity	S	INTJ yyCM NP ADVP VP PP PP
+Infinity	S	SBAR yyCM AUX NP VP VP
+Infinity	S	PP ADVP VP AUX VP
+Infinity	S	NP AUX PP PREDP
+Infinity	S	NP INTJ VP PP PP
+Infinity	S	PP NP VP PP NP PP yyDOT
+Infinity	S	SQ INTJ yyEXCL S yyEXCL S yyDOT
+Infinity	NP	PRN CC NP
+Infinity	PRN	yyCM ADJP
+Infinity	S	NP VP yyCM INTJ yyCM PP
+Infinity	S	PP yyCM ADVP PREDP
+Infinity	PREDP	PRP NP
+Infinity	PP	RB IN VP
+Infinity	S	NP VP ADVP yyCM PP yyDOT
+Infinity	NP	NP PP yyCM PP
+Infinity	SBAR	CC IN PRP S
+Infinity	S	PP ADVP VP NP yyDOT
+Infinity	S	NP VP VP
+Infinity	ADJP	ADJP yyCM ADJP CC ADJP
+Infinity	ADVP	ADVP NP
+Infinity	S	ADVP yyCM PP yyCM VP NP NP yyDOT
+Infinity	S	NP VP SQ
+Infinity	S	PP yyCM VP NP PP
+Infinity	ADJP	ADJP RBR
+Infinity	NP	IN NP
+Infinity	S	NP VP SBAR yyCM CC NP yyDOT
+Infinity	S	NP PP VP VP yyDOT
+Infinity	S	ZVL NP VP ADVP SBAR yyDOT
+Infinity	S	NP PREDP yyCM SBAR yyDOT
+Infinity	S	NP NP PP
+Infinity	S	INTJ yyCM NP VP PP yyDOT
+Infinity	ADVP	MOD MOD ADVP
+Infinity	S	VP yyQUOT PP
+Infinity	S	VP PP NP PRN
+Infinity	S	S yyCM yyCM CC S yyDOT
+Infinity	VP	VP yyCM CC MOD VP
+Infinity	S	S CC FRAG
+Infinity	S	NP ADVP VP NP yyDOT
+Infinity	S	ADVP NP PREDP SBAR
+Infinity	S	NP VP yyCM INTJ yyCM NP
+Infinity	S	SBAR AUX NP PREDP yyDOT
+Infinity	S	VP NP PP NP
+Infinity	PP	PP CC PP yyCM CC PP
+Infinity	ADJP	H JJ
+Infinity	S	NP yyCM VP NP PP
+Infinity	S	PP VP PRN SBAR yyDOT
+Infinity	S	SBAR NP VP VP yyDOT
+Infinity	NP	NP yyCM yyQUOT NP CC NP
+Infinity	ADVP	ADVP PP
+Infinity	CDP	CD NP
+Infinity	S	PP ADVP NP VP ADVP PP yyDOT
+Infinity	S	NP VP ADJP PP yyDOT
+Infinity	S	NP yyCM ADVP VP PP
+Infinity	S	ADVP VP AUX VP
+Infinity	S	PP VP NP SQBAR yyDOT
+Infinity	SQ	HAM S yyQM
+Infinity	S	ADVP PP VP NP PP
+Infinity	SQ	PREDP ADVP NP
+Infinity	S	NP NP NP
+Infinity	S	PREDP VP
+Infinity	S	PP VP PP SBAR
+Infinity	ADVP	RBR IN ADVP
+Infinity	S	ADVP NP yyDOT
+Infinity	NP	PRP
+Infinity	NP	PRN
+Infinity	S	NP VP yyCM SBAR yyDOT
+Infinity	S	VP NP PP PP
+Infinity	S	SBAR yyCM NP VP VP
+Infinity	SQ	ADVP NP VP PP PP
+Infinity	S	NP ADVP VP ADVP PP yyCM PP yyDOT
+Infinity	S	NP yyCM VP NP NP
+Infinity	S	ADVP VP PP PP NP
+Infinity	S	NP VP PP SBAR yyDOT
+Infinity	S	PP VP VP NP PP
+Infinity	S	NP VP VP ZVLP yyCM PP yyDOT
+Infinity	S	NP VP NP PRN SQBAR
+Infinity	NP	NP ADJP
+Infinity	NX	NNT NN
+Infinity	S	PP NP VP PP PP
+Infinity	S	VP yyCM INTJ yyCM PP
+Infinity	CDP	CD CC NN
+Infinity	S	ADVP yyCM SBAR yyCM AUX PREDP
+Infinity	S	PP NP
+Infinity	S	SBAR yyCM VP NP PP yyDOT
+Infinity	NNPP	NN NNP
+Infinity	S	ADVP NP yyCM PREDP yyDOT
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP CC NP CC NP
+Infinity	SQ	ADVP NP ADVP VP NP NP
+Infinity	S	NP yyCM VP
+Infinity	S	PP NP ADVP PREDP ADVP PP
+Infinity	S	NP ADVP ADVP VP NP PP
+Infinity	VP	VB ADVP PP PP
+Infinity	S	ADVP yyCM SBAR NP PREDP
+Infinity	S	INTJ NP ADVP VP NP
+Infinity	NP	NP yyQUOT POS NP
+Infinity	FRAG	PP PP PP
+Infinity	S	NP yyCM ADVP VP VP yyDOT
+Infinity	S	PREDP VP yyCM PP
+Infinity	PP	yyQUOT PP
+Infinity	S	VP INTJ yyCM NP
+Infinity	SQ	NP ADJP VP PP
+Infinity	S	NP VP NP INTJ yyDOT
+Infinity	NP	NP yyQUOT yyCM SBAR
+Infinity	NP	NP PP yyCM VP
+Infinity	S	PP NP VP VP yyCM PP
+Infinity	S	NP VP PP ADVP NP yyDOT
+Infinity	INTJ	ADVP
+Infinity	S	PP NP VP PP NP
+Infinity	S	NP VP PP yyCM PP yyCM PP yyDOT
+Infinity	SBAR	COM S
+Infinity	FRAG	CC S yyQM
+Infinity	S	INTJ ADVP VP NP NP
+Infinity	PREDP	ADJP
+Infinity	S	INTJ yyCM PP yyCM INTJ yyCM VP NP VP yyDOT
+Infinity	S	PP VP PP NP PP yyCM ADVP
+Infinity	NP	NP PP PP
+Infinity	VP	MOD MOD VP
+Infinity	S	AUX VP
+Infinity	S	S CC S CC FRAG yyDOT
+Infinity	PP	PP yyCM PP yyCM CC PP
+Infinity	S	ZVLP NP VP PP yyCM PP yyDOT
+Infinity	S	SBAR yyCM VP PP SQBAR yyDOT
+Infinity	S	S CC yyDASH S
+Infinity	S	PREDP SBAR yyDOT
+Infinity	PRN	yyLRB PP NP yyRRB
+Infinity	S	SBAR yyCM ADVP COM PP VP NP yyDOT
+Infinity	NP	NP ADJP PRN PP
+Infinity	CDP	CDT IN CD
+Infinity	NP	NP yyCM NP yyCM NP CC NP
+Infinity	S	SBAR yyCM AUX NP VP PP PP
+Infinity	S	AUX PREDP PRN
+Infinity	S	AUX PREDP yyCM SBAR
+Infinity	S	INTJ yyCM NP PP yyCM VP VP
+Infinity	S	NP NP VP VP
+Infinity	NP	NP yyCM PP yyCM NP
+Infinity	S	NP ADVP VP PP ADVP yyCM PP
+Infinity	PP	PP yyCM NP
+Infinity	S	PP PRN ADVP PREDP SBAR yyDOT
+Infinity	NP	NP PP yyCM NP ADJP PP
+Infinity	PREDP	yyCLN NP
+Infinity	S	PP AUX PREDP NP yyDOT
+Infinity	INTJ	yyELPS
+Infinity	S	NP yyCM PREDP yyCM SBAR yyDOT
+Infinity	SBAR	S yyCM
+Infinity	FRAGQ	INTJ yyCM CC NP yyQM
+Infinity	S	AUX ADVP PREDP
+Infinity	PP	ADVP PP
+Infinity	ADVP	IN NN CD
+Infinity	S	S yyLRB yyRRB CC S yyDOT
+Infinity	S	ADVP NP VP SBAR
+Infinity	INTJ	yyCM ADVP yyCM
+Infinity	S	VP PP NP PP PP
+Infinity	S	VP VP yyCM SBAR yyDOT
+Infinity	S	NP VP NP PP SBAR
+Infinity	S	NP PREDP VP
+Infinity	S	VP ADJP PP
+Infinity	PRN	yyCM PP PP
+Infinity	S	INTJ yyCM PP ADVP ADVP VP PP NP yyDOT
+Infinity	S	VP PP VP yyCM FRAG
+Infinity	S	VP ADVP PRN
+Infinity	S	ADVP VP NP PP yyCLN NP yyDOT
+Infinity	S	PP yyCM VP ADVP NP PP
+Infinity	S	PP ADVP AUX VP PP VP
+Infinity	S	VP NP PP VP
+Infinity	NP	NP yyCM PP yyCM PP
+Infinity	NP	NP PP NP
+Infinity	PP	PP yyCM PP
+Infinity	S	SBAR VP NP SBAR yyDOT
+Infinity	S	ADVP VP PP NP SBAR yyDOT
+Infinity	S	SBAR yyCM VP ADVP PP yyDOT
+Infinity	NP	ADJP ADJP
+Infinity	SQ	PREDP INTJ AUX NP
+Infinity	S	PP yyCM VP NP yyDOT
+Infinity	S	PP PRN ADVP VP NP VP yyDOT
+Infinity	S	ADVP NP VP NP NP
+Infinity	S	INTJ ADVP VP NP VP
+Infinity	ADVP	CD CC RB
+Infinity	S	SBAR yyCM INTJ PP VP PP
+Infinity	FRAG	CC SBAR
+Infinity	S	NP VP ADVP ADVP PRN PP
+Infinity	S	ZVLP NP VP SBAR yyDOT
+Infinity	S	PP yyCM SBAR yyCM VP PP NP NP yyDOT
+Infinity	S	NP VP PP NP PP yyCM SBAR yyDOT
+Infinity	S	NP yyQUOT yyCM VP NP PP yyDOT
+Infinity	S	ADVP yyDASH VP VP yyCM PP
+Infinity	S	ADVP yyCM PP yyCM VP NP NP NP PP
+Infinity	S	PP VP NP yyCM NP yyDOT
+Infinity	ADVP	IN RB IN RB
+Infinity	S	PREDP AUX NP
+Infinity	S	NP INTJ AUX PREDP yyCM PP yyDOT
+Infinity	S	NP ADVP ADVP VP PP yyDOT
+Infinity	S	NP VP VP yyCM SBAR yyDOT
+Infinity	S	SBAR yyCM NP VP NP
+Infinity	PRN	PP NP
+Infinity	S	PP AUX VP VP
+Infinity	SQBAR	SQ
+Infinity	SQ	ADVP ADVP VP NP PP PP yyQM
+Infinity	NP	NP yyCM CC ADVP NP
+Infinity	S	ADVP NP VP NP PP
+Infinity	ADJP	MOD MOD ADJP
+Infinity	S	NP VP yyCM SBAR
+Infinity	S	NP VP PP PP PRN yyDOT
+Infinity	NP	NP CC ADVP NP
+Infinity	PRN	yyLRB NP NP yyRRB
+Infinity	ADVP	MOD yyDASH RB
+Infinity	PRN	yyLRB SBAR yyRRB
+Infinity	S	ADVP yyCM PP yyCM NP AUX PREDP yyDOT
+Infinity	S	PP yyCM VP NP NP PP
+Infinity	S	NP PRN VP PP yyDOT
+Infinity	ADVP	CC CC RB
+Infinity	NP	MOD MOD MOD NP
+Infinity	NP	NP ADJP PRN NP
+Infinity	SQ	PP VP PP NP
+Infinity	ADJP	ADJP CC NP
+Infinity	S	FRAG yyEXCL S yyDOT
+Infinity	ADJP	H NN
+Infinity	S	PP VP PP NP yyDOT
+Infinity	NP	NP PP yyCM NP
+Infinity	S	SBAR yyCM NP VP PP
+Infinity	S	ADVP NP VP PP NP yyDOT
+Infinity	VP	VB PP PP NP
+Infinity	SBAR	REL FRAG
+Infinity	S	NP VP PP ADVP
+Infinity	S	NP VP NP PP PP yyDOT
+Infinity	S	INTJ yyCM VP PP NP SBAR yyDOT
+Infinity	S	NP yyCM VP ADVP PP
+Infinity	S	yyQUOT NP VP NP
+Infinity	SBAR	SBAR yyCM INTJ yyCLN SBAR yyCM SBAR
+Infinity	S	INTJ NP ADVP PREDP yyDOT
+Infinity	S	SBAR yyCM VP PP NP yyDOT
+Infinity	S	NP yyCM VP PP NP PP
+Infinity	NP	NP PP SBAR
+Infinity	S	S yyCM CC S yyQM
+Infinity	ADJP	ADJP yyCM PP
+Infinity	ZVLP	ZVL
+Infinity	S	VP PP PP ADVP PP
+Infinity	S	NP VP ADVP ADJP yyDOT
+Infinity	SBAR	CC S
+Infinity	S	VP PP NP ADVP PP yyCM PP
+Infinity	SQBAR	SQBAR yyCM CC SQBAR
+Infinity	S	SQ yyCM CC S
+Infinity	FRAGQ	CC NP yyQM
+Infinity	S	COM S
+Infinity	S	PP ADVP NP VP VP
+Infinity	NP	NP PP yyCM ADJP yyCM ADJP
+Infinity	S	PP PREDP NP yyCM PP yyDOT
+Infinity	S	ZVLP NP VP ADJP PP PP PP yyDOT
+Infinity	S	PP VP NP ADVP
+Infinity	S	S yyCM FRAG
+Infinity	FRAG	VP
+Infinity	VP	VB ADVP yyCM INTJ yyCM NP yyDOT
+Infinity	ADJP	NP PP
+Infinity	ADJP	JJT yyDASH NP
+Infinity	S	VP INTJ VP yyDOT
+Infinity	PP	POS ADVP
+Infinity	S	ADVP AUX PREDP ADVP
+Infinity	NP	NP NP yyCM NP
+Infinity	S	ADVP yyCM PP yyCM VP NP PP yyDOT
+Infinity	NNPP	NN CC NN
+Infinity	S	NP VP ADVP NP yyCM PP yyDOT
+Infinity	S	S yyCM S
+Infinity	S	PP yyCM INTJ yyCM VP PP PP yyDOT
+Infinity	S	NP VP VP yyCM PP yyCM PP yyDOT
+Infinity	S	PP yyCM VP NP SBAR yyDOT
+Infinity	NP	DT SBAR
+Infinity	ADVP	H RB
+Infinity	S	NP PP PREDP
+Infinity	FRAG	yyQUOT NP PRN yyDOT
+Infinity	SQ	NP VP PP PP PP
+Infinity	NP	MOD RBR IN NP
+Infinity	S	PP yyCM VP PP ADVP NP PP
+Infinity	S	ADVP VP NP PP yyCM PP
+Infinity	S	ADVP NP VP ADVP ADJP yyDOT
+Infinity	FRAG	PP NP yyDOT
+Infinity	S	SBAR yyCM VP NP PP PP yyCM PP yyDOT
+Infinity	FRAG	ADVP yyQM
+Infinity	S	VP ADVP NP PP
+Infinity	S	SBAR yyCM ADVP VP VP
+Infinity	S	ADVP VP NP VP
+Infinity	S	NP yyCM VP PP PP yyDOT
+Infinity	S	PP NP ADVP PREDP yyDOT
+Infinity	VP	ADVP ADVP VB
+Infinity	PP	INTJ PP
+Infinity	ADVP	RB MOD JJ
+Infinity	NP	NP NP yyCM PP
+Infinity	S	VP yyCM ADVP SBAR
+Infinity	S	NP VP NP PRN yyDOT
+Infinity	S	SBAR yyCM VP VP
+Infinity	SQ	SQ CC CC SQ yyQM
+Infinity	S	NP VP PP NP yyCM CC PP
+Infinity	S	PP yyCM PP yyCM VP NP VP yyDOT
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP
+Infinity	S	PP yyCM ADVP NP VP VP
+Infinity	S	S PRN S
+Infinity	NNPP	IN H NN
+Infinity	S	FRAG S
+Infinity	S	NP VP ADVP ADVP PP yyDOT
+Infinity	S	ADVP VP NP PP yyCM PP yyDOT
+Infinity	S	NP yyCM VP NP yyDOT
+Infinity	S	NP PREDP NP
+Infinity	S	SBAR yyCM ADVP VP NP
+Infinity	NP	H NN CD CD
+Infinity	S	PP yyCM VP PP NP NP PP yyDOT
+Infinity	S	FRAG VP VP yyDOT
+Infinity	VP	VB NP PP PP
+Infinity	NNPP	IN NNP
+Infinity	NP	PP SBAR
+Infinity	S	NP yyCM AUX PREDP yyCM PP yyDOT
+Infinity	S	NP ADVP PREDP SBAR
+Infinity	S	ADVP VP SBAR yyCM PP
+Infinity	NP	NP yyDASH CD
+Infinity	S	NP VP VP yyCM PP yyDOT
+Infinity	S	NP yyCM SBAR yyCM VP PP NP
+Infinity	S	NP VP yyCM PP yyDOT
+Infinity	S	SBAR yyCM VP PP NP yyCM PP yyCM PP yyDOT
+Infinity	S	ADVP ADVP VP NP PRN
+Infinity	VP	VB ADJP PP
+Infinity	S	ADVP VP SBAR yyDOT
+Infinity	ADJP	ADJP CC ADJP
+Infinity	NX	NN MOD
+Infinity	S	NP PREDP PP
+Infinity	FRAG	CC S yyDOT
+Infinity	S	NP ADVP VP PP yyDOT
+Infinity	VP	PP VB PP VP
+Infinity	S	SBAR yyCM ADVP VP PP
+Infinity	PREDP	AGR SBAR
+Infinity	S	NP yyCM VP NP ADVP PP yyDOT
+Infinity	S	S CC S yyQUOT yyDOT
+Infinity	NP	NP yyCM SBAR
+Infinity	ADJP	INTJ ADJP
+Infinity	S	NP VP PP yyCM PP yyCM SBAR yyDOT
+Infinity	SQ	PREDP NP yyCM FRAGQ yyQM
+Infinity	S	ADVP NP AUX VP PP yyDOT
+Infinity	S	NP VP PP yyCM PP yyCM PP yyCM PP yyDOT
+Infinity	ADVP	RB PRP MOD COM
+Infinity	S	VP PP PP PRN
+Infinity	S	NP VP VP PP PP NP yyDOT
+Infinity	SBAR	AGR VP
+Infinity	S	INTJ SBAR yyCM VP SBAR
+Infinity	S	NP ADVP VP yyCM ADVP yyCM PP yyDOT
+Infinity	NP	NP ADVP
+Infinity	NP	H ZVLP NNP
+Infinity	NP	NP yyCM NP yyCM NP ADVP
+Infinity	FRAG	CC PP yyDOT
+Infinity	S	PREDP VP PP
+Infinity	S	S yyCM S yyCM S yyDOT
+Infinity	S	NP PRN VP NP
+Infinity	S	PP yyCM NP yyCM INTJ yyCM VP yyDOT
+Infinity	S	PP ADVP NP VP NP
+Infinity	S	NP PRN yyQUOT ADVP VP VP yyCM SBAR yyQUOT yyDOT
+Infinity	S	NP AUX VP SBAR yyDOT
+Infinity	S	SBAR VP VP yyDOT
+Infinity	S	NP VP NP
+Infinity	SQ	PP yyCM NP PREDP
+Infinity	S	NP PREDP yyQUOT
+Infinity	S	PP yyCM ADVP ADVP VP NP
+Infinity	S	NP VP NP NP PP
+Infinity	S	INTJ yyCM PP VP SBAR yyDOT
+Infinity	FRAG	PP NP
+Infinity	FRAG	NP
+Infinity	S	INTJ S yyDOT
+Infinity	S	SBAR yyCM NP ADVP VP NP
+Infinity	S	ADVP VP ADJP PP
+Infinity	PP	IN INTJ NP
+Infinity	NP	NP CC ADVP
+Infinity	S	PP yyCM ADVP NP VP VP yyCM PP yyDOT
+Infinity	NP	yyQUOT NP yyQUOT
+Infinity	PP	IN ZVLP NP
+Infinity	VP	VB PP PP PP yyCM PP
+Infinity	S	NP ADVP VP VP SBAR
+Infinity	S	NP VP PP PP NP yyDOT
+Infinity	S	NP yyCM VP PP NP PP yyDOT
+Infinity	S	PP yyCM VP NP PREDP
+Infinity	NP	NP CC NP
+Infinity	S	NP yyCM VP NP PP ZVLP VP yyDOT
+Infinity	S	S yyQUOT
+Infinity	S	yyCM INTJ yyCM NP VP PP SBAR
+Infinity	S	AUX VP PP SBAR
+Infinity	ADVP	RB IN H NN
+Infinity	NP	NNP NP
+Infinity	S	NP ADVP ADVP VP
+Infinity	NP	NP CC PP
+Infinity	PP	IN DT PRP
+Infinity	FRAG	PP
+Infinity	FRAGQ	SBAR yyQM
+Infinity	S	NP AUX PREDP PP
+Infinity	S	NP ADVP VP PP PP PP yyDOT
+Infinity	VP	VP VP
+Infinity	ADJP	ADJP ADJP PP
+Infinity	S	PP yyCM VP VP yyDOT
+Infinity	NP	NP ADJP PP PP NP ADJP yyCM SBAR
+Infinity	S	NP VP ADVP NP PP yyDOT
+Infinity	ADVP	IN NNT NN
+Infinity	S	ADVP ADVP VP PP VP
+Infinity	S	SBAR NP AUX VP PP
+Infinity	S	NP ADVP VP NP VP yyDOT
+Infinity	S	ADVP yyCM PP yyCM VP NP yyDOT
+Infinity	S	PREDP VP yyDOT
+Infinity	S	NP ADVP AUX PREDP INTJ yyDOT
+Infinity	S	INTJ NP VP PP yyCM PP
+Infinity	SQ	ADVP yyCM INTJ yyCM VP NP yyQM
+Infinity	S	PP VP NP ADVP yyDOT
+Infinity	NP	NP ADJP PP ADVP
+Infinity	S	SBAR yyCM VP NP VP ADVP PP yyDOT
+Infinity	S	INTJ PP NP AUX PREDP
+Infinity	PP	MOD RB PP
+Infinity	ADJX	NNP yyDASH NNP yyDASH JJ
+Infinity	S	AUX INTJ PREDP
+Infinity	S	PP yyCM VP PP NP yyDOT
+Infinity	S	ADVP VP PP yyCM PP yyDOT
+Infinity	NP	NP CDT
+Infinity	NNPP	NN yyDASH JJ yyDASH PRP
+Infinity	S	NP VP PP PP yyCM PP yyCM PP yyDOT
+Infinity	S	SBAR yyCM VP NP PP PP
+Infinity	S	NP VP ADVP SBAR yyDOT
+Infinity	VP	VP PP
+Infinity	SQ	ADVP NP VP PP yyQM
+Infinity	S	INTJ yyCM VP NP PP NP PP yyDOT
+Infinity	S	ADVP INTJ NP VP PP yyDOT
+Infinity	S	INTJ yyCM VP PP NP yyDOT
+Infinity	S	NP yyCLN VP ADVP SBAR yyDOT
+Infinity	FRAG	yyQUOT FRAG yyQUOT
+Infinity	S	ADVP PP VP NP PP VP
+Infinity	S	NP VP PP ADVP VP
+Infinity	S	PP VP NP yyCM PP yyCM PP yyDOT
+Infinity	S	NP ADVP VP VP SBAR yyDOT
+Infinity	S	PP yyCM NP VP PP yyCM SBAR yyDOT
+Infinity	S	NP VP PP
+Infinity	SQ	INTJ yyCM NP ADVP ADVP AUX VP NP PP ADVP yyQM
+Infinity	NP	PRP AT PRP
+Infinity	S	INTJ yyCM NP ADVP VP NP ADVP yyDOT
+Infinity	NP	WDT
+Infinity	S	AUX VP PP
+Infinity	S	NP VP yyCM ADVP yyCM PP yyCM NP PP
+Infinity	S	ADVP NP PREDP PP
+Infinity	S	AUX PREDP ADVP
+Infinity	S	INTJ yyCM NP VP NP NP
+Infinity	S	NP yyCM VP PP VP yyDOT
+Infinity	S	SBAR yyCM VP NP SBAR yyDOT
+Infinity	S	VP NP yyCM NP yyCM PP yyDOT
+Infinity	PREDP	AGR INTJ NP
+Infinity	VP	VP NP
+Infinity	S	NP VP SBAR yyCM INTJ PP
+Infinity	S	NP ADVP VP PP PP
+Infinity	S	ADVP PP ADVP VP yyDOT
+Infinity	S	S CC S ADVP
+Infinity	ADVP	QW yyDASH VB yyDASH QW
+Infinity	S	NNP PP AUX VP NP VP yyCLN PP FRAG yyDOT
+Infinity	S	NP VP NP ADVP SBAR
+Infinity	S	NP VP AUX VP PP
+Infinity	PP	IN yyCLN NP
+Infinity	S	PREDP INTJ NP yyDOT
+Infinity	PREDP	NP SBAR
+Infinity	S	INTJ yyCM VP NP
+Infinity	NP	DT JJ
+Infinity	S	ADVP ADVP VP PP PP
+Infinity	S	S yyCM S yyCM S yyCM S
+Infinity	SBAR	SBAR CC SBAR
+Infinity	S	PP ADVP VP NP PP NP
+Infinity	S	PP PRN VP PP yyDOT
+Infinity	S	NP yyCM VP ADVP NP PP PP PP
+Infinity	S	PP yyCM ADVP VP PP NP NP yyDOT
+Infinity	SBAR	yyQUOT SBAR
+Infinity	S	PP yyCM INTJ yyCM VP NP PP
+Infinity	SQ	NP AUX VP PP yyCM SBAR yyDOT
+Infinity	S	NP yyCM VP PP PP yyCM PP yyDOT
+Infinity	S	PP yyCM ADVP NP yyCM INTJ yyCM PREDP yyDOT
+Infinity	NP	MOD PP
+Infinity	SQ	ADVP AUX NP VP PP
+Infinity	ADVP	DT yyDASH RB
+Infinity	PRN	yyCM INTJ yyCM
+Infinity	NP	NP ADJP ADJP yyCM PP
+Infinity	NP	yyQUOT NNT yyQUOT NP
+Infinity	PP	CC IN SBAR
+Infinity	PRN	yyLRB SBAR
+Infinity	S	NP ADVP VP VP yyDOT
+Infinity	S	NP ADVP VP PP NP
+Infinity	PRN	INTJ NP
+Infinity	PP	PP yyCM PP yyCM PP yyCM PP yyCM PP yyCM PP CC PP
+Infinity	S	PP NP ADVP PREDP
+Infinity	INTJ	yyCM PP yyCM
+Infinity	NP	NP ADJP PP PRN
+Infinity	S	SBAR VP NP SBAR
+Infinity	S	ADVP PP VP VP yyDOT
+Infinity	S	PP yyCM VP PP
+Infinity	ADVP	ADJP RBR
+Infinity	S	INTJ NP AUX PREDP
+Infinity	ADVP	RB IN RB
+Infinity	S	INTJ yyCM ADVP NP VP VP yyDOT
+Infinity	S	ZVL NP VP PP VP PP
+Infinity	S	FRAG yyCM CC S yyDOT
+Infinity	S	ADVP PP VP AUX VP
+Infinity	INP	IN NN
+Infinity	S	NP NP ADVP VP yyCM INTJ
+Infinity	S	ADVP ADVP VP PP NP
+Infinity	S	SBAR yyCM VP AUX VP yyDOT
+Infinity	S	VP PRN ADVP yyCM PP
+Infinity	S	S yyQUOT CC S
+Infinity	NP	NP yyCM NP yyCM NP yyCM CC NP
+Infinity	NP	H yyDASH CD
+Infinity	NP	MOD NP
+Infinity	S	PP VP NP NP PP yyDOT
+Infinity	S	ADVP VP NP PP PP yyDOT
+Infinity	S	VP ADVP NP NP PP
+Infinity	PP	PP yyCM PP yyCM PP yyCM PP CC PP
+Infinity	S	ADVP NP PREDP CC SBAR yyDOT
+Infinity	S	NP AUX VP ADVP
+Infinity	S	NP VP PP SBAR
+Infinity	S	NP VP NP PP yyCM PP
+Infinity	PP	PP yyCM PP yyCM PP yyCM PP yyCM PP
+Infinity	S	NP PP AUX PREDP PRN
+Infinity	NP	NP ADJP ADJP NP yyCM SBAR
+Infinity	S	PP ADVP VP SBAR
+Infinity	PP	POS ADJP
+Infinity	S	NP SBAR
+Infinity	NP	NP ADJP ADJP PP
+Infinity	S	PP yyCM VP NP
+Infinity	S	NP VP VP PP yyCM PP
+Infinity	S	PP ADVP AUX VP VP
+Infinity	FRAG	INTJ yyDOT
+Infinity	S	ADVP VP NP yyCM SBAR
+Infinity	S	NP VP PP yyCM PP PP
+Infinity	S	SBAR yyQUOT yyCM VP NP
+Infinity	PP	NNT NP
+Infinity	ADJP	ADJP PP PP
+Infinity	S	SBAR yyCM NP VP NP PP yyDOT
+Infinity	S	PP yyCM VP NP yyCM INTJ yyCM NP yyDOT
+Infinity	FRAG	CC CC S yyDOT
+Infinity	SQ	NP ADVP
+Infinity	S	SBAR VP NP PP SQ
+Infinity	PP	PP yyCM PP yyCM PP
+Infinity	S	NP ADVP PRN PREDP
+Infinity	S	ADVP VP NP PP yyCM SBAR yyDOT
+Infinity	INTJ	CC PP
+Infinity	S	ADVP VP NP VP yyDOT
+Infinity	NP	NP ADJP ADJP NP
+Infinity	FRAG	CC ADVP
+Infinity	S	PP yyCM VP NP yyCM PP yyCM PP PP yyDOT
+Infinity	SQ	NP VP VP
+Infinity	SQ	ADVP NP VP VP
+Infinity	S	NP ADVP VP VP PRN yyDOT
+Infinity	NP	NP ADJP yyCM ADJP yyCM PP
+Infinity	S	PP VP PP NP PP yyDOT
+Infinity	VP	VP yyCM PP VP yyCM CC INTJ VP
+Infinity	S	S CC S CC CC S yyDOT
+Infinity	S	PP AUX VP PP yyDOT
+Infinity	ADJP	yyQUOT ADJP yyQUOT
+Infinity	S	NP yyCM PP yyCM VP VP
+Infinity	VP	VP yyCM VP CC PP
+Infinity	INP	IN IN
+Infinity	SBAR	REL SBAR
+Infinity	S	ADVP ADVP VP VP yyDOT
+Infinity	S	AUX VP NP PP
+Infinity	NP	NP yyCM NP CC NP yyCM CC NP
+Infinity	SQ	QW VP NP yyQM
+Infinity	S	NP VP yyCM INTJ yyCM SBAR yyDOT
+Infinity	PP	PP yyCM PP CC yyCM INTJ yyCM PP
+Infinity	S	PP yyCM VP NP ADVP SBAR yyDOT
+Infinity	SQ	ADVP VP VP yyQM
+Infinity	PP	PP MOD
+Infinity	S	PP NP VP SBAR
+Infinity	VP	VB ADVP PP yyCM PP
+Infinity	S	SBAR yyCM NP VP yyDOT
+Infinity	S	PP yyCM PP VP NP yyDOT
+Infinity	S	NP VP PP PP yyDOT
+Infinity	S	NP VP ADVP PP NP yyDOT
+Infinity	S	S yyCM S yyCM S yyCM S CC S
+Infinity	S	PP yyCM VP ADVP NP yyDOT
+Infinity	ADJP	ADJP MOD RBR
+Infinity	NX	yyQUOT NX yyQUOT
+Infinity	NP	NP ADJP yyCM CC PP
+Infinity	PREDP	NP
+Infinity	INP	IN CC IN
+Infinity	S	PP ADVP VP VP
+Infinity	S	VP NP PP yyCM NP PRN yyDOT
+Infinity	S	ADVP VP NP PP VP PP yyDOT
+Infinity	S	PREDP VP SBAR
+Infinity	S	NP yyCM PP yyCM VP NP yyDOT
+Infinity	S	PP yyCM VP PP yyCM PP
+Infinity	S	S yyCM S yyCM S yyCM CC S yyDOT
+Infinity	NP	NP PRN yyCM
+Infinity	NP	NP yyCM INTJ
+Infinity	NP	NP yyLRB yyRRB yyCM SBAR
+Infinity	FRAG	ZVLP PP yyCM PP
+Infinity	S	PP NP AUX INTJ PREDP
+Infinity	S	S yyCM S yyDOT
+Infinity	NNPP	NN
+Infinity	S	ADVP NP VP VP yyDOT
+Infinity	SBAR	DT MOD S
+Infinity	S	NP yyCM VP PP PP SBAR yyDOT
+Infinity	S	SBAR VP NP PP PP
+Infinity	ADJP	ADJP yyCM ADJP yyCM CC ADJP
+Infinity	NP	NP ADJP IN NP
+Infinity	S	NP yyCM VP PP PP yyCM SBAR
+Infinity	S	INTJ yyCM NP VP NP PP PP yyDOT
+Infinity	S	SBAR yyCM VP PP
+Infinity	S	AUX NP PREDP yyCM VP
+Infinity	S	NP PREDP yyCM SBAR
+Infinity	NP	NP PP PP VP
+Infinity	S	PP NP VP SBAR yyQM
+Infinity	NP	NP yyCM NP yyCM PP yyCM SBAR
+Infinity	S	S CC S CC S
+Infinity	S	NP VP NP PP yyCM SBAR yyDOT
+Infinity	S	SBAR yyCM ADVP VP PP NP
+Infinity	S	NP ADVP ADVP VP VP yyDOT
+Infinity	S	NP ADVP AUX ADVP PREDP
+Infinity	S	PP ADVP AUX VP NP
+Infinity	ADVP	IN RB
+Infinity	SQ	NP VP PP
+Infinity	PRN	NNP yyRRB
+Infinity	S	NP PRN ADVP VP PP yyDOT
+Infinity	PP	IN DT H RBR
+Infinity	S	NP VP ADVP PP PRN yyDOT
+Infinity	S	NP yyCLN PREDP yyDOT
+Infinity	NP	NP ADJP yyCM ADJP yyCM PP yyCM PP
+Infinity	NP	NP ADJP ADJP PP PP PP yyCM PP
+Infinity	S	PP yyCM NP AUX PREDP yyDOT
+Infinity	ADJP	ADJP yyQUOT
+Infinity	S	yyCLN S
+Infinity	SBAR	SQBAR CC SBAR
+Infinity	S	INTJ yyCM PP NP VP NP
+Infinity	NP	DT NP
+Infinity	S	SBAR yyCM VP NP
+Infinity	S	NP VP PP ADVP yyCM VP yyDOT
+Infinity	S	VP PP NP yyCM SBAR
+Infinity	VP	VB NP yyCM PP
+Infinity	FRAG	ADVP VP yyCM SBAR
+Infinity	S	VP SBAR yyDOT
+Infinity	S	PP VP NP PP PRN yyDOT
+Infinity	S	PP VP NP NP yyCM PP yyDOT
+Infinity	S	SBAR yyCM VP PP yyDOT
+Infinity	NP	POS NP
+Infinity	S	ADVP VP VP PP yyDOT
+Infinity	NP	NP yyCM CC NP yyCM NP
+Infinity	FRAG	INTJ yyCLN NP PP yyDOT
+Infinity	S	NP yyCM VP yyCM INTJ
+Infinity	PRN	yyLRB VP yyRRB
+Infinity	NP	NP ADJP ADJP VP
+Infinity	S	NP SBAR yyDOT
+Infinity	S	SBAR PRN VP PP NP yyDOT
+Infinity	S	VP yyCM INTJ yyCM NP PP
+Infinity	SQ	NP VP NP
+Infinity	S	NP VP VP PRN
+Infinity	NP	NP yyQUOT SBAR
+Infinity	S	S PRN SQ yyDOT
+Infinity	S	S yyDOT
+Infinity	S	INTJ yyCM VP PP
+Infinity	S	ADVP PP NP VP
+Infinity	S	PP yyCM INTJ yyCM NP VP ADVP PP ADVP yyDOT
+Infinity	NP	NP PP yyCM NP yyCM SBAR
+Infinity	S	NP yyCM PP yyCM VP NP
+Infinity	S	S SQ yyQM
+Infinity	S	VP ADVP PP
+Infinity	CC	yySCLN
+Infinity	S	NP yyCM INTJ yyCM ADVP PREDP yyDOT
+Infinity	S	NP yyCM INTJ yyCM VP VP PP yyDOT
+Infinity	S	PP NP ADVP ADVP VP
+Infinity	S	VP yyCM INTJ VP
+Infinity	NP	NP yyCM ADJP yyCM SBAR yyCM PP yyDOT
+Infinity	S	NP AUX VP yyCM PP
+Infinity	PRN	yyLRB ADVP NP yyRRB
+Infinity	S	NP VP NP yyCM PP yyCLN NP yyDOT
+Infinity	PRN	yyLRB ADJP yyCM S yyRRB
+Infinity	VP	VB PP PP yyCM PP
+Infinity	NP	DT PRP
+Infinity	S	PP yyCM SBAR yyCM VP NP VP
+Infinity	NNPP	NNPP NNP NNP
+Infinity	ADJP	ADJP PRN
+Infinity	PP	IN NP S
+Infinity	PRN	yyCM S yyCM
+Infinity	S	NP VP ADVP yyCM NP yyDOT
+Infinity	PRN	yyCM INTJ yyCM NP
+Infinity	S	VP ADJP ADVP
+Infinity	S	INTJ yyCM VP NP PP yyQM
+Infinity	S	NP VP NP yyQUOT VP
+Infinity	S	SBAR yyCM NP VP
+Infinity	NP	NP PP yyQUOT
+Infinity	S	ADVP ADVP VP NP PP yyDOT
+Infinity	SBAR	yyCLN SQBAR
+Infinity	NP	NP ADJP yyCM INTJ yyCM SBAR
+Infinity	S	SBAR yyCM VP NP ADVP
+Infinity	FRAG	ADVP yyDOT
+Infinity	S	PP VP NP NP PP yyCM PP yyDOT
+Infinity	S	NP PP ADVP
+Infinity	S	SBAR yyCM PREDP
+Infinity	S	NP VP PP PP yyCM SBAR yyDOT
+Infinity	NP	ADJP
+Infinity	S	PP yyCM VP NP PP NP PP yyDOT
+Infinity	S	PP NP PREDP PP
+Infinity	S	NP VP NP NP
+Infinity	S	NP yyCM ADVP VP SBAR yyDOT
+Infinity	PRN	yyCM SBAR
+Infinity	S	SBAR CC ADVP VP PP yyCM NP yyCM PP yyDOT
+Infinity	S	VP ADVP VP yyCM SBAR
+Infinity	S	NP VP SBAR PP yyDOT
+Infinity	ADVP	ADVP yyCM ADVP
+Infinity	S	VP ADVP ADVP PP
+Infinity	S	VP PP NP
+Infinity	S	SBAR yyCM VP
+Infinity	S	SBAR yyCM VP PP PP
+Infinity	NX	MOD yyDASH NN
+Infinity	NNPP	NNP NNP NNP
+Infinity	VP	IN NP
+Infinity	FRAG	yyCM NP PP PP yyDOT
+Infinity	S	ADVP PP VP NP
+Infinity	S	INTJ ADVP VP PP
+Infinity	S	VP yyCM PP
+Infinity	S	NP VP PP PRN SBAR
+Infinity	S	AUX NP PREDP
+Infinity	S	INTJ VP NP NP PP
+Infinity	S	SBAR VP PP NP yyDOT
+Infinity	S	NP VP ADVP PP SBAR yyDOT
+Infinity	S	VP PP PP PP SBAR yyDOT
+Infinity	S	PP ADVP VP NP yyCM SBAR yyDOT
+Infinity	FRAG	NP yyCM NP yyDOT
+Infinity	S	NP VP NP PP
+Infinity	PP	IN DT REL VB
+Infinity	S	NP VP yyCM PP SBAR yyDOT
+Infinity	S	NP VP PP yyDOT
+Infinity	S	AUX PREDP SBAR
+Infinity	INTJ	CC ADVP
+Infinity	PRN	yyLRB ZVLP yyRRB
+Infinity	S	ZVLP PP VP NP PP PP SBAR yyDOT
+Infinity	S	VP PP PRN PP
+Infinity	S	VP PP PP
+Infinity	NX	NN yyDASH NN yyDASH NN
+Infinity	PP	COM PP
+Infinity	S	ADVP ADVP ADVP VP NP PP
+Infinity	S	NP AUX VP ADVP PP
+Infinity	NP	CDT NP
+Infinity	PP	NP ADJP PP
+Infinity	S	PP yyCM VP AUX SBAR
+Infinity	PP	IN H PRP
+Infinity	ADJP	ADJP NP
+Infinity	NP	NP ZVL PP
+Infinity	S	ZVLP ZVLP PP VP NP PP ADVP ADVP yyDOT
+Infinity	S	NP yyCM VP PP yyCM NP PP yyDOT
+Infinity	S	NP yyCM PP yyCM VP PP
+Infinity	PREDP	SBAR
+Infinity	S	VP ADVP VP
+Infinity	S	NP VP NP PP yyCM PP yyCM SBAR yyDOT
+Infinity	S	NP VP NP PP PRN SBAR yyDOT
+Infinity	S	SBAR yyCM SQ
+Infinity	NP	NP yyCLN SBAR
+Infinity	ADJP	ADVP RBR
+Infinity	S	S yyCM S CC S yyCM S yyCM CC S yyDOT
+Infinity	ADJX	NN yyDASH JJ
+Infinity	S	NP VP ADVP PP yyCM SBAR yyDOT
+Infinity	S	VP yyCM INTJ PP
+Infinity	S	NP yyCM VP PP yyCM PP PP PRN yyCM PP yyDOT
+Infinity	NP	NP yyCM NP ADVP
+Infinity	S	S yyEXCL S yyCM S yyCM CC S yyDOT
+Infinity	S	NP PRN PREDP
+Infinity	S	NP VP yyCM PP yyCM SBAR yyDOT
+Infinity	NP	NP SBAR
+Infinity	S	PP yyCM VP NP yyCM PP yyDOT
+Infinity	S	S yyQUOT yyDOT
+Infinity	S	NP yyDASH VP yyDASH NP
+Infinity	ADVP	RB RBR
+Infinity	NP	NP CC NP CC NP CC NP CC NP
+Infinity	NP	NN CC NN
+Infinity	S	PP PP VP NP yyDOT
+Infinity	CDP	CD
+Infinity	ADJP	ADJP PP
+Infinity	S	NP yyCM PP yyCM VP PP yyCM SBAR yyDOT
+Infinity	FRAG	PP yyQUOT yyDOT
+Infinity	FRAG	ADVP PP
+Infinity	PP	IN NN JJ
+Infinity	SQ	ADVP VP NP PP yyQM
+Infinity	S	INTJ yyCM VP PP NP
+Infinity	PRN	ADJP PP yyCM
+Infinity	S	CC S yyDOT
+Infinity	S	VP ADVP ADVP PP PP
+Infinity	NP	NP NP NP PP
+Infinity	NX	CD
+Infinity	S	ADVP ADVP NP PREDP yyDOT
+Infinity	NP	NNPP NNP
+Infinity	S	ADVP yyCM PP VP NP
+Infinity	S	ADVP ADVP VP NP PP NP yyDOT
+Infinity	FRAG	NP PRN yyDOT
+Infinity	S	PP yyCM PP yyCM NP ADVP AUX VP PP
+Infinity	S	INTJ yyCM VP PP yyDOT
+Infinity	S	NP VP ADVP yyCM SBAR yyDOT
+Infinity	NP	NP PRN VP
+Infinity	S	NP PP VP VP
+Infinity	S	NP yyCM INTJ yyCM PREDP
+Infinity	S	PP VP NP CC S yyDOT
+Infinity	NNPP	NNP NNP yyDASH NNP
+Infinity	S	NP PP VP ADVP PP PP
+Infinity	S	NP PRN VP ADVP yyCM SBAR yyDOT
+Infinity	S	NP VP NP VP
+Infinity	S	SBAR yyCM yyQUOT VP NP yyQUOT PP yyCM PP
+Infinity	PP	PP PP yyCM PP yyCM PP yyCM CC PP PP
+Infinity	NP	NP yyCM NP ADJP
+Infinity	S	VP PP VP yyCM PP
+Infinity	VP	MOD VB
+Infinity	S	PP yyCM VP ADVP NP VP yyCM ADVP yyDOT
+Infinity	S	ADVP NP VP NP yyDOT
+Infinity	SQ	ADVP NP VP ADVP
+Infinity	SQ	ADVP ADVP VP NP
+Infinity	NP	NP NP NP NP
+Infinity	S	NP VP yyCM INTJ yyCM NP PP yyDOT
+Infinity	S	PP yyCM NP AUX PREDP
+Infinity	S	NP ADVP VP PP VP
+Infinity	PP	INTJ yyCM PP
+Infinity	VP	MOD VP
+Infinity	S	ADVP PP NP VP PP
+Infinity	S	NP VP ADVP NP PP yyCM PP yyDOT
+Infinity	S	NP ADVP VP PP NP PP
+Infinity	NP	NP yyCM NP yyCM NP
+Infinity	S	ADVP yyCM PP VP VP yyDOT
+Infinity	S	VP INTJ PP
+Infinity	FRAG	CC CC S
+Infinity	NP	yyQUOT NP PP PP
+Infinity	NP	NP PP ADVP
+Infinity	NP	NP ADJP PP PP PRN
+Infinity	S	NP VP PP yyCLN NP yyDOT
+Infinity	S	PP AUX NP PREDP PP yyDOT
+Infinity	SQ	NP VP ADVP
+Infinity	S	VP NP AUX PREDP
+Infinity	S	ADVP VP NP SBAR yyQUOT yyDOT
+Infinity	S	NP yyCM VP ADVP PP SBAR yyDOT
+Infinity	VP	VB SQBAR
+Infinity	S	S S CC S
+Infinity	SQ	ADVP NP VP yyCM INTJ yyQM
+Infinity	SBAR	IN S
+Infinity	S	NP yyCM VP PP yyDOT
+Infinity	S	NP yyCM ADVP ADVP AUX PREDP yyDOT
+Infinity	PP	IN MOD RB
+Infinity	S	ADVP VP ADVP SBAR yyDOT
+Infinity	S	PP VP NP yyCM PP yyDOT
+Infinity	FRAG	INTJ NP
+Infinity	S	NP PRN VP PP PP yyDOT
+Infinity	S	PP yyCM VP VP
+Infinity	NNPP	NNP NNP NNP NNP
+Infinity	S	NP ADJP PREDP
+Infinity	S	VP PP NP VP yyDOT
+Infinity	NP	CD NP
+Infinity	S	PREDP NP PP
+Infinity	NP	NP yyCM NP yyCM PP
+Infinity	S	ADVP VP NP PP NP
+Infinity	PP	PP yyCM PP CC NP
+Infinity	NP	CD NN
+Infinity	S	PP yyCM NP yyCM VP NP yyCM SBAR yyDOT
+Infinity	S	PP VP NP PP PP NP
+Infinity	S	PP VP NP PP PP yyCM PP yyDOT
+Infinity	S	VP VP NP PP
+Infinity	NP	NNP CC NNP
+Infinity	ADJX	MOD JJ
+Infinity	ADVP	RBR RB
+Infinity	PRN	yyCM ADVP PP
+Infinity	S	PP VP PP PP ADVP yyCLN VP
+Infinity	S	PP NP ADVP VP VP yyDOT
+Infinity	ADVP	IN WDT
+Infinity	S	VP ADVP NP
+Infinity	S	ADVP VP ADVP
+Infinity	S	S S CC S yyDOT
+Infinity	S	S yyCM CC S yyCM CC S
+Infinity	ADVP	RBR IN DT
+Infinity	S	VP NP PP yyDOT
+Infinity	S	SBAR PRN S yyDOT
+Infinity	S	PP VP NP VP PP yyDOT
+Infinity	S	PREDP PP yyDOT
+Infinity	S	NP yyCM ADVP VP VP PP
+Infinity	S	ADVP VP NP PP PP
+Infinity	S	PP NP PREDP CC S yyDOT
+Infinity	VP	NP VP
+Infinity	S	S yyCM INTJ yyCM PP
+Infinity	PP	PP yyCM PP CC PP
+Infinity	S	PREDP NP NP
+Infinity	NP	NP PRN PP
+Infinity	NP	NP PP PP PP PRN yyCM PP
+Infinity	S	PP NP ADVP VP SBAR yyDOT
+Infinity	S	INTJ NP yyCM VP PP NP ADVP yyDOT
+Infinity	S	NP PRN ADVP VP NP PP yyDOT
+Infinity	PP	PP PP yyCM PP yyCM CC PP
+Infinity	NP	NP yyCM CC NP yyCM
+Infinity	PREDP	NP AGR
+Infinity	S	FRAG yyCM VP NP yyCM SBAR yyDOT
+Infinity	S	SBAR yyCM VP NP PP NP yyDOT
+Infinity	S	VP NP PP PP yyCM SBAR
+Infinity	S	NP PRN yyDOT
+Infinity	NNPP	NNP yyDASH CD yyDASH NNP yyDASH CD
+Infinity	S	NP VP VP yyCM NP
+Infinity	NP	NP PP ADJP
+Infinity	S	NP VP PP yyCM VP
+Infinity	ZVLP	PRP
+Infinity	S	PP yyCM VP PP SBAR
+Infinity	VP	ADVP VB PP NP
+Infinity	PP	AT NP
+Infinity	FRAG	yyQUOT FRAG
+Infinity	S	VP PP yyCM PP yyCM PP yyCM SBAR
+Infinity	PP	MOD MOD PP
+Infinity	S	AUX VP VP
+Infinity	SQ	NP VP PP yyQM
+Infinity	S	NP VP PP yyCM PP yyDOT
+Infinity	PRN	yyLRB PP CC S yyRRB
+Infinity	S	NP PP VP NP
+Infinity	FRAGQ	HAM PP yyQM
+Infinity	S	VP ADJP ADVP PP
+Infinity	PP	PP yyCM PP yyCM ADVP
+Infinity	S	NP AUX VP SBAR
+Infinity	ADVP	IN NNT RB
+Infinity	S	PP yyCM VP PP VP yyDOT
+Infinity	NP	NP PRN NP
+Infinity	VP	VB NP ADVP
+Infinity	VP	MOD yyDASH VB
+Infinity	VP	VB VP
+Infinity	S	SBAR yyCM VP ADVP NP yyCM PP yyDOT
+Infinity	SBAR	MOD MOD SBAR
+Infinity	ADVP	ADVP SBAR
+Infinity	S	S yyCM S CC S yyDOT
+Infinity	S	PP yyCM NP ADVP PREDP
+Infinity	S	NP VP ADVP PP SBAR
+Infinity	FRAG	ZVLP ZVLP NP ADJP yyDOT
+Infinity	S	PP VP PP PP yyDOT
+Infinity	S	NP ADVP VP ADVP SBAR yyDOT
+Infinity	S	PP PREDP ADVP NP yyDOT
+Infinity	S	NP yyCM NP yyCM VP NP VP yyDOT
+Infinity	NP	NP PRN ADJP
+Infinity	S	SBAR NP VP PP
+Infinity	S	INTJ ADVP NP VP VP
+Infinity	NP	CD PP
+Infinity	S	NP PP VP PP
+Infinity	S	PP yyCM ADVP NP VP NP yyDOT
+Infinity	PP	IN NN IN PRP
+Infinity	VP	VP CC VP PP
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP CC NP
+Infinity	NP	CD ZVL NP
+Infinity	S	NP yyCM VP NP NP yyCM PP yyDOT
+Infinity	S	NP ADVP VP PP PRN VP yyDOT
+Infinity	S	NP yyCM NP VP yyDOT
+Infinity	S	VP PP NP PP
+Infinity	S	NP AUX VP PP NP SBAR
+Infinity	PRN	yyCM S
+Infinity	SQ	yyQUOT SQ
+Infinity	NP	NP POS NP
+Infinity	S	SBAR VP NP PP SBAR
+Infinity	S	NP VP NP yyCM SBAR
+Infinity	S	VP NP yyCM PP yyDOT
+Infinity	NP	NNT
+Infinity	S	PP yyCM PP yyCM VP NP PP yyDOT
+Infinity	NP	NNP
+Infinity	NP	ZVL NP
+Infinity	S	NP VP PP ADVP PP
+Infinity	S	NP ADVP VP PP SBAR
+Infinity	S	PP VP PP yyCM NP
+Infinity	ADVP	RBR IN NP
+Infinity	S	VP INTJ NP
+Infinity	SQ	PREDP NP yyQM
+Infinity	S	NP yyCM VP INTJ NP
+Infinity	NP	NP ADJP SBAR VP
+Infinity	S	NP PREDP SBAR
+Infinity	S	SBAR yyCM VP PP NP PP SBAR
+Infinity	S	S yyCM CC yyCM S
+Infinity	S	PP AUX VP yyQUOT NP
+Infinity	S	SBAR yyCM NP VP ADVP PP yyDOT
+Infinity	NP	NP NP ADVP
+Infinity	S	PP yyCM PREDP SBAR yyDOT
+Infinity	S	NP VP VP yyCM PP
+Infinity	ADVP	IN NNT yyDASH NN
+Infinity	S	VP PP NP NP
+Infinity	S	PP yyCM NP ADVP VP ADVP VP
+Infinity	S	ZVLP VP PP yyDOT
+Infinity	S	PP NP ADVP VP yyCM SBAR yyDOT
+Infinity	S	ADVP yyDASH VP VP
+Infinity	S	NP VP PP ADVP NP
+Infinity	S	ADVP PREDP VP yyDOT
+Infinity	S	NP yyCM PREDP yyDOT
+Infinity	VP	VB PP PP SBAR
+Infinity	S	PP yyCM PP yyCM VP ADVP VP
+Infinity	NP	NP ADJP SBAR SBAR
+Infinity	S	SBAR yyCM VP NP yyCM NP yyDOT
+Infinity	S	PP VP NP PP VP
+Infinity	FRAG	INTJ yyCLN PP yyDOT
+Infinity	S	NP AUX VP NP yyQUOT PP
+Infinity	PP	NP PP
+Infinity	S	PP yyCM NP ADVP VP PP yyDOT
+Infinity	S	PP yyCM VP PP yyDOT
+Infinity	S	ADVP VP PP SBAR yyDOT
+Infinity	S	ADVP VP yyDOT
+Infinity	SQ	NP PREDP
+Infinity	S	SBAR yyCM VP ADVP NP yyDOT
+Infinity	S	PP yyCM PP VP NP NP PP yyCM PP yyDOT
+Infinity	VP	VB SQ
+Infinity	S	PP yyCM PP yyCM VP PP yyDOT
+Infinity	S	VP VP PP yyDOT
+Infinity	CDP	H yyDASH CD
+Infinity	S	ADVP SBAR VP NP PP
+Infinity	PRN	yyLRB CC PP yyEXCL yyRRB
+Infinity	S	SBAR PP NP VP PP PP
+Infinity	S	PP NP VP NP PP yyCM PP yyDOT
+Infinity	S	NP VP PP yyCM NP
+Infinity	NP	yyQUOT VP yyQUOT
+Infinity	S	NP PREDP PRN PRN
+Infinity	S	NP VP yyDOT
+Infinity	NP	NP yyCM SBAR yyCM
+Infinity	SQ	NP NP VP SBAR
+Infinity	S	S S yyDOT
+Infinity	S	ADVP yyCM PP VP NP PP PP yyDOT
+Infinity	S	NP VP ADVP PP PP yyCM PP yyDOT
+Infinity	VP	ADVP VB PP VP
+Infinity	S	VP yyCM INTJ NP
+Infinity	VP	VB PP
+Infinity	S	NP NP ADVP VP VP
+Infinity	VP	VB PP ADVP
+Infinity	NP	NP yyDASH PP
+Infinity	NP	NP NP yyCM ADJP
+Infinity	VP	VP yyCM VP yyCM VP CC VP
+Infinity	ADVP	QW MOD
+Infinity	NP	CDTP NN
+Infinity	S	S yyCLN S
+Infinity	S	NP yyCM INTJ VP NP yyDOT
+Infinity	NP	CDTP NP
+Infinity	PP	PP CC PP CC CC PP
+Infinity	S	S PRN FRAG yyDOT
+Infinity	NP	NP yyCM NP CC CC NP
+Infinity	FRAG	CC PP yyCM NP
+Infinity	S	NP VP PP VP yyDOT
+Infinity	S	ADVP VP NP PP
+Infinity	S	INTJ yyCM NP VP yyCM PP yyCM VP yyDOT
+Infinity	S	NP VP PP yyCM PP
+Infinity	S	PP yyCM VP PP PP NP yyCM PP yyDOT
+Infinity	S	PP yyCM PP NP PREDP NP yyDOT
+Infinity	S	INTJ yyCM ADVP VP VP yyDOT
+Infinity	S	INTJ yyCM SBAR AUX VP PP NP
+Infinity	S	NP VP PP NP yyCM PP yyDOT
+Infinity	VP	VB NP
+Infinity	S	ADJP VP NP PP yyCM SBAR
+Infinity	S	NP VP NP yyCM PP yyDOT
+Infinity	S	ADVP NP PREDP yyCM INTJ yyCM SBAR yyDOT
+Infinity	ADVP	DT RB
+Infinity	S	VP PP VP
+Infinity	FRAG	ADVP NP yyDOT
+Infinity	S	NP VP NP PP yyCM PP yyDOT
+Infinity	NP	NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP yyCM NP CC NP
+Infinity	NP	NP yyDASH NP
+Infinity	ADJP	ADJP INTJ PP
+Infinity	INTJ	ADVP yyDOT
+Infinity	ADVP	ADVP RBR
+Infinity	S	NP VP PP PP yyCM PP yyDOT
+Infinity	S	PP yyCM VP NP PP yyCM FRAG yyDOT
+Infinity	VP	VP yyCM PP
+Infinity	FRAG	FRAG yyQUOT yyDOT
+Infinity	S	ZVLP NP yyCM VP SBAR yyDOT
+Infinity	S	PP yyCM ADVP NP VP PP PP
+Infinity	S	AUX VP PP PP PP PP
+Infinity	S	PP VP yyCM PP yyCM PP yyDOT
+Infinity	S	PP VP AUX yyCM INTJ yyCM VP yyDOT
+Infinity	S	PP NP AUX PREDP yyDOT
+Infinity	NX	NNP yyDASH NNP yyDASH NNP
+Infinity	S	PP VP VP NP yyCM PP yyDOT
+Infinity	INTJ	INTJ yyCM INTJ
+Infinity	S	PP yyCM PREDP VP
+Infinity	S	ADVP PREDP yyCM PP
+Infinity	S	ADVP VP NP NP
+Infinity	S	PP yyCM ADVP NP VP NP
+Infinity	SQ	NP NP VP
+Infinity	S	PP VP NP PP PP
+Infinity	ADJP	ADJP VP
+Infinity	S	NP VP ADVP PRN PP
+Infinity	S	NP VP VP yyDOT
+Infinity	S	PP NP ADVP VP VP
+Infinity	S	PP VP PP PRN
+Infinity	S	S yyCM CC S CC S
+Infinity	S	ADVP PP VP PP
+Infinity	S	NP VP PP NP PP yyDOT
+Infinity	NP	NP yyCM NP yyCM CC NP
+Infinity	S	NP VP NP PP PRN yyDOT
+Infinity	S	PP NP yyQUOT VP NP yyQUOT
+Infinity	S	NP ADVP VP ADVP PP PP yyCM PP
+Infinity	S	NP PREDP yyDOT
+Infinity	SQ	NP NP VP PP
+Infinity	PP	PP yyCM CC PP
+Infinity	S	PP VP ADVP NP PP yyDOT
+Infinity	S	NP ADVP VP PP SBAR yyDOT
+Infinity	S	PP VP NP ADVP ADVP PP PP
+Infinity	S	SBAR NP VP NP
+Infinity	S	PP VP NP ADJP
+Infinity	S	ZVLP NP VP yyDOT
+Infinity	S	PP VP NP PP NP
+Infinity	NP	NP NP ADJP
+Infinity	S	NP yyCM ADVP ADVP VP NP
+Infinity	S	ZVLP PREDP
+Infinity	S	PP yyCM VP INTJ PP yyDOT
+Infinity	SBAR	SBAR CC MOD SBAR
+Infinity	S	S PRN yyQUOT CC S yyDOT
+Infinity	NP	NP PP CC PP
+Infinity	S	FRAG yyCLN S
+Infinity	NNPP	NNP yyDASH NNP yyDASH NNP yyDASH NNP
+Infinity	ADJP	H yyDASH JJ
+Infinity	S	NP AUX INTJ PREDP yyDOT
+Infinity	S	PP VP VP yyCM PP
+Infinity	S	NP AUX yyCM INTJ yyCM PREDP yyDOT
+Infinity	S	NP VP PP yyCM SBAR yyDOT
+Infinity	S	FRAG S yyDOT
+Infinity	VP	VB PP NP PRN PP
+Infinity	PP	IN yyDASH IN PRP
+Infinity	NP	INTJ yyCM NP
+Infinity	S	PP yyCM PP yyCM VP PP NP
+Infinity	S	FRAG PRN S yyDOT
+Infinity	S	NP VP yyCM ADVP yyCM NP
