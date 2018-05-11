@@ -79,7 +79,6 @@ public class Grammar {
 		// update the rule counts 
 		getRuleCounts().increment(r);
 	}
-	
 
 	public Set<String> getNonTerminalSymbols() {
 		return m_setNonTerminalSymbols;
