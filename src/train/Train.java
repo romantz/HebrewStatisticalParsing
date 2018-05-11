@@ -11,7 +11,7 @@ import java.util.List;
 import tree.Node;
 import tree.Tree;
 import treebank.Treebank;
-
+import utils.CountMap;
 
 
 /**
@@ -56,6 +56,24 @@ public class Train {
 			List<Rule> theRules = getRules(myTree);
 			myGrammar.addAll(theRules);
 		}
+
+		CountMap<Event> lhsCounts = new CountMap<Event>();
+
+		for(java.util.Map.Entry e: myGrammar.getRuleCounts().entrySet()){
+			Event lhs = ((Rule)e.getKey()).getLHS();
+			if(!lhsCounts.containsKey(lhs))
+				lhsCounts.put(lhs, (Integer)e.getValue());
+			else
+				lhsCounts.put(lhs, lhsCounts.get(lhs) + (Integer)e.getValue());
+		}
+
+		for(java.util.Map.Entry e: myGrammar.getRuleCounts().entrySet()){
+			Rule r = (Rule)e.getKey();
+			Event lhs = r.getLHS();
+			r.setMinusLogProb(Math.log((Integer)e.getValue() / ((Integer)lhsCounts.get(lhs)).doubleValue()));
+			System.out.println(r + ", " + r.getMinusLogProb());
+		}
+
 		return myGrammar;
 	}
 
