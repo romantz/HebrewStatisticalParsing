@@ -5,6 +5,7 @@ import grammar.Grammar;
 import grammar.Rule;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,6 +30,9 @@ import utils.CountMap;
 public class Train {
 
 
+	private static int newNonTerminalCount = 0;
+	private static final String NEW_NON_TERMINAL_PREFIX = "N";
+
     /**
      * Implementation of a singleton pattern
      * Avoids redundant instances in memory 
@@ -51,10 +55,47 @@ public class Train {
 	public Grammar train(Treebank myTreebank)
 	{
 		Grammar myGrammar = new Grammar();
+		HashMap<Rule, List<Rule>> binarizationMap = new HashMap<Rule, List<Rule>>();
 		for (int i = 0; i < myTreebank.size(); i++) {
 			Tree myTree = myTreebank.getAnalyses().get(i);
 			List<Rule> theRules = getRules(myTree);
-			myGrammar.addAll(theRules);
+			List<Rule> actualRules = new ArrayList<Rule>();
+
+			for(Rule r: theRules) {
+				List<String> rhsSymbols = r.getRHS().getSymbols();
+				String newTerminal = "";
+				if(rhsSymbols.size() > 2){
+					if(binarizationMap.containsKey(r)){
+						actualRules.addAll(binarizationMap.get(r));
+					} else {
+						List<Rule> currentBinarization = new ArrayList<Rule>();
+						Event eLHS = new Event(r.getLHS().toString());
+						newTerminal = NEW_NON_TERMINAL_PREFIX + (newNonTerminalCount++);
+						Event eRHS = new Event(rhsSymbols.get(0) + " " + newTerminal);
+						Rule r1 = new Rule(eLHS, eRHS);
+						currentBinarization.add(r1);
+						r1.setTop(r.isTop());
+						for (int j = 1; j < rhsSymbols.size() - 2; j++) {
+							eLHS = new Event(newTerminal);
+							newTerminal = NEW_NON_TERMINAL_PREFIX + (newNonTerminalCount++);
+							eRHS = new Event(rhsSymbols.get(j) + " " + newTerminal);
+							Rule r2 = new Rule(eLHS, eRHS);
+							currentBinarization.add(r2);
+						}
+						eLHS = new Event(newTerminal);
+						eRHS = new Event(rhsSymbols.get(rhsSymbols.size() - 2) +
+								" " + rhsSymbols.get(rhsSymbols.size() - 1));
+						Rule r3 = new Rule(eLHS, eRHS);
+						currentBinarization.add(r3);
+						actualRules.addAll(currentBinarization);
+						binarizationMap.put(r, currentBinarization);
+					}
+				} else {
+					actualRules.add(r);
+				}
+			}
+
+			myGrammar.addAll(actualRules);
 		}
 
 		CountMap<Event> lhsCounts = new CountMap<Event>();
