@@ -70,8 +70,8 @@ public class Train {
 		for(java.util.Map.Entry e: myGrammar.getRuleCounts().entrySet()){
 			Rule r = (Rule)e.getKey();
 			Event lhs = r.getLHS();
-			r.setMinusLogProb(Math.log((Integer)e.getValue() / ((Integer)lhsCounts.get(lhs)).doubleValue()));
-			System.out.println(r + ", " + r.getMinusLogProb());
+			r.setMinusLogProb(
+					(-1) * Math.log((Integer)e.getValue() / ((Integer)lhsCounts.get(lhs)).doubleValue()));
 		}
 
 		return myGrammar;
