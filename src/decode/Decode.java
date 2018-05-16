@@ -42,7 +42,7 @@ public class Decode {
 					if(s == null) {
 						Set<Rule> ruleSet = new HashSet<Rule>();
 						ruleSet.add(r);
-						m_mapUnaryRules.put(r.getLHS().toString(), ruleSet);
+						m_mapUnaryRules.put(r.getRHS().toString(), ruleSet);
 					} else {
 						s.add(r);
 					}
