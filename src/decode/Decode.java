@@ -6,6 +6,7 @@ import grammar.Rule;
 import java.util.*;
 import java.util.Map.Entry;
 
+import parse.Parse;
 import tree.Node;
 import tree.Terminal;
 import tree.Tree;
@@ -14,6 +15,7 @@ public class Decode {
 
 	public static Set<Rule> m_setGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
+	public static Map<String, Set<Rule>> m_mapUnaryRules = null;
 
 	private final double MAX_PROBABILITY = 0.0;
 	private final String START_VARIABLE = "S";
@@ -30,7 +32,22 @@ public class Decode {
 		{
 			m_singDecoder = new Decode();
 			m_setGrammarRules = g.getSyntacticRules();
-			m_mapLexicalRules = g.getLexicalEntries();			
+			m_mapLexicalRules = g.getLexicalEntries();
+
+			m_mapUnaryRules = new HashMap<String, Set<Rule>>();
+
+			for(Rule r: m_setGrammarRules){
+				if(r.getRHS().getSymbols().size() == 1){
+					Set s = m_mapUnaryRules.get(r.getRHS().toString());
+					if(s == null) {
+						Set<Rule> ruleSet = new HashSet<Rule>();
+						ruleSet.add(r);
+						m_mapUnaryRules.put(r.getLHS().toString(), ruleSet);
+					} else {
+						s.add(r);
+					}
+				}
+			}
 		}
 		return m_singDecoder;
 	}
@@ -43,14 +60,17 @@ public class Decode {
 		List<ChartTransition> previousNewTransitions = new LinkedList<ChartTransition>();
 
 		for (ChartTransition t: n.getTransitions()) {
-			for (Rule r : m_setGrammarRules) {
-				if(r.getRHS().toString().equals(t.getVar()) && !r.getLHS().toString().equals(r.getRHS().toString())){
-					ChartTransition t2 = new UnaryChartTransition(
-							t,
-							r.getMinusLogProb() + t.getProbability(),
-							r.getLHS().toString());
-					currentNewTransitions.add(t2);
-					newAppliedRules.add(r);
+			Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
+			if(ruleSet != null) {
+				for (Rule r : ruleSet) {
+					if (!r.getLHS().toString().equals(r.getRHS().toString())) {
+						ChartTransition t2 = new UnaryChartTransition(
+								t,
+								r.getMinusLogProb() + t.getProbability(),
+								r.getLHS().toString());
+						currentNewTransitions.add(t2);
+						newAppliedRules.add(r);
+					}
 				}
 			}
 		}
@@ -60,17 +80,19 @@ public class Decode {
 			previousNewTransitions = currentNewTransitions;
 			currentNewTransitions = new LinkedList<ChartTransition>();
 			for (ChartTransition t: previousNewTransitions) {
-				for (Rule r : m_setGrammarRules) {
-					if(r.getRHS().toString().equals(t.getVar()) &&
-							!r.getLHS().toString().equals(r.getRHS().toString()) &&
-							!newAppliedRules.contains(r)
-							){
-						ChartTransition t2 = new UnaryChartTransition(
-								t,
-								r.getMinusLogProb() + t.getProbability(),
-								r.getLHS().toString());
-						currentNewTransitions.add(t2);
-						newAppliedRules.add(r);
+				Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
+				if(ruleSet != null) {
+					for (Rule r : ruleSet) {
+						if (!r.getLHS().toString().equals(r.getRHS().toString()) &&
+								!newAppliedRules.contains(r)
+								) {
+							ChartTransition t2 = new UnaryChartTransition(
+									t,
+									r.getMinusLogProb() + t.getProbability(),
+									r.getLHS().toString());
+							currentNewTransitions.add(t2);
+							newAppliedRules.add(r);
+						}
 					}
 				}
 			}
@@ -105,12 +127,19 @@ public class Decode {
 			t.getRoot().addDaughter(preTerminal);
 		}
 
+		System.out.println("---------");
 		for(Rule r: m_setGrammarRules){
 			System.out.println(r);
 		}
+		System.out.println("---------");
 		for(Entry e: m_mapLexicalRules.entrySet()){
 			System.out.println(e.getKey()+" , " + e.getValue());
 		}
+		System.out.println("---------");
+		for(Entry e: m_mapUnaryRules.entrySet()){
+			System.out.println(e.getKey()+" , " + e.getValue());
+		}
+		System.out.println("---------");
 
 		ChartNode[][] chart = new ChartNode[input.size() + 1][input.size() + 1];
 
@@ -160,6 +189,7 @@ public class Decode {
 					}
 				}
 				addUnaryRules(chart[j][i]);
+				System.out.println("("+j+"," +i+") " +chart[j][i].getTransitions().size());
 			}
 		}
 
@@ -264,26 +294,30 @@ public class Decode {
 	}
 
 	private class ChartNode{
-		private List<ChartTransition> nodeTransitions;
+		private Map<String, ChartTransition> nodeTransitions;
 
 		public ChartNode(){
-			nodeTransitions = new LinkedList<ChartTransition>();
+			nodeTransitions = new HashMap<String, ChartTransition>();
 		}
 
 		public void addTransition(ChartTransition t){
-			nodeTransitions.add(t);
+			String var = t.variable;
+			ChartTransition oldTransition = nodeTransitions.get(var);
+			if(oldTransition == null || t.getProbability() < oldTransition.getProbability()){
+				nodeTransitions.put(var, t);
+			}
 		}
 
 		public String toString() {
 			StringBuffer sb = new StringBuffer();
-			for(ChartTransition t: nodeTransitions) {
-				sb.append(t.toString() + "\n");
+			for(ChartTransition t: nodeTransitions.values()) {
+				sb.append(t.toString() + "," + t.getProbability() + "\n");
 			}
 			return sb.toString();
 		}
 
-		public List<ChartTransition> getTransitions(){
-			return nodeTransitions;
+		public Collection<ChartTransition> getTransitions(){
+			return nodeTransitions.values();
 		}
 	}
 	

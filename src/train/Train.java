@@ -63,28 +63,27 @@ public class Train {
 
 			for(Rule r: theRules) {
 				List<String> rhsSymbols = r.getRHS().getSymbols();
-				String newTerminal = "";
+				String newNonTerminal = "";
 				if(rhsSymbols.size() > 2){
 					if(binarizationMap.containsKey(r)){
 						actualRules.addAll(binarizationMap.get(r));
 					} else {
 						List<Rule> currentBinarization = new ArrayList<Rule>();
 						Event eLHS = new Event(r.getLHS().toString());
-						newTerminal = NEW_NON_TERMINAL_PREFIX + (newNonTerminalCount++);
-						Event eRHS = new Event(rhsSymbols.get(0) + " " + newTerminal);
+						newNonTerminal = "-@" + eLHS.toString();
+						Event eRHS = new Event(rhsSymbols.get(0) + " " + newNonTerminal);
 						Rule r1 = new Rule(eLHS, eRHS);
 						currentBinarization.add(r1);
 						r1.setTop(r.isTop());
-						for (int j = 1; j < rhsSymbols.size() - 2; j++) {
-							eLHS = new Event(newTerminal);
-							newTerminal = NEW_NON_TERMINAL_PREFIX + (newNonTerminalCount++);
-							eRHS = new Event(rhsSymbols.get(j) + " " + newTerminal);
+						for (int j = 1; j < rhsSymbols.size() - 1; j++) {
+							eLHS = new Event(newNonTerminal);
+							//newNonTerminal = "-@" + eLHS.toString();
+							eRHS = new Event(rhsSymbols.get(j) + " " + newNonTerminal);
 							Rule r2 = new Rule(eLHS, eRHS);
 							currentBinarization.add(r2);
 						}
-						eLHS = new Event(newTerminal);
-						eRHS = new Event(rhsSymbols.get(rhsSymbols.size() - 2) +
-								" " + rhsSymbols.get(rhsSymbols.size() - 1));
+						eLHS = new Event(newNonTerminal);
+						eRHS = new Event(rhsSymbols.get(rhsSymbols.size() - 1));
 						Rule r3 = new Rule(eLHS, eRHS);
 						currentBinarization.add(r3);
 						actualRules.addAll(currentBinarization);
