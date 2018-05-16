@@ -16,6 +16,7 @@ public class Decode {
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
 
 	private final double MAX_PROBABILITY = 0.0;
+	private final String START_VARIABLE = "S";
 
     /**
      * Implementation of a singleton pattern
@@ -36,21 +37,20 @@ public class Decode {
 
 
 	public void addUnaryRules(ChartNode n){
+		Set<Rule> newAppliedRules = new HashSet<Rule>();
 		List<ChartTransition> allNewTransitions = new LinkedList<ChartTransition>();
 		List<ChartTransition> currentNewTransitions = new LinkedList<ChartTransition>();
 		List<ChartTransition> previousNewTransitions = new LinkedList<ChartTransition>();
 
 		for (ChartTransition t: n.getTransitions()) {
-			Set<Rule> ruleSet = m_mapLexicalRules.get(t.getVar());
-			if (ruleSet != null) {
-				for (Rule r : ruleSet) {
-					if(!r.getLHS().toString().equals(r.getRHS().toString())) {
-						ChartTransition t2 = new UnaryChartTransition(
-								t,
-								r.getMinusLogProb() + t.getProbability(),
-								r.getLHS().toString());
-						currentNewTransitions.add(t2);
-					}
+			for (Rule r : m_setGrammarRules) {
+				if(r.getRHS().toString().equals(t.getVar()) && !r.getLHS().toString().equals(r.getRHS().toString())){
+					ChartTransition t2 = new UnaryChartTransition(
+							t,
+							r.getMinusLogProb() + t.getProbability(),
+							r.getLHS().toString());
+					currentNewTransitions.add(t2);
+					newAppliedRules.add(r);
 				}
 			}
 		}
@@ -60,16 +60,17 @@ public class Decode {
 			previousNewTransitions = currentNewTransitions;
 			currentNewTransitions = new LinkedList<ChartTransition>();
 			for (ChartTransition t: previousNewTransitions) {
-				Set<Rule> ruleSet = m_mapLexicalRules.get(t.getVar());
-				if (ruleSet != null) {
-					for (Rule r : ruleSet) {
-						if(!r.getLHS().toString().equals(r.getRHS().toString())) {
-							ChartTransition t2 = new UnaryChartTransition(
-									t,
-									r.getMinusLogProb() + t.getProbability(),
-									r.getLHS().toString());
-							currentNewTransitions.add(t2);
-						}
+				for (Rule r : m_setGrammarRules) {
+					if(r.getRHS().toString().equals(t.getVar()) &&
+							!r.getLHS().toString().equals(r.getRHS().toString()) &&
+							!newAppliedRules.contains(r)
+							){
+						ChartTransition t2 = new UnaryChartTransition(
+								t,
+								r.getMinusLogProb() + t.getProbability(),
+								r.getLHS().toString());
+						currentNewTransitions.add(t2);
+						newAppliedRules.add(r);
 					}
 				}
 			}
@@ -104,9 +105,17 @@ public class Decode {
 			t.getRoot().addDaughter(preTerminal);
 		}
 
+		for(Rule r: m_setGrammarRules){
+			System.out.println(r);
+		}
+		for(Entry e: m_mapLexicalRules.entrySet()){
+			System.out.println(e.getKey()+" , " + e.getValue());
+		}
+
 		ChartNode[][] chart = new ChartNode[input.size() + 1][input.size() + 1];
 
 		for(int i = 1; i <= input.size(); i++) {
+			System.out.println(i);
 			chart[i - 1][i] = new ChartNode();
 			TerminalTransition terminal = new TerminalTransition(input.get(i - 1));
 			if(m_mapLexicalRules.containsKey(input.get(i - 1))) {
@@ -135,9 +144,8 @@ public class Decode {
 						for (ChartTransition t1: chart[j][k].getTransitions()) {
 							for (ChartTransition t2: chart[k][i].getTransitions()) {
 								String key = t1.getVar() + " " + t2.getVar();
-								if (m_mapLexicalRules.containsKey(key)) {
-									Set<Rule> ruleSet = m_mapLexicalRules.get(key);
-									for (Rule r : ruleSet) {
+								for(Rule r: m_setGrammarRules) {
+									if(r.getRHS().toString().equals(key)){
 										ChartTransition transition = new BinaryChartTransition(
 												t1,
 												t2,
@@ -159,12 +167,20 @@ public class Decode {
 		ChartTransition bestTransition = null;
 		if(chart[0][input.size()] != null) {
 			for (ChartTransition transition : chart[0][input.size()].getTransitions()) {
-				if (transition.variable.equals("S") && transition.getProbability() < minProb) {
+				if (transition.variable.equals(START_VARIABLE) && transition.getProbability() < minProb) {
 					minProb = transition.getProbability();
 					bestTransition = transition;
 				}
 			}
 		}
+
+		System.out.println("-----");
+		for(int i = 0; i < chart.length; i++){
+			for(int j = 0; j < chart[i].length; j++){
+				System.out.println("(" + j +", " + i +")" + chart[j][i]);
+			}
+		}
+
 
 		if(bestTransition == null)
 			return t;
