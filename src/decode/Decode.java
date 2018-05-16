@@ -46,7 +46,7 @@ public class Decode {
 				for (Rule r : ruleSet) {
 					ChartTransition t2 = new UnaryChartTransition(
 							t,
-							r.getMinusLogProb(),
+							r.getMinusLogProb() + t.getProbability(),
 							r.getLHS().toString());
 					currentNewTransitions.add(t2);
 				}
@@ -63,7 +63,7 @@ public class Decode {
 					for (Rule r : ruleSet) {
 						ChartTransition t2 = new UnaryChartTransition(
 								t,
-								r.getMinusLogProb(),
+								r.getMinusLogProb() + t.getProbability(),
 								r.getLHS().toString());
 						currentNewTransitions.add(t2);
 					}
@@ -75,6 +75,15 @@ public class Decode {
 		for(ChartTransition t: allNewTransitions)
 			n.addTransition(t);
 	}
+
+	public Node constructNodeFromTransition(ChartTransition transition){
+		Node n = new Node(transition.getVar());
+		for(ChartTransition t: transition.getTransitions()) {
+			n.addDaughter(constructNodeFromTransition(t));
+		}
+		return n;
+	}
+
 
 	public Tree decode(List<String> input){
 		
@@ -90,23 +99,10 @@ public class Decode {
 			preTerminal.addDaughter(terminal);
 			t.getRoot().addDaughter(preTerminal);
 		}
-		
-		// TODO: CYK decoder
-		//       if CYK fails, 
-		//       use the baseline outcome
-
-		for(Entry e: m_mapLexicalRules.entrySet()){
-			System.out.println(e.getKey() + ", " + e.getValue());
-		}
-		System.out.println("---------");
-		for(Rule r: m_setGrammarRules){
-			System.out.println(r);
-		}
 
 		ChartNode[][] chart = new ChartNode[input.size() + 1][input.size() + 1];
 
 		for(int i = 1; i <= input.size(); i++) {
-			System.out.println(input.get(i - 1));
 			chart[i - 1][i] = new ChartNode();
 			for(Rule r: m_mapLexicalRules.get(input.get(i - 1))) {
 				TerminalTransition terminal = new TerminalTransition(r.getRHS().toString());
@@ -132,7 +128,7 @@ public class Decode {
 										ChartTransition transition = new BinaryChartTransition(
 												t1,
 												t2,
-												r.getMinusLogProb(),
+												r.getMinusLogProb() + t1.getProbability() + t2.getProbability(),
 												r.getLHS().toString()
 										);
 										chart[j][i].addTransition(transition);
@@ -146,13 +142,23 @@ public class Decode {
 			}
 		}
 
-		for(int i = 0; i <= input.size(); i++) {
-			for(int j = 0; j <= input.size(); j++) {
-				System.out.println("(" + j + ", " + i + "): " + chart[j][i]);
+		double minProb = Double.MAX_VALUE;
+		ChartTransition bestTransition = null;
+		if(chart[0][input.size()] != null) {
+			for (ChartTransition transition : chart[0][input.size()].getTransitions()) {
+				if (transition.variable.equals("S") && transition.getProbability() < minProb) {
+					minProb = transition.getProbability();
+					bestTransition = transition;
+				}
 			}
 		}
 
-		return t;
+		if(bestTransition == null)
+			return t;
+
+		Tree t2 = new Tree(new Node("TOP"));
+		t2.getRoot().addDaughter(constructNodeFromTransition(bestTransition));
+		return t2;
 		
 	}
 
@@ -166,6 +172,8 @@ public class Decode {
 			this.probability = probability;
 			this.variable = var;
 		}
+
+		public abstract List<ChartTransition> getTransitions();
 
 		public ChartTransition getT1() { return t1; }
 		public double getProbability() { return probability; }
@@ -184,6 +192,13 @@ public class Decode {
 		}
 		public ChartTransition getT2() { return t2; }
 
+		public List<ChartTransition> getTransitions(){
+			List<ChartTransition> transitions = new LinkedList<ChartTransition>();
+			transitions.add(t1);
+			transitions.add(t2);
+			return transitions;
+		}
+
 		public String toString(){
 			return "(" + variable + " (" + t1.toString() +" " + t2.toString() + "))";
 		}
@@ -197,6 +212,12 @@ public class Decode {
 		public String toString(){
 			return "(" + variable + " " + t1.toString() + ")";
 		}
+
+		public List<ChartTransition> getTransitions(){
+			List<ChartTransition> transitions = new LinkedList<ChartTransition>();
+			transitions.add(t1);
+			return transitions;
+		}
 	}
 
 	private class TerminalTransition extends ChartTransition {
@@ -205,6 +226,11 @@ public class Decode {
 		}
 		public String toString(){
 			return variable;
+		}
+
+		public List<ChartTransition> getTransitions(){
+			List<ChartTransition> transitions = new LinkedList<ChartTransition>();
+			return transitions;
 		}
 	}
 
@@ -223,10 +249,6 @@ public class Decode {
 			StringBuffer sb = new StringBuffer();
 			for(ChartTransition t: nodeTransitions) {
 				sb.append(t.toString() + "\n");
-				//if(e.getValue() == this)
-				//	sb.append(e.getKey() + ": this\n");
-				//else
-				//	sb.append(e.getKey() + ": " + e.getValue() +"\n");
 			}
 			return sb.toString();
 		}
