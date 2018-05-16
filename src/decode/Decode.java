@@ -63,11 +63,13 @@ public class Decode {
 				Set<Rule> ruleSet = m_mapLexicalRules.get(t.getVar());
 				if (ruleSet != null) {
 					for (Rule r : ruleSet) {
-						ChartTransition t2 = new UnaryChartTransition(
-								t,
-								r.getMinusLogProb() + t.getProbability(),
-								r.getLHS().toString());
-						currentNewTransitions.add(t2);
+						if(!r.getLHS().toString().equals(r.getRHS().toString())) {
+							ChartTransition t2 = new UnaryChartTransition(
+									t,
+									r.getMinusLogProb() + t.getProbability(),
+									r.getLHS().toString());
+							currentNewTransitions.add(t2);
+						}
 					}
 				}
 			}
