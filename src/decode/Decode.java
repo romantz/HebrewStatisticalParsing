@@ -67,14 +67,12 @@ public class Decode {
 			Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
 			if(ruleSet != null) {
 				for (Rule r : ruleSet) {
-					if (!r.getLHS().toString().equals(r.getRHS().toString())) {
-						ChartTransition t2 = new UnaryChartTransition(
-								t,
-								r.getMinusLogProb() + t.getProbability(),
-								r.getLHS().toString());
-						currentNewTransitions.add(t2);
-						newAppliedRules.add(r);
-					}
+					ChartTransition t2 = new UnaryChartTransition(
+							t,
+							r.getMinusLogProb() + t.getProbability(),
+							r.getLHS().toString());
+					currentNewTransitions.add(t2);
+					newAppliedRules.add(r);
 				}
 			}
 		}
@@ -87,9 +85,7 @@ public class Decode {
 				Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
 				if(ruleSet != null) {
 					for (Rule r : ruleSet) {
-						if (!r.getLHS().toString().equals(r.getRHS().toString()) &&
-								!newAppliedRules.contains(r)
-								) {
+						if (!newAppliedRules.contains(r)) {
 							ChartTransition t2 = new UnaryChartTransition(
 									t,
 									r.getMinusLogProb() + t.getProbability(),
