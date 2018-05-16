@@ -14,6 +14,7 @@ import tree.Tree;
 public class Decode {
 
 	public static Set<Rule> m_setGrammarRules = null;
+	public static Map<String, Set<Rule>> m_mapGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
 	public static Map<String, Set<Rule>> m_mapUnaryRules = null;
 
@@ -35,17 +36,20 @@ public class Decode {
 			m_mapLexicalRules = g.getLexicalEntries();
 
 			m_mapUnaryRules = new HashMap<String, Set<Rule>>();
+			m_mapGrammarRules = new HashMap<String, Set<Rule>>();
 
 			for(Rule r: m_setGrammarRules){
-				if(r.getRHS().getSymbols().size() == 1){
-					Set s = m_mapUnaryRules.get(r.getRHS().toString());
-					if(s == null) {
-						Set<Rule> ruleSet = new HashSet<Rule>();
-						ruleSet.add(r);
+				Set s = m_mapGrammarRules.get(r.getRHS().toString());
+				if(s == null) {
+					Set<Rule> ruleSet = new HashSet<Rule>();
+					ruleSet.add(r);
+					m_mapGrammarRules.put(r.getRHS().toString(), ruleSet);
+					if(r.getRHS().getSymbols().size() == 1)
 						m_mapUnaryRules.put(r.getRHS().toString(), ruleSet);
-					} else {
-						s.add(r);
-					}
+				} else{
+					s.add(r);
+					if(r.getRHS().getSymbols().size() == 1)
+						m_mapUnaryRules.get(r.getRHS().toString()).add(r);
 				}
 			}
 		}
@@ -55,9 +59,9 @@ public class Decode {
 
 	public void addUnaryRules(ChartNode n){
 		Set<Rule> newAppliedRules = new HashSet<Rule>();
-		List<ChartTransition> allNewTransitions = new LinkedList<ChartTransition>();
-		List<ChartTransition> currentNewTransitions = new LinkedList<ChartTransition>();
-		List<ChartTransition> previousNewTransitions = new LinkedList<ChartTransition>();
+		List<ChartTransition> allNewTransitions = new ArrayList<ChartTransition>();
+		List<ChartTransition> currentNewTransitions = new ArrayList<ChartTransition>();
+		List<ChartTransition> previousNewTransitions = new ArrayList<ChartTransition>();
 
 		for (ChartTransition t: n.getTransitions()) {
 			Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
@@ -127,7 +131,7 @@ public class Decode {
 			t.getRoot().addDaughter(preTerminal);
 		}
 
-		System.out.println("---------");
+		/*System.out.println("---------");
 		for(Rule r: m_setGrammarRules){
 			System.out.println(r);
 		}
@@ -137,14 +141,17 @@ public class Decode {
 		}
 		System.out.println("---------");
 		for(Entry e: m_mapUnaryRules.entrySet()){
-			System.out.println(e.getKey()+" , " + e.getValue());
+			System.out.println("xxx "+e.getKey()+" , " + e.getValue());
 		}
 		System.out.println("---------");
+		for(Entry e: m_mapGrammarRules.entrySet()){
+			System.out.println("yyy "+e.getKey()+" , " + e.getValue());
+		}
+		System.out.println("---------");*/
 
 		ChartNode[][] chart = new ChartNode[input.size() + 1][input.size() + 1];
 
 		for(int i = 1; i <= input.size(); i++) {
-			System.out.println(i);
 			chart[i - 1][i] = new ChartNode();
 			TerminalTransition terminal = new TerminalTransition(input.get(i - 1));
 			if(m_mapLexicalRules.containsKey(input.get(i - 1))) {
@@ -173,15 +180,17 @@ public class Decode {
 						for (ChartTransition t1: chart[j][k].getTransitions()) {
 							for (ChartTransition t2: chart[k][i].getTransitions()) {
 								String key = t1.getVar() + " " + t2.getVar();
-								for(Rule r: m_setGrammarRules) {
-									if(r.getRHS().toString().equals(key)){
-										ChartTransition transition = new BinaryChartTransition(
-												t1,
-												t2,
-												r.getMinusLogProb() + t1.getProbability() + t2.getProbability(),
-												r.getLHS().toString()
-										);
-										chart[j][i].addTransition(transition);
+								if (m_mapGrammarRules.containsKey(key)) {
+									for (Rule r : m_mapGrammarRules.get(key)) {
+										if (r.getRHS().toString().equals(key)) {
+											ChartTransition transition = new BinaryChartTransition(
+													t1,
+													t2,
+													r.getMinusLogProb() + t1.getProbability() + t2.getProbability(),
+													r.getLHS().toString()
+											);
+											chart[j][i].addTransition(transition);
+										}
 									}
 								}
 							}
@@ -189,7 +198,6 @@ public class Decode {
 					}
 				}
 				addUnaryRules(chart[j][i]);
-				System.out.println("("+j+"," +i+") " +chart[j][i].getTransitions().size());
 			}
 		}
 
@@ -203,14 +211,6 @@ public class Decode {
 				}
 			}
 		}
-
-		System.out.println("-----");
-		for(int i = 0; i < chart.length; i++){
-			for(int j = 0; j < chart[i].length; j++){
-				System.out.println("(" + j +", " + i +")" + chart[j][i]);
-			}
-		}
-
 
 		if(bestTransition == null)
 			return t;
