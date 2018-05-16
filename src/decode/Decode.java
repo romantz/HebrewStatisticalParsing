@@ -14,7 +14,9 @@ public class Decode {
 
 	public static Set<Rule> m_setGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
-	
+
+	private final double MAX_PROBABILITY = 0.0;
+
     /**
      * Implementation of a singleton pattern
      * Avoids redundant instances in memory 
@@ -34,28 +36,44 @@ public class Decode {
 
 
 	public void addUnaryRules(ChartNode n){
-		boolean foundNew;
-		Map<String, Double> newTransitions = new HashMap<String, Double>();
-		do {
-			foundNew = false;
-			for (Entry<String, ChartTransition> e: n.getTransitions()) {
-				Set<Rule> ruleSet = m_mapLexicalRules.get(e.getKey());
+		List<ChartTransition> allNewTransitions = new LinkedList<ChartTransition>();
+		List<ChartTransition> currentNewTransitions = new LinkedList<ChartTransition>();
+		List<ChartTransition> previousNewTransitions = new LinkedList<ChartTransition>();
+
+		for (ChartTransition t: n.getTransitions()) {
+			Set<Rule> ruleSet = m_mapLexicalRules.get(t.getVar());
+			if (ruleSet != null) {
+				for (Rule r : ruleSet) {
+					ChartTransition t2 = new UnaryChartTransition(
+							t,
+							r.getMinusLogProb(),
+							r.getLHS().toString());
+					currentNewTransitions.add(t2);
+				}
+			}
+		}
+
+		allNewTransitions.addAll(currentNewTransitions);
+		while(!currentNewTransitions.isEmpty()) {
+			previousNewTransitions = currentNewTransitions;
+			currentNewTransitions = new LinkedList<ChartTransition>();
+			for (ChartTransition t: previousNewTransitions) {
+				Set<Rule> ruleSet = m_mapLexicalRules.get(t.getVar());
 				if (ruleSet != null) {
 					for (Rule r : ruleSet) {
-						String lhs = r.getLHS().toString();
-						if (!newTransitions.containsKey(lhs)) {
-							newTransitions.put(lhs, r.getMinusLogProb());
-							foundNew = true;
-						}
+						ChartTransition t2 = new UnaryChartTransition(
+								t,
+								r.getMinusLogProb(),
+								r.getLHS().toString());
+						currentNewTransitions.add(t2);
 					}
 				}
 			}
-		} while(foundNew);
-
-		for(Entry<String, Double> e: newTransitions.entrySet()) {
-			ChartTransition transition = new UnaryChartTransition(n, e.getValue(), true);
-			n.addTransition(e.getKey(), transition);
+			allNewTransitions.addAll(currentNewTransitions);
 		}
+
+		for(ChartTransition t: allNewTransitions)
+			n.addTransition(t);
 	}
 
 	public Tree decode(List<String> input){
@@ -91,9 +109,12 @@ public class Decode {
 			System.out.println(input.get(i - 1));
 			chart[i - 1][i] = new ChartNode();
 			for(Rule r: m_mapLexicalRules.get(input.get(i - 1))) {
-				ChartTransition transition = new UnaryChartTransition(null, r.getMinusLogProb(), false);
-				String parent = r.getLHS().toString();
-				chart[i - 1][i].addTransition(parent, transition);
+				TerminalTransition terminal = new TerminalTransition(r.getRHS().toString());
+				ChartTransition transition = new UnaryChartTransition(
+						terminal,
+						r.getMinusLogProb(),
+						r.getLHS().toString());
+				chart[i - 1][i].addTransition(transition);
 			}
 
 			addUnaryRules(chart[i - 1][i]);
@@ -102,26 +123,26 @@ public class Decode {
 				chart[j][i] = new ChartNode();
 				for(int k = j + 1; k < i; k++){
 					if(chart[j][k] != null && chart[k][i] != null) {
-						for (Entry<String, ChartTransition> e1 : chart[j][k].getTransitions()) {
-							for (Entry<String, ChartTransition> e2 : chart[k][i].getTransitions()) {
-								String key = e1.getKey() + " " + e2.getKey();
+						for (ChartTransition t1: chart[j][k].getTransitions()) {
+							for (ChartTransition t2: chart[k][i].getTransitions()) {
+								String key = t1.getVar() + " " + t2.getVar();
 								if (m_mapLexicalRules.containsKey(key)) {
 									Set<Rule> ruleSet = m_mapLexicalRules.get(key);
 									for (Rule r : ruleSet) {
 										ChartTransition transition = new BinaryChartTransition(
-												chart[j][k],
-												chart[k][i],
+												t1,
+												t2,
 												r.getMinusLogProb(),
-												false
+												r.getLHS().toString()
 										);
-										chart[j][i].addTransition(r.getLHS().toString(), transition);
+										chart[j][i].addTransition(transition);
 									}
 								}
 							}
 						}
 					}
-					addUnaryRules(chart[j][i]);
 				}
+				addUnaryRules(chart[j][i]);
 			}
 		}
 
@@ -136,67 +157,72 @@ public class Decode {
 	}
 
 	private abstract class ChartTransition {
-		boolean selfReference = false;
-		ChartNode n1;
+		ChartTransition t1;
 		double probability;
+		String variable;
 
-		public ChartTransition(ChartNode n1, double probability, boolean sr) {
-			this.n1 = n1;
+		public ChartTransition(ChartTransition t1, double probability, String var) {
+			this.t1 = t1;
 			this.probability = probability;
-			this.selfReference = sr;
+			this.variable = var;
 		}
 
-		public ChartNode getN1() { return n1; }
+		public ChartTransition getT1() { return t1; }
 		public double getProbability() { return probability; }
+		public String getVar() { return variable; }
 	}
 
 	private class BinaryChartTransition extends ChartTransition {
-		ChartNode n2;
-		public BinaryChartTransition(ChartNode n1, ChartNode n2, double probability, boolean sr) {
-			super(n1, probability, sr);
-			this.n2 = n2;
+		ChartTransition t2;
+		public BinaryChartTransition(
+				ChartTransition t1,
+				ChartTransition t2,
+				double probability,
+				String var) {
+			super(t1, probability, var);
+			this.t2 = t2;
 		}
-		public ChartNode getP2() { return n2; }
+		public ChartTransition getT2() { return t2; }
 
 		public String toString(){
-			return "(" + n1.toString() +", " + n2.toString() + ")" + ", " + probability;
+			return "(" + variable + " (" + t1.toString() +" " + t2.toString() + "))";
 		}
 	}
 
 	private class UnaryChartTransition extends ChartTransition {
-		public UnaryChartTransition(ChartNode n1, double probability, boolean sr) {
-			super(n1, probability, sr);
+		public UnaryChartTransition(ChartTransition t1, double probability, String var) {
+			super(t1, probability, var);
 		}
 
 		public String toString(){
-			if(selfReference)
-				return "this, " + probability;
-			else if(n1 != null)
-				return n1.toString() + ", " + probability;
-			else
-				return "null, " + probability;
+			return "(" + variable + " " + t1.toString() + ")";
 		}
 	}
 
-//	private class TerminalTransition extends ChartTransition {
-//		public TerminalTransition
-//	}
+	private class TerminalTransition extends ChartTransition {
+		public TerminalTransition(String var){
+			super(null, MAX_PROBABILITY, var);
+		}
+		public String toString(){
+			return variable;
+		}
+	}
 
 	private class ChartNode{
-		private List<Entry<String, ChartTransition>> nodeTransitions;
+		private List<ChartTransition> nodeTransitions;
 
 		public ChartNode(){
-			nodeTransitions = new LinkedList<Entry<String, ChartTransition>>();
+			nodeTransitions = new LinkedList<ChartTransition>();
 		}
 
-		public void addTransition(String var, ChartTransition t){
-			nodeTransitions.add(new AbstractMap.SimpleEntry<String, ChartTransition>(var, t));
+		public void addTransition(ChartTransition t){
+			nodeTransitions.add(t);
 		}
 
 		public String toString() {
 			StringBuffer sb = new StringBuffer();
-			for(Entry e: nodeTransitions) {
-				sb.append(e.getKey() + " - ");
+			for(ChartTransition t: nodeTransitions) {
+				sb.append(t.toString() + "\n");
 				//if(e.getValue() == this)
 				//	sb.append(e.getKey() + ": this\n");
 				//else
@@ -205,7 +231,7 @@ public class Decode {
 			return sb.toString();
 		}
 
-		public List<Entry<String, ChartTransition>> getTransitions(){
+		public List<ChartTransition> getTransitions(){
 			return nodeTransitions;
 		}
 	}
