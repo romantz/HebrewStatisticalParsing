@@ -104,12 +104,21 @@ public class Decode {
 
 		for(int i = 1; i <= input.size(); i++) {
 			chart[i - 1][i] = new ChartNode();
-			for(Rule r: m_mapLexicalRules.get(input.get(i - 1))) {
-				TerminalTransition terminal = new TerminalTransition(r.getRHS().toString());
+			TerminalTransition terminal = new TerminalTransition(input.get(i - 1));
+			if(m_mapLexicalRules.containsKey(input.get(i - 1))) {
+				for (Rule r : m_mapLexicalRules.get(input.get(i - 1))) {
+					ChartTransition transition = new UnaryChartTransition(
+							terminal,
+							r.getMinusLogProb(),
+							r.getLHS().toString());
+					chart[i - 1][i].addTransition(transition);
+				}
+			}
+			else {
 				ChartTransition transition = new UnaryChartTransition(
 						terminal,
-						r.getMinusLogProb(),
-						r.getLHS().toString());
+						MAX_PROBABILITY,
+						"NN");
 				chart[i - 1][i].addTransition(transition);
 			}
 
