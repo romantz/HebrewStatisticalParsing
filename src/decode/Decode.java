@@ -4,9 +4,7 @@ import grammar.Grammar;
 import grammar.Rule;
 
 import java.util.*;
-import java.util.Map.Entry;
 
-import parse.Parse;
 import tree.Node;
 import tree.Terminal;
 import tree.Tree;
@@ -17,7 +15,8 @@ public class Decode {
 	public static Map<String, Set<Rule>> m_mapGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
 	public static Map<String, Set<Rule>> m_mapUnaryRules = null;
-	public static Map<String, Set<Rule>> m_mapBinaryRules = null;
+	public static Map<String, Set<Rule>> m_mapLeftSymbolBinaryRules = null;
+	public static Map<String, Set<Rule>> m_mapRightSymbolBinaryRules = null;
 
 	private final double MAX_PROBABILITY = 0.0;
 	private final String START_VARIABLE = "S";
@@ -37,9 +36,33 @@ public class Decode {
 			m_mapLexicalRules = g.getLexicalEntries();
 
 			m_mapUnaryRules = new HashMap<String, Set<Rule>>();
+			m_mapLeftSymbolBinaryRules = new HashMap<String, Set<Rule>>();
+			m_mapRightSymbolBinaryRules = new HashMap<String, Set<Rule>>();
 			m_mapGrammarRules = new HashMap<String, Set<Rule>>();
 
 			for(Rule r: m_setGrammarRules){
+				if(r.getRHS().getSymbols().size() == 2){
+					String firstSymbol = r.getRHS().getSymbols().get(0);
+					Set s = m_mapLeftSymbolBinaryRules.get(firstSymbol);
+					if(s == null) {
+						Set<Rule> ruleSet = new HashSet<Rule>();
+						ruleSet.add(r);
+						m_mapLeftSymbolBinaryRules.put(firstSymbol, ruleSet);
+					} else {
+						s.add(r);
+					}
+
+					String secondSymbol = r.getRHS().getSymbols().get(1);
+					s = m_mapRightSymbolBinaryRules.get(secondSymbol);
+					if(s == null) {
+						Set<Rule> ruleSet = new HashSet<Rule>();
+						ruleSet.add(r);
+						m_mapRightSymbolBinaryRules.put(secondSymbol, ruleSet);
+					} else {
+						s.add(r);
+					}
+				}
+
 				Set s = m_mapGrammarRules.get(r.getRHS().toString());
 				if(s == null) {
 					Set<Rule> ruleSet = new HashSet<Rule>();
@@ -53,7 +76,12 @@ public class Decode {
 						m_mapUnaryRules.get(r.getRHS().toString()).add(r);
 				}
 			}
+
+			for(Map.Entry e: m_mapRightSymbolBinaryRules.entrySet()){
+				System.out.println(e.getKey()+" , " + e.getValue());
+			}
 		}
+
 		return m_singDecoder;
 	}
 
@@ -63,7 +91,7 @@ public class Decode {
 		List<ChartTransition> currentNewTransitions = new ArrayList<ChartTransition>();
 		List<ChartTransition> previousNewTransitions = new ArrayList<ChartTransition>();
 
-		for (ChartTransition t: n.getTransitions()) {
+		for (ChartTransition t: n.getTransitions().values()) {
 			Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
 			if(ruleSet != null) {
 				for (Rule r : ruleSet) {
@@ -172,13 +200,36 @@ public class Decode {
 				chart[j][i] = new ChartNode();
 				for(int k = j + 1; k < i; k++){
 					if(chart[j][k] != null && chart[k][i] != null) {
-						for (ChartTransition t1: chart[j][k].getTransitions()) {
-							for (ChartTransition t2: chart[k][i].getTransitions()) {
-								String key = t1.getVar() + " " + t2.getVar();
-								Set<Rule> ruleSet = m_mapGrammarRules.get(key);
+						Map<String, ChartTransition> transitions1 = chart[j][k].getTransitions();
+						Map<String, ChartTransition> transitions2 = chart[k][i].getTransitions();
+						if(transitions1.size() <= transitions2.size()) {
+							for (ChartTransition t1 : chart[j][k].getTransitions().values()) {
+								Set<Rule> ruleSet = m_mapLeftSymbolBinaryRules.get(t1.getVar());
 								if (ruleSet != null) {
 									for (Rule r : ruleSet) {
-										if (r.getRHS().toString().equals(key)) {
+										ChartTransition t2 =
+												chart[k][i].getTransitions().get(r.getRHS().getSymbols().get(1));
+										if (t2 != null) {
+											ChartTransition newTransition = new BinaryChartTransition(
+													t1,
+													t2,
+													r.getMinusLogProb() + t1.getProbability() + t2.getProbability(),
+													r.getLHS().toString()
+											);
+											chart[j][i].addTransition(newTransition);
+										}
+									}
+								}
+							}
+						}
+						else {
+							for (ChartTransition t2 : chart[k][i].getTransitions().values()) {
+								Set<Rule> ruleSet = m_mapRightSymbolBinaryRules.get(t2.getVar());
+								if (ruleSet != null) {
+									for (Rule r : ruleSet) {
+										ChartTransition t1 =
+												chart[j][k].getTransitions().get(r.getRHS().getSymbols().get(0));
+										if (t1 != null) {
 											ChartTransition newTransition = new BinaryChartTransition(
 													t1,
 													t2,
@@ -200,7 +251,7 @@ public class Decode {
 		double minProb = Double.MAX_VALUE;
 		ChartTransition bestTransition = null;
 		if(chart[0][input.size()] != null) {
-			for (ChartTransition transition : chart[0][input.size()].getTransitions()) {
+			for (ChartTransition transition : chart[0][input.size()].getTransitions().values()) {
 				if (transition.variable.equals(START_VARIABLE) && transition.getProbability() < minProb) {
 					minProb = transition.getProbability();
 					bestTransition = transition;
@@ -312,8 +363,8 @@ public class Decode {
 			return sb.toString();
 		}
 
-		public Collection<ChartTransition> getTransitions(){
-			return nodeTransitions.values();
+		public Map<String, ChartTransition> getTransitions(){
+			return nodeTransitions;
 		}
 	}
 	
