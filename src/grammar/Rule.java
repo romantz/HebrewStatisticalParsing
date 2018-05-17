@@ -36,6 +36,8 @@ public class Rule {
 		this.m_dMinusLogProb = m_dMinusLogProb;
 	}
 
+	private String representation = null;
+
 	public Rule(String s1, String s2){
 		setLHS(new Event(s1));
 		setRHS(new Event(s2));
@@ -117,6 +119,7 @@ public class Rule {
 	}
 
 	public void setLHS(Event m_lhs) {
+		representation = null;
 		m_LHS = m_lhs;
 	}
 
@@ -125,12 +128,15 @@ public class Rule {
 	}
 
 	public void setRHS(Event m_rhs) {
+		representation = null;
 		m_RHS = m_rhs;
 	}
 	
 	public String toString()
 	{
-		return getLHS().toString()+"-->"+getRHS().toString();
+		if(representation == null)
+			representation = getLHS().toString()+"-->"+getRHS().toString();
+		return representation;
 	}
 
 

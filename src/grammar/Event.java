@@ -28,6 +28,7 @@ import java.util.StringTokenizer;
 public class Event {
 	
 	private List<String> m_lstSymbols = new ArrayList<String>();
+	private String representation = null;
 	
 	public Event(String s) {
 		StringTokenizer st = new StringTokenizer(s);
@@ -39,25 +40,31 @@ public class Event {
 
 	private void addSymbol(String sym) {
 		getSymbols().add(sym);
+		representation = null;
 	}
 
 	public boolean equals(Object o)
 	{
 		return toString().equals(((Event)o).toString());
 	}
-	
+
+	// Calculate toString only once as a performance improvement
 	public String toString()
 	{
-		// return concatenation of symbols
-		StringBuffer sb = new StringBuffer();
-		Iterator<String> it = getSymbols().iterator();
-		while (it.hasNext()) {
-			String s = (String) it.next();
-			sb.append(s);
-			if (it.hasNext()) 
-				sb.append(" ");	
+		if(representation == null) {
+			// return concatenation of symbols
+			StringBuffer sb = new StringBuffer();
+			Iterator<String> it = getSymbols().iterator();
+			while (it.hasNext()) {
+				String s = (String) it.next();
+				sb.append(s);
+				if (it.hasNext())
+					sb.append(" ");
+			}
+			representation = sb.toString();
 		}
-		return sb.toString();
+
+		return representation;
 	}
 	
 	public int hashCode()

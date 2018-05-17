@@ -17,6 +17,7 @@ public class Decode {
 	public static Map<String, Set<Rule>> m_mapGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
 	public static Map<String, Set<Rule>> m_mapUnaryRules = null;
+	public static Map<String, Set<Rule>> m_mapBinaryRules = null;
 
 	private final double MAX_PROBABILITY = 0.0;
 	private final String START_VARIABLE = "S";
@@ -59,7 +60,6 @@ public class Decode {
 
 	public void addUnaryRules(ChartNode n){
 		Set<Rule> newAppliedRules = new HashSet<Rule>();
-		List<ChartTransition> allNewTransitions = new ArrayList<ChartTransition>();
 		List<ChartTransition> currentNewTransitions = new ArrayList<ChartTransition>();
 		List<ChartTransition> previousNewTransitions = new ArrayList<ChartTransition>();
 
@@ -77,7 +77,9 @@ public class Decode {
 			}
 		}
 
-		allNewTransitions.addAll(currentNewTransitions);
+		for(ChartTransition t: currentNewTransitions)
+			n.addTransition(t);
+
 		while(!currentNewTransitions.isEmpty()) {
 			previousNewTransitions = currentNewTransitions;
 			currentNewTransitions = new LinkedList<ChartTransition>();
@@ -91,16 +93,13 @@ public class Decode {
 									r.getMinusLogProb() + t.getProbability(),
 									r.getLHS().toString());
 							currentNewTransitions.add(t2);
+							n.addTransition(t2);
 							newAppliedRules.add(r);
 						}
 					}
 				}
 			}
-			allNewTransitions.addAll(currentNewTransitions);
 		}
-
-		for(ChartTransition t: allNewTransitions)
-			n.addTransition(t);
 	}
 
 	public Node constructNodeFromTransition(ChartTransition transition){
@@ -176,16 +175,17 @@ public class Decode {
 						for (ChartTransition t1: chart[j][k].getTransitions()) {
 							for (ChartTransition t2: chart[k][i].getTransitions()) {
 								String key = t1.getVar() + " " + t2.getVar();
-								if (m_mapGrammarRules.containsKey(key)) {
-									for (Rule r : m_mapGrammarRules.get(key)) {
+								Set<Rule> ruleSet = m_mapGrammarRules.get(key);
+								if (ruleSet != null) {
+									for (Rule r : ruleSet) {
 										if (r.getRHS().toString().equals(key)) {
-											ChartTransition transition = new BinaryChartTransition(
+											ChartTransition newTransition = new BinaryChartTransition(
 													t1,
 													t2,
 													r.getMinusLogProb() + t1.getProbability() + t2.getProbability(),
 													r.getLHS().toString()
 											);
-											chart[j][i].addTransition(transition);
+											chart[j][i].addTransition(newTransition);
 										}
 									}
 								}
