@@ -5,6 +5,7 @@ import grammar.Rule;
 
 import java.util.*;
 
+import train.Pair;
 import tree.Node;
 import tree.Terminal;
 import tree.Tree;
@@ -12,11 +13,17 @@ import tree.Tree;
 public class Decode {
 
 	public static Set<Rule> m_setGrammarRules = null;
-	public static Map<String, Set<Rule>> m_mapGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
+
+	public static Map<String, Set<Rule>> m_mapGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapUnaryRules = null;
 	public static Map<String, Set<Rule>> m_mapLeftSymbolBinaryRules = null;
 	public static Map<String, Set<Rule>> m_mapRightSymbolBinaryRules = null;
+
+	public static int ruleCount = 0;
+	public static Map<Rule, Integer> m_mapRuleToNum = null;
+	public static Map<Integer, Rule> m_mapNumToRule = null;
+
 
 	private final double MAX_PROBABILITY = 0.0;
 	private final String START_VARIABLE = "S";
@@ -40,7 +47,13 @@ public class Decode {
 			m_mapRightSymbolBinaryRules = new HashMap<String, Set<Rule>>();
 			m_mapGrammarRules = new HashMap<String, Set<Rule>>();
 
+			m_mapRuleToNum = new HashMap<Rule, Integer>();
+			m_mapNumToRule = new HashMap<Integer, Rule>();
+
 			for(Rule r: m_setGrammarRules){
+				m_mapRuleToNum.put(r, ruleCount);
+				m_mapNumToRule.put(ruleCount, r);
+
 				if(r.getRHS().getSymbols().size() == 2){
 					String firstSymbol = r.getRHS().getSymbols().get(0);
 					Set s = m_mapLeftSymbolBinaryRules.get(firstSymbol);
@@ -75,6 +88,8 @@ public class Decode {
 					if(r.getRHS().getSymbols().size() == 1)
 						m_mapUnaryRules.get(r.getRHS().toString()).add(r);
 				}
+
+				ruleCount++;
 			}
 
 //			for(Map.Entry e: m_mapRightSymbolBinaryRules.entrySet()){
@@ -195,68 +210,50 @@ public class Decode {
 			}
 
 			addUnaryRules(chart[i - 1][i]);
+			chart[i - 1][i].calculateRuleArrays();
+			for (ChartTransition tr : chart[i - 1][i].getTransitions().values()) {
+				System.out.println("----- " + tr);
+			}
 
 			for(int j = i - 2; j >= 0; j--){
 				chart[j][i] = new ChartNode();
 				for(int k = j + 1; k < i; k++){
 					if(chart[j][k] != null && chart[k][i] != null) {
-						Map<String, ChartTransition> transitions1 = chart[j][k].getTransitions();
-						Map<String, ChartTransition> transitions2 = chart[k][i].getTransitions();
-						if(transitions1.size() <= transitions2.size()) {
-							for (ChartTransition t1 : chart[j][k].getTransitions().values()) {
-								Set<Rule> ruleSet = m_mapLeftSymbolBinaryRules.get(t1.getVar());
-								if (ruleSet != null) {
-									for (Rule r : ruleSet) {
-										ChartTransition t2 =
-												chart[k][i].getTransitions().get(r.getRHS().getSymbols().get(1));
-										if (t2 != null) {
-											ChartTransition newTransition = new BinaryChartTransition(
-													t1,
-													t2,
-													r.getMinusLogProb() + t1.getProbability() + t2.getProbability(),
-													r.getLHS().toString()
-											);
-											chart[j][i].addTransition(newTransition);
-										}
-									}
-								}
-							}
-						}
-						else {
-							for (ChartTransition t2 : chart[k][i].getTransitions().values()) {
-								Set<Rule> ruleSet = m_mapRightSymbolBinaryRules.get(t2.getVar());
-								if (ruleSet != null) {
-									for (Rule r : ruleSet) {
-										ChartTransition t1 =
-												chart[j][k].getTransitions().get(r.getRHS().getSymbols().get(0));
-										if (t1 != null) {
-											ChartTransition newTransition = new BinaryChartTransition(
-													t1,
-													t2,
-													r.getMinusLogProb() + t1.getProbability() + t2.getProbability(),
-													r.getLHS().toString()
-											);
-											chart[j][i].addTransition(newTransition);
-										}
-									}
-								}
-							}
+						HashMap<Integer, ChartTransition> leftRules = chart[j][k].getLeftRules();
+						HashMap<Integer, ChartTransition> rightRules = chart[k][i].getRightRules();
+
+						HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersection =
+								intersectHashMaps(leftRules, rightRules);
+						for(Map.Entry<Integer, Pair<ChartTransition, ChartTransition>> e: intersection.entrySet()) {
+							Rule r = m_mapNumToRule.get(e.getKey());
+
+							ChartTransition newTransition = new BinaryChartTransition(
+									e.getValue().x,
+									e.getValue().y,
+									r.getMinusLogProb() +
+											e.getValue().x.getProbability() +
+											e.getValue().y.getProbability(),
+									r.getLHS().toString()
+							);
+							chart[j][i].addTransition(newTransition);
 						}
 					}
 				}
 				addUnaryRules(chart[j][i]);
+				chart[j][i].calculateRuleArrays();
+				System.out.println(chart[j][i].getTransitions().size());
 			}
 		}
 
-		for(int i = 0; i < chart[0].length; i++) {
-			for (int j = 0; j < chart.length; j++) {
-				System.out.println(i + ", " + j);
-				if(chart[j][i] != null)
-				for (ChartTransition tr : chart[j][i].getTransitions().values()) {
-					System.out.println("----- " + tr);
-				}
-			}
-		}
+//		for(int i = 0; i < chart[0].length; i++) {
+//			for (int j = 0; j < chart.length; j++) {
+//				System.out.println(i + ", " + j);
+//				if(chart[j][i] != null)
+//				for (ChartTransition tr : chart[j][i].getTransitions().values()) {
+//					System.out.println("----- " + tr);
+//				}
+//			}
+//		}
 
 		double minProb = Double.MAX_VALUE;
 		ChartTransition bestTransition = null;
@@ -276,6 +273,29 @@ public class Decode {
 		t2.getRoot().addDaughter(constructNodeFromTransition(bestTransition));
 		return t2;
 		
+	}
+
+	public static HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersectHashMaps(
+			HashMap<Integer, ChartTransition> left,
+			HashMap<Integer, ChartTransition> right){
+
+		HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersection =
+				new HashMap<Integer, Pair<ChartTransition, ChartTransition>>();
+
+		if(left.size() <= right.size()) {
+			for (Map.Entry<Integer, ChartTransition> e : left.entrySet()) {
+				ChartTransition t = right.get(e.getKey());
+				if (t != null)
+					intersection.put(e.getKey(), new Pair(e.getValue(), t));
+			}
+		} else {
+			for (Map.Entry<Integer, ChartTransition> e : right.entrySet()) {
+				ChartTransition t = left.get(e.getKey());
+				if (t != null)
+					intersection.put(e.getKey(), new Pair(t, e.getValue()));
+			}
+		}
+		return intersection;
 	}
 
 	private abstract class ChartTransition {
@@ -352,10 +372,35 @@ public class Decode {
 
 	private class ChartNode{
 		private Map<String, ChartTransition> nodeTransitions;
+		private HashMap<Integer, ChartTransition> rightRules;
+		private HashMap<Integer, ChartTransition> leftRules;
+
 
 		public ChartNode(){
 			nodeTransitions = new HashMap<String, ChartTransition>();
 		}
+
+		public void calculateRuleArrays(){
+			leftRules = new HashMap<Integer, ChartTransition>();
+			rightRules = new HashMap<Integer, ChartTransition>();
+
+			for(ChartTransition t: nodeTransitions.values()) {
+				Set<Rule> currentLeftRules = m_mapLeftSymbolBinaryRules.get(t.getVar());
+				if(currentLeftRules != null)
+					for(Rule r: currentLeftRules){
+						leftRules.put(m_mapRuleToNum.get(r), t);
+					}
+
+				Set<Rule> currentRightRules = m_mapRightSymbolBinaryRules.get(t.getVar());
+				if(currentRightRules != null)
+					for(Rule r: currentRightRules){
+						rightRules.put(m_mapRuleToNum.get(r), t);
+					}
+			}
+		}
+
+		public HashMap<Integer, ChartTransition> getRightRules(){ return rightRules; }
+		public HashMap<Integer, ChartTransition> getLeftRules(){ return leftRules; }
 
 		public void addTransition(ChartTransition t){
 			String var = t.variable;
@@ -377,6 +422,4 @@ public class Decode {
 			return nodeTransitions;
 		}
 	}
-	
-	
 }

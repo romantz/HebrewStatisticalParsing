@@ -13,6 +13,7 @@ import bracketimport.TreebankReader;
 import decode.Decode;
 import train.Train;
 
+import tree.Node;
 import tree.Tree;
 import treebank.Treebank;
 
@@ -48,26 +49,43 @@ public class Parse {
 		// 1. read input
 		Treebank myGoldTreebank = TreebankReader.getInstance().read(true, args[0]);
 		Treebank myTrainTreebank = TreebankReader.getInstance().read(true, args[1]);
-		
+
 		// 2. transform trees
 		// TODO
 		
 		// 3. train
 		Grammar myGrammar = Train.getInstance().train(myTrainTreebank);
-		
+//		for(Rule r: myGrammar.getLexicalRules()) System.out.println(r);
+//		for(Rule r: myGrammar.getSyntacticRules()) System.out.println(r);
+//		for(java.util.Map.Entry e: myGrammar.getRuleCounts().entrySet()) {
+//			Rule r = (Rule) e.getKey();
+//			System.out.println(r.getMinusLogProb() +", " + r.isTop() + ", " + e.getKey() + ", " + e.getValue());
+//		}
+
 		// 4. decode
+
+
 		List<Tree> myParseTrees = new ArrayList<Tree>();		
 		for (int i = 0; i < myGoldTreebank.size(); i++) {
+			if(i == 1)
+				System.exit(0);
+			Long currentTime = System.currentTimeMillis();
 			List<String> mySentence = myGoldTreebank.getAnalyses().get(i).getYield();
 			Tree myParseTree = Decode.getInstance(myGrammar).decode(mySentence);
 			myParseTrees.add(myParseTree);
+			System.out.println((System.currentTimeMillis() - currentTime) + ", " +myParseTree);
+		}
+
+		// 5. de-transform trees
+		List<Tree> myDeTransformedTrees = new ArrayList<Tree>();
+		for(Tree t: myParseTrees){
+			Tree t2 = new Tree(deTransformTree(t.getRoot()));
+			myDeTransformedTrees.add(t2);
+			System.out.println(t2);
 		}
 		
-		// 5. de-transform trees
-		// TODO
-		
 		// 6. write output
-		writeOutput(args[2], myGrammar, myParseTrees);	
+		writeOutput(args[2], myGrammar, myDeTransformedTrees);
 	}
 	
 	
@@ -142,7 +160,24 @@ public class Parse {
 		}
 	}
 
-	
+	public static Node deTransformTree(Node node){
+		if(node.isLeaf())
+			return new Node(node.getLabel());
+
+		Node newNode = new Node(node.getLabel());
+		for(Node daughter: node.getDaughters()){
+			Node newDaughter = deTransformTree(daughter);
+			if(daughter.isLeaf() || !daughter.getLabel().contains(Train.MARKOVIZATION_SYMBOL)){
+				newNode.addDaughter(newDaughter);
+			} else {
+				for(Node daughter2: newDaughter.getDaughters()){
+					newNode.addDaughter(daughter2);
+				}
+			}
+
+		}
+		return newNode;
+	}
 
 	
 
