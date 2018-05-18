@@ -68,35 +68,35 @@ public class Train {
 						actualRules.addAll(binarizationMap.get(r));
 					} else {
 						List<Rule> currentBinarization = new ArrayList<Rule>();
-						String[] lastHSymbols = new String[h];
+						ArrayList<String> lastHSymbols = new ArrayList<String>();
 						String parent = r.getLHS().toString();
 
 						for (int k = 0; k < h - 1; k++){
-							lastHSymbols[k] = "-";
+							lastHSymbols.add("-");
 						}
-						if(h > 0)
-							lastHSymbols[h - 1] = rhsSymbols.get(0);
+						if(h > 0 || h == -1)
+							lastHSymbols.add(rhsSymbols.get(0));
 
 						Event eLHS = new Event(parent);
-						newNonTerminal = Arrays.toString(lastHSymbols) + NEW_NONTERMINAL_SYMBOL + eLHS.toString();
+						newNonTerminal = Arrays.toString(lastHSymbols.toArray()) + NEW_NONTERMINAL_SYMBOL + eLHS.toString();
 						Event eRHS = new Event(rhsSymbols.get(0) + " " + newNonTerminal);
 						Rule r1 = new Rule(eLHS, eRHS);
 						currentBinarization.add(r1);
 						r1.setTop(r.isTop());
-						System.out.println(r1);
 						for (int j = 1; j < rhsSymbols.size() - 1; j++) {
 							if(h > 0){
 								for (int k = 1; k < h; k++){
-									lastHSymbols[k - 1] = lastHSymbols[k];
+									lastHSymbols.set(k - 1, lastHSymbols.get(k));
 								}
-								lastHSymbols[h - 1] = rhsSymbols.get(j);
+								lastHSymbols.set(h - 1, rhsSymbols.get(j));
 							}
+							if(h == -1)
+								lastHSymbols.add(rhsSymbols.get(j));
 							eLHS = new Event(newNonTerminal);
-							newNonTerminal = Arrays.toString(lastHSymbols) + NEW_NONTERMINAL_SYMBOL + parent;
+							newNonTerminal = Arrays.toString(lastHSymbols.toArray()) + NEW_NONTERMINAL_SYMBOL + parent;
 							eRHS = new Event(rhsSymbols.get(j) + " " + newNonTerminal);
 							Rule r2 = new Rule(eLHS, eRHS);
 							currentBinarization.add(r2);
-							System.out.println(r2);
 						}
 						eLHS = new Event(newNonTerminal);
 						eRHS = new Event(rhsSymbols.get(rhsSymbols.size() - 1));
@@ -104,7 +104,6 @@ public class Train {
 						currentBinarization.add(r3);
 						actualRules.addAll(currentBinarization);
 						binarizationMap.put(r, currentBinarization);
-						System.out.println(r3);
 					}
 				} else {
 					actualRules.add(r);
