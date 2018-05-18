@@ -248,6 +248,16 @@ public class Decode {
 			}
 		}
 
+		for(int i = 0; i < chart[0].length; i++) {
+			for (int j = 0; j < chart.length; j++) {
+				System.out.println(i + ", " + j);
+				if(chart[j][i] != null)
+				for (ChartTransition tr : chart[j][i].getTransitions().values()) {
+					System.out.println("----- " + tr);
+				}
+			}
+		}
+
 		double minProb = Double.MAX_VALUE;
 		ChartTransition bestTransition = null;
 		if(chart[0][input.size()] != null) {

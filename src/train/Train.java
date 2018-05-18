@@ -78,7 +78,8 @@ public class Train {
 							lastHSymbols.add(rhsSymbols.get(0));
 
 						Event eLHS = new Event(parent);
-						newNonTerminal = Arrays.toString(lastHSymbols.toArray()) + NEW_NONTERMINAL_SYMBOL + eLHS.toString();
+						newNonTerminal = Arrays.toString(lastHSymbols.toArray()).replace(" ", "")
+								+ NEW_NONTERMINAL_SYMBOL + eLHS.toString();
 						Event eRHS = new Event(rhsSymbols.get(0) + " " + newNonTerminal);
 						Rule r1 = new Rule(eLHS, eRHS);
 						currentBinarization.add(r1);
@@ -93,7 +94,8 @@ public class Train {
 							if(h == -1)
 								lastHSymbols.add(rhsSymbols.get(j));
 							eLHS = new Event(newNonTerminal);
-							newNonTerminal = Arrays.toString(lastHSymbols.toArray()) + NEW_NONTERMINAL_SYMBOL + parent;
+							newNonTerminal = Arrays.toString(lastHSymbols.toArray()).replace(" ", "")
+									+ NEW_NONTERMINAL_SYMBOL + parent;
 							eRHS = new Event(rhsSymbols.get(j) + " " + newNonTerminal);
 							Rule r2 = new Rule(eLHS, eRHS);
 							currentBinarization.add(r2);
