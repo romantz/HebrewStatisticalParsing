@@ -77,9 +77,9 @@ public class Decode {
 				}
 			}
 
-			for(Map.Entry e: m_mapRightSymbolBinaryRules.entrySet()){
-				System.out.println(e.getKey()+" , " + e.getValue());
-			}
+//			for(Map.Entry e: m_mapRightSymbolBinaryRules.entrySet()){
+//				System.out.println(e.getKey()+" , " + e.getValue());
+//			}
 		}
 
 		return m_singDecoder;
