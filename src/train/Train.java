@@ -26,11 +26,8 @@ import utils.CountMap;
 
 public class Train {
 
-
-	private static int newNonTerminalCount = 0;
-	private static final String NEW_NON_TERMINAL_PREFIX = "N";
-	private static final String NEW_NONTERMINAL_SYMBOL = "@";
-	int h = 0;
+	public static final String MARKOVIZATION_SYMBOL = "@";
+	int h = -1;
 
     /**
      * Implementation of a singleton pattern
@@ -79,7 +76,7 @@ public class Train {
 
 						Event eLHS = new Event(parent);
 						newNonTerminal = Arrays.toString(lastHSymbols.toArray()).replace(" ", "")
-								+ NEW_NONTERMINAL_SYMBOL + eLHS.toString();
+								+ MARKOVIZATION_SYMBOL + eLHS.toString();
 						Event eRHS = new Event(rhsSymbols.get(0) + " " + newNonTerminal);
 						Rule r1 = new Rule(eLHS, eRHS);
 						currentBinarization.add(r1);
@@ -95,7 +92,7 @@ public class Train {
 								lastHSymbols.add(rhsSymbols.get(j));
 							eLHS = new Event(newNonTerminal);
 							newNonTerminal = Arrays.toString(lastHSymbols.toArray()).replace(" ", "")
-									+ NEW_NONTERMINAL_SYMBOL + parent;
+									+ MARKOVIZATION_SYMBOL + parent;
 							eRHS = new Event(rhsSymbols.get(j) + " " + newNonTerminal);
 							Rule r2 = new Rule(eLHS, eRHS);
 							currentBinarization.add(r2);
