@@ -91,11 +91,11 @@ public class Decode {
 
 				ruleCount++;
 			}
-
-//			for(Map.Entry e: m_mapRightSymbolBinaryRules.entrySet()){
-//				System.out.println(e.getKey()+" , " + e.getValue());
-//			}
 		}
+
+//		for(Map.Entry e: m_mapGrammarRules.entrySet()){
+//			System.out.println(e.getKey() +", " + e.getValue());
+//		}
 
 		return m_singDecoder;
 	}
@@ -202,11 +202,22 @@ public class Decode {
 				}
 			}
 			else {
-				ChartTransition transition = new UnaryChartTransition(
-						terminal,
-						MAX_PROBABILITY,
-						"NN");
-				chart[i - 1][i].addTransition(transition);
+
+				for(Rule r: m_mapLexicalRules.get("UNKNOWN")) {
+					ChartTransition transition = new UnaryChartTransition(
+							terminal,
+							r.getMinusLogProb(),
+							r.getLHS().toString());
+					chart[i - 1][i].addTransition(transition);
+				}
+//				ChartTransition transition = new UnaryChartTransition(
+//						terminal,
+//						MAX_PROBABILITY,
+//						"NN");
+//				chart[i - 1][i].addTransition(transition);
+//				for(Map.Entry e: chart[i - 1][i].getTransitions().entrySet()){
+//					System.out.println(e.getKey() +", "+e.getValue() + ((ChartTransition)e.getValue()).getProbability());
+//				}
 			}
 
 			addUnaryRules(chart[i - 1][i]);
@@ -249,7 +260,7 @@ public class Decode {
 //				System.out.println(i + ", " + j);
 //				if(chart[j][i] != null)
 //				for (ChartTransition tr : chart[j][i].getTransitions().values()) {
-//					System.out.println("----- " + tr);
+//					System.out.println(tr.getProbability() + "----- " + tr);
 //				}
 //			}
 //		}

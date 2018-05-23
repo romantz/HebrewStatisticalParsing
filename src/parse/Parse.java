@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import bracketimport.TreebankReader;
 
@@ -64,29 +67,49 @@ public class Parse {
 
 		// 4. decode
 
+		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(8);
 
+		Decode decodeInstance = Decode.getInstance(myGrammar);
+
+		Long startTime = System.currentTimeMillis();
 		List<Tree> myParseTrees = new ArrayList<Tree>();
+		Task[] tasks = new Task[myGoldTreebank.size()];
 		for (int i = 0; i < myGoldTreebank.size(); i++) {
 			Long currentTime = System.currentTimeMillis();
 			List<String> mySentence = myGoldTreebank.getAnalyses().get(i).getYield();
-			Tree myParseTree = Decode.getInstance(myGrammar).decode(mySentence);
-			myParseTrees.add(myParseTree);
+			tasks[i] = new Task(mySentence, decodeInstance, i);
+			executor.execute(tasks[i]);
+//			Tree myParseTree = Decode.getInstance(myGrammar).decode(mySentence);
+//			myParseTrees.add(myParseTree);
+//			if(i % 10 == 0)
+//				System.out.println("Finished processing " + i + " sentences");
 			//System.out.println((System.currentTimeMillis() - currentTime) + ", " + myParseTree);
-
+			//System.exit(0);
 		}
+		try {
+			executor.shutdown();
+			while (!executor.awaitTermination(1, TimeUnit.SECONDS)) {}
+		} catch (InterruptedException e){
+			System.out.println(e.getStackTrace());
+		}
+		System.out.println(System.currentTimeMillis() - startTime);
 
 		// 5. de-transform trees
 		List<Tree> myDeTransformedTrees = new ArrayList<Tree>();
-		for(Tree t: myParseTrees){
-			Tree t2 = new Tree(deTransformTree(t.getRoot()));
+		for(Task t: tasks){
+			Tree t2 = new Tree(deTransformTree(t.getTree().getRoot()));
 			myDeTransformedTrees.add(t2);
-			System.out.println(t2);
 		}
+//		List<Tree> myDeTransformedTrees = new ArrayList<Tree>();
+//		for(Tree t: myParseTrees){
+//			Tree t2 = new Tree(deTransformTree(t.getRoot()));
+//			myDeTransformedTrees.add(t2);
+//		//	System.out.println(t2);
+//		}
 		
 		// 6. write output
 		writeOutput(args[2], myGrammar, myDeTransformedTrees);
 	}
-	
 	
 	/**
 	 * Writes output to files:

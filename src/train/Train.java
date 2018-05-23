@@ -27,7 +27,7 @@ import utils.CountMap;
 public class Train {
 
 	public static final String MARKOVIZATION_SYMBOL = "@";
-	int h = 1;
+	int h = -1;
 
     /**
      * Implementation of a singleton pattern
@@ -51,6 +51,7 @@ public class Train {
 	public Grammar train(Treebank myTreebank)
 	{
 		Grammar myGrammar = new Grammar();
+		Map<String, Integer> unknownCount = new HashMap<String, Integer>();
 		HashMap<Rule, List<Rule>> binarizationMap = new HashMap<Rule, List<Rule>>();
 		for (int i = 0; i < myTreebank.size(); i++) {
 			Tree myTree = myTreebank.getAnalyses().get(i);
@@ -122,11 +123,36 @@ public class Train {
 				lhsCounts.put(lhs, lhsCounts.get(lhs) + (Integer)e.getValue());
 		}
 
+		int totalUnknownCount = 0;
+		for(Rule r: myGrammar.getLexicalRules()){
+			List<String> rhsSymbols = r.getRHS().getSymbols();
+			if(rhsSymbols.size() == 1){
+				String lhs = r.getLHS().toString();
+				Integer count = unknownCount.get(lhs);
+				totalUnknownCount++;
+				if(count == null){
+					unknownCount.put(lhs, 1);
+				}
+				else {
+					unknownCount.put(lhs, count + 1);
+				}
+			}
+		}
+
 		for(java.util.Map.Entry e: myGrammar.getRuleCounts().entrySet()){
+			//
+			// System.out.println("========== " + e.getKey()+", "+e.getValue());
 			Rule r = (Rule)e.getKey();
 			Event lhs = r.getLHS();
 			r.setMinusLogProb(
 					(-1) * Math.log((Integer)e.getValue() / ((Integer)lhsCounts.get(lhs)).doubleValue()));
+		}
+
+		for(java.util.Map.Entry e: unknownCount.entrySet()){
+			Rule r = new Rule((String)e.getKey(), "UNKNOWN", true);
+			r.setMinusLogProb(
+					(-1) * Math.log((Integer)e.getValue() / ((Integer)totalUnknownCount).doubleValue()));
+			myGrammar.addRule(r);
 		}
 
 		return myGrammar;
