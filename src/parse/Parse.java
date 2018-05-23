@@ -77,7 +77,7 @@ public class Parse {
 		for (int i = 0; i < myGoldTreebank.size(); i++) {
 			Long currentTime = System.currentTimeMillis();
 			List<String> mySentence = myGoldTreebank.getAnalyses().get(i).getYield();
-			tasks[i] = new Task(mySentence, decodeInstance, i);
+			tasks[i] = new Task(mySentence, decodeInstance);
 			executor.execute(tasks[i]);
 //			Tree myParseTree = Decode.getInstance(myGrammar).decode(mySentence);
 //			myParseTrees.add(myParseTree);

@@ -12,14 +12,12 @@ import java.util.List;
 class Task implements Runnable {
     List<String> sentence;
     Decode decodeInstance;
-    int index;
     private Tree tree;
     private static int counter = 0;
 
-    public Task(List<String> s, Decode d, int i) {
+    public Task(List<String> s, Decode d) {
         sentence = s;
         decodeInstance = d;
-        index = i;
     }
 
     public Tree getTree(){
@@ -28,7 +26,6 @@ class Task implements Runnable {
 
     public void run() {
         tree = decodeInstance.decode(sentence);
-//        System.out.println("Finished processing sentence " + index);
         synchronized(this){
             counter++;
             if(counter % 10 == 0)
