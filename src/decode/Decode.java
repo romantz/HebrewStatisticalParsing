@@ -211,9 +211,6 @@ public class Decode {
 
 			addUnaryRules(chart[i - 1][i]);
 			chart[i - 1][i].calculateRuleArrays();
-			for (ChartTransition tr : chart[i - 1][i].getTransitions().values()) {
-				System.out.println("----- " + tr);
-			}
 
 			for(int j = i - 2; j >= 0; j--){
 				chart[j][i] = new ChartNode();
@@ -222,8 +219,10 @@ public class Decode {
 						HashMap<Integer, ChartTransition> leftRules = chart[j][k].getLeftRules();
 						HashMap<Integer, ChartTransition> rightRules = chart[k][i].getRightRules();
 
+
 						HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersection =
 								intersectHashMaps(leftRules, rightRules);
+
 						for(Map.Entry<Integer, Pair<ChartTransition, ChartTransition>> e: intersection.entrySet()) {
 							Rule r = m_mapNumToRule.get(e.getKey());
 
@@ -241,7 +240,7 @@ public class Decode {
 				}
 				addUnaryRules(chart[j][i]);
 				chart[j][i].calculateRuleArrays();
-				System.out.println(chart[j][i].getTransitions().size());
+//				System.out.println(chart[j][i].getTransitions().size());
 			}
 		}
 
@@ -272,7 +271,7 @@ public class Decode {
 		Tree t2 = new Tree(new Node("TOP"));
 		t2.getRoot().addDaughter(constructNodeFromTransition(bestTransition));
 		return t2;
-		
+
 	}
 
 	public static HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersectHashMaps(
@@ -374,7 +373,6 @@ public class Decode {
 		private Map<String, ChartTransition> nodeTransitions;
 		private HashMap<Integer, ChartTransition> rightRules;
 		private HashMap<Integer, ChartTransition> leftRules;
-
 
 		public ChartNode(){
 			nodeTransitions = new HashMap<String, ChartTransition>();

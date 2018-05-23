@@ -27,7 +27,7 @@ import utils.CountMap;
 public class Train {
 
 	public static final String MARKOVIZATION_SYMBOL = "@";
-	int h = -1;
+	int h = 1;
 
     /**
      * Implementation of a singleton pattern
