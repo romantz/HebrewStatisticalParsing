@@ -3,10 +3,7 @@ package parse;
 import grammar.Grammar;
 import grammar.Rule;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -51,6 +48,14 @@ public class Parse {
 		return newNode;
 	}
 
+	static Map<Character, String> hebrewLetters = new HashMap<Character, String>();
+
+	public static void printWord(String word){
+		for(int i =0; i < word.length(); i++)
+			System.out.print(hebrewLetters.getOrDefault(word.charAt(i), Character.toString(word.charAt(i))));
+		System.out.println("");
+	}
+
 	/**
 	 *
 	 * @author Reut Tsarfaty
@@ -63,6 +68,32 @@ public class Parse {
 	 */
 	
 	public static void main(String[] args) {
+
+		// Used for debug purposes
+		hebrewLetters.put('A', "א");
+		hebrewLetters.put('B', "ב");
+		hebrewLetters.put('G', "ג");
+		hebrewLetters.put('D', "ד");
+		hebrewLetters.put('H', "ה");
+		hebrewLetters.put('V', "ו");
+		hebrewLetters.put('W', "ו");
+		hebrewLetters.put('Z', "ז");
+		hebrewLetters.put('X', "ח");
+		hebrewLetters.put('J', "ט");
+		hebrewLetters.put('I', "י");
+		hebrewLetters.put('K', "כ");
+		hebrewLetters.put('L', "ל");
+		hebrewLetters.put('M', "מ");
+		hebrewLetters.put('N', "נ");
+		hebrewLetters.put('S', "ס");
+		hebrewLetters.put('E', "ע");
+		hebrewLetters.put('P', "פ");
+		hebrewLetters.put('C', "צ");
+		hebrewLetters.put('Q', "ק");
+		hebrewLetters.put('R', "ר");
+		hebrewLetters.put('F', "ש");
+		hebrewLetters.put('T', "ת");
+
 
 		//**************************//
 		//*      NLP@IDC PA2       *//
@@ -91,6 +122,10 @@ public class Parse {
 				nThreads = Integer.parseInt(args[4]);
 		}
 
+		System.out.println("The parser implements Markovization of order " + h);
+		System.out.println("This machine has " + Runtime.getRuntime().availableProcessors() + " CPUs");
+		System.out.println("The application runs with a thread pool of size " + nThreads);
+
 		// 1. read input
 		Treebank myGoldTreebank = TreebankReader.getInstance().read(true, args[0]);
 		Treebank myTrainTreebank = TreebankReader.getInstance().read(true, args[1]);
@@ -107,7 +142,6 @@ public class Parse {
 		Decode decodeInstance = Decode.getInstance(myGrammar);
 
 		Long startTime = System.currentTimeMillis();
-		List<Tree> myParseTrees = new ArrayList<Tree>();
 		Task[] tasks = new Task[myGoldTreebank.size()];
 		for (int i = 0; i < myGoldTreebank.size(); i++) {
 			List<String> mySentence = myGoldTreebank.getAnalyses().get(i).getYield();
@@ -120,7 +154,7 @@ public class Parse {
 		} catch (InterruptedException e){
 			System.out.println(e.getStackTrace());
 		}
-		System.out.println(System.currentTimeMillis() - startTime);
+		System.out.println("The process took " + (System.currentTimeMillis() - startTime) / 1000 + " seconds");
 
 		// 5. de-transform trees
 		List<Tree> myDeTransformedTrees = new ArrayList<Tree>();

@@ -5,6 +5,7 @@ import grammar.Rule;
 
 import java.util.*;
 
+import parse.Parse;
 import train.Pair;
 import tree.Node;
 import tree.Terminal;
@@ -176,27 +177,52 @@ public class Decode {
 	}
 
 	/**
-	 * A heuristic to tag terminal values
+	 * This method is used to tag a terminal. If the terminal does not exist in the
+	 * training vocabulary, various heuristics for Hebrew are used to tag the terminal
 	 * @param cn the current ChartNode to process
 	 * @param word the given word in the given sentence
 	 */
-	public void terminalTaggingHeuristic(ChartNode cn, String word){
+	public void terminalTag(ChartNode cn, String word){
 		TerminalTransition terminal = new TerminalTransition(word);
 		String wordSearched = "";
 		boolean foundWord = false;
 
 		// Check if the lexical rules contain the given word in the rhs of a rule.
-		// If not, check if the word ends in "IM" or "WT" (hebrew plural), and if so, look for the
+		// If not, check if the word ends in "IM", "WT" (hebrew plural) or "IT", and if so, look for the
 		// word without the two last letters in the lexical rules
 		if(m_mapLexicalRules.containsKey(word)) {
 			wordSearched = word;
 			foundWord = true;
 		} else if(word.length() > 2 &&
-				(word.substring(word.length() - 2).equals("IM") || word.substring(word.length() - 2).equals("WT")) &&
-				m_mapLexicalRules.containsKey(word.substring(0, word.length() - 2))){
-			wordSearched = word.substring(0, word.length() - 2);
-			foundWord = true;
+				(
+						word.substring(word.length() - 2).equals("IM") ||
+								word.substring(word.length() - 2).equals("WT") ||
+								word.substring(word.length() - 2).equals("IT") ||
+								word.substring(word.length() - 2).equals("TW") ||
+								word.substring(word.length() - 2).equals("TH") ||
+								word.substring(word.length() - 2).equals("TM") ||
+								word.substring(word.length() - 2).equals("TN") ||
+								word.substring(word.length() - 2).equals("KM") ||
+								word.substring(word.length() - 2).equals("KN")
+				)){
+			if(m_mapLexicalRules.containsKey(word.substring(0, word.length() - 2))) {
+				wordSearched = word.substring(0, word.length() - 2);
+				foundWord = true;
+			}
+			else if(m_mapLexicalRules.containsKey(word.substring(0, word.length() - 2) + "H")){
+				wordSearched = word.substring(0, word.length() - 2) + "H";
+				foundWord = true;
+			}
 		}
+		else if(word.charAt(word.length() - 1) == 'I' ||
+				word.charAt(word.length() - 1) == 'H' ||
+				word.charAt(word.length() - 1) == 'W') {
+			if(m_mapLexicalRules.containsKey(word.substring(0, word.length() - 1))) {
+				wordSearched = word.substring(0, word.length() - 1);
+				foundWord = true;
+			}
+		}
+
 
 		// If such a word was found, add the unary transition to it
 		if(foundWord) {
@@ -208,15 +234,34 @@ public class Decode {
 				cn.addTransition(transition);
 			}
 		}
+
+		// If this is a number then tag it with CD
+		else if(word.matches("\\d+")) {
+			ChartTransition transition = new UnaryChartTransition(
+					terminal,
+					MAX_PROBABILITY,
+					"CD");
+			cn.addTransition(transition);
+		}
+
+		//
+		else if(word.contains("U")) {
+			ChartTransition transition = new UnaryChartTransition(
+					terminal,
+					MAX_PROBABILITY,
+					"NNP");
+			cn.addTransition(transition);
+		}
+
 		// Otherwise, the word has not been found, so we employ smoothing and give it all
 		// the possible tags with their respective probabilities
 		else{
 			boolean mightBeVerb = false;
 
-			// If the word is unseen and its first letter is an "AITN" letter, there is a high probability
+			// If the word is unseen and its first letter is an "AITN" letter or "M", there is a high probability
 			// that this is a verb
-			if(word.charAt(0) == 'A' || word.charAt(0) == 'I' || word.charAt(0) == 'T' || word.charAt(0) == 'N' ||
-					word.charAt(0) == 'M') {
+			if(word.charAt(0) == 'A' || word.charAt(0) == 'I' || word.charAt(0) == 'T' || word.charAt(0) == 'N'
+					|| word.charAt(0) == 'M') {
 				mightBeVerb = true;
 			}
 
@@ -228,8 +273,12 @@ public class Decode {
 				// Judging by the given train and gold sets, unseen words are often adjectives,
 				// so if the current rule is JJ, or VB and the word starts with a "AITN" letter,
 				// it's probability is then divided by 2
-				if(lhs.equals("JJ") || (lhs.equals("VB") && mightBeVerb))
-					prob /= 2;
+				if(lhs.equals("NN") ||
+						lhs.equals("NNP") ||
+						lhs.equals("NNT") ||
+						lhs.equals("JJ") ||
+						(mightBeVerb &&lhs.equals("VB")))
+					prob = Math.log(prob);
 
 				ChartTransition transition = new UnaryChartTransition(
 						terminal,
@@ -240,7 +289,11 @@ public class Decode {
 		}
 	}
 
-
+	/**
+	 * Decode the given sentence into a tree using the CKY algorithm
+	 * @param input a list of words which represent the sentence
+	 * @return the parse tree with the lowest -LogProb
+	 */
 	public Tree decode(List<String> input){
 
 		// Done: Baseline Decoder
@@ -261,7 +314,7 @@ public class Decode {
 
 		for(int i = 1; i <= input.size(); i++) {
 			chart[i - 1][i] = new ChartNode();
-			terminalTaggingHeuristic(chart[i - 1][i], input.get(i - 1));
+			terminalTag(chart[i - 1][i], input.get(i - 1));
 
 			addUnaryRules(chart[i - 1][i]);
 			chart[i - 1][i].calculateRuleMaps();
@@ -330,6 +383,13 @@ public class Decode {
 
 	}
 
+	/**
+	 * Intersect two hash maps by their keys. Used to calculate which rules can be derived
+	 * given a map of right and a map of left symbols
+	 * @param left map of integers representing rule number to ChartTransitions
+	 * @param right map of integers representing rule number to ChartTransitions
+	 * @return a HashMap that maps a rule to the pair of two transitions yielding this rule
+	 */
 	public static HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersectHashMaps(
 			HashMap<Integer, ChartTransition> left,
 			HashMap<Integer, ChartTransition> right){
@@ -337,6 +397,8 @@ public class Decode {
 		HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersection =
 				new HashMap<Integer, Pair<ChartTransition, ChartTransition>>();
 
+		// If the left map is smaller we iterate over it, otherwise we iterate over the right
+		// This is an optimization
 		if(left.size() <= right.size()) {
 			for (Map.Entry<Integer, ChartTransition> e : left.entrySet()) {
 				ChartTransition t = right.get(e.getKey());
@@ -353,9 +415,15 @@ public class Decode {
 		return intersection;
 	}
 
+	// This class represents an abstract transition in the chart of the CKY algorithm
 	private abstract class ChartTransition {
-		ChartTransition t1;
+		// A child transition
+		protected ChartTransition t1;
+
+		// The probability of this transition
 		double probability;
+
+		// The label of this transition
 		String variable;
 
 		public ChartTransition(ChartTransition t1, double probability, String var) {
@@ -364,15 +432,21 @@ public class Decode {
 			this.variable = var;
 		}
 
+		/**
+		 * Get all child transitions as a list
+		 * @return all chart transitions in order
+		 */
 		public abstract List<ChartTransition> getTransitions();
 
-		public ChartTransition getT1() { return t1; }
 		public double getProbability() { return probability; }
 		public String getVar() { return variable; }
 	}
 
+	// This class represents a binary transition in the chart of the CKY algorithm
 	private class BinaryChartTransition extends ChartTransition {
-		ChartTransition t2;
+		// A second child transition
+		protected ChartTransition t2;
+
 		public BinaryChartTransition(
 				ChartTransition t1,
 				ChartTransition t2,
@@ -381,7 +455,6 @@ public class Decode {
 			super(t1, probability, var);
 			this.t2 = t2;
 		}
-		public ChartTransition getT2() { return t2; }
 
 		public List<ChartTransition> getTransitions(){
 			List<ChartTransition> transitions = new LinkedList<ChartTransition>();
@@ -395,6 +468,7 @@ public class Decode {
 		}
 	}
 
+	// This class represents a unary transition in the chart of the CKY algorithm
 	private class UnaryChartTransition extends ChartTransition {
 		public UnaryChartTransition(ChartTransition t1, double probability, String var) {
 			super(t1, probability, var);
@@ -411,10 +485,12 @@ public class Decode {
 		}
 	}
 
+	// This class represents a dummy transition to a terminal in the chart of the CKY algorithm
 	private class TerminalTransition extends ChartTransition {
 		public TerminalTransition(String var){
 			super(null, MAX_PROBABILITY, var);
 		}
+
 		public String toString(){
 			return variable;
 		}
@@ -425,7 +501,9 @@ public class Decode {
 		}
 	}
 
+	// This class represents a cell in the chart of the CKY algorithm
 	private class ChartNode{
+		// A mapping from a string to a chart transitions in the current cell having the given string
 		private Map<String, ChartTransition> nodeTransitions;
 		private HashMap<Integer, ChartTransition> rightRules;
 		private HashMap<Integer, ChartTransition> leftRules;
@@ -434,6 +512,11 @@ public class Decode {
 			nodeTransitions = new HashMap<String, ChartTransition>();
 		}
 
+		/**
+		 * Calculate the rules that can be derived from the cell's ChartTransition for rules where
+		 * the transition is to the first symbol or second symbol. This is used to optimize the inner
+		 * loop of the CKY algorithm
+		 */
 		public void calculateRuleMaps(){
 			leftRules = new HashMap<Integer, ChartTransition>();
 			rightRules = new HashMap<Integer, ChartTransition>();
