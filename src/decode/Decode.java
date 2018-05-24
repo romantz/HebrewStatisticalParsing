@@ -15,12 +15,23 @@ public class Decode {
 	public static Set<Rule> m_setGrammarRules = null;
 	public static Map<String, Set<Rule>> m_mapLexicalRules = null;
 
+	// A mapping from a string to a set of rules in which the rhs is equal to the string
 	public static Map<String, Set<Rule>> m_mapGrammarRules = null;
+
+	// A mapping from a string to a set of unary rules in which the rhs is equal to the string
 	public static Map<String, Set<Rule>> m_mapUnaryRules = null;
+
+	// A mapping from a string to a set of binary rules in which the rhs' 1st symbol is equal to the string
 	public static Map<String, Set<Rule>> m_mapLeftSymbolBinaryRules = null;
+
+	// A mapping from a string to a set of binary rules in which the rhs' 2nd symbol is equal to the string
 	public static Map<String, Set<Rule>> m_mapRightSymbolBinaryRules = null;
 
+	// Counter for the number of rules
 	public static int ruleCount = 0;
+
+	// The following two maps are used to give every rule a unique number
+	// this way, string comparison is avoided in order to improve performance
 	public static Map<Rule, Integer> m_mapRuleToNum = null;
 	public static Map<Integer, Rule> m_mapNumToRule = null;
 
@@ -50,10 +61,12 @@ public class Decode {
 			m_mapRuleToNum = new HashMap<Rule, Integer>();
 			m_mapNumToRule = new HashMap<Integer, Rule>();
 
+			// Populate all the HashMaps that will be used in processing
 			for(Rule r: m_setGrammarRules){
 				m_mapRuleToNum.put(r, ruleCount);
 				m_mapNumToRule.put(ruleCount, r);
 
+				// Check if this is a binary rule
 				if(r.getRHS().getSymbols().size() == 2){
 					String firstSymbol = r.getRHS().getSymbols().get(0);
 					Set s = m_mapLeftSymbolBinaryRules.get(firstSymbol);
@@ -93,23 +106,23 @@ public class Decode {
 			}
 		}
 
-//		for(Map.Entry e: m_mapGrammarRules.entrySet()){
-//			System.out.println(e.getKey() +", " + e.getValue());
-//		}
-
 		return m_singDecoder;
 	}
 
-
-	public void addUnaryRules(ChartNode n){
+	/**
+	 * Add all relevant unary rule after all the binary rules for the chart node have been calculated
+	 * @param cn the ChartNode for which unary rules are calculated
+	 */
+	public void addUnaryRules(ChartNode cn){
 		Set<Rule> newAppliedRules = new HashSet<Rule>();
 		List<ChartTransition> currentNewTransitions = new ArrayList<ChartTransition>();
 		List<ChartTransition> previousNewTransitions = new ArrayList<ChartTransition>();
 
-		for (ChartTransition t: n.getTransitions().values()) {
+		for (ChartTransition t: cn.getTransitions().values()) {
 			Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
 			if(ruleSet != null) {
 				for (Rule r : ruleSet) {
+					// Add current unary rule to chart node
 					ChartTransition t2 = new UnaryChartTransition(
 							t,
 							r.getMinusLogProb() + t.getProbability(),
@@ -121,8 +134,10 @@ public class Decode {
 		}
 
 		for(ChartTransition t: currentNewTransitions)
-			n.addTransition(t);
+			cn.addTransition(t);
 
+		// Keep adding unary transition to the chart node as long as new unary
+		// transitions have been introduced in the previous iteration
 		while(!currentNewTransitions.isEmpty()) {
 			previousNewTransitions = currentNewTransitions;
 			currentNewTransitions = new LinkedList<ChartTransition>();
@@ -130,13 +145,15 @@ public class Decode {
 				Set<Rule> ruleSet = m_mapUnaryRules.get(t.getVar());
 				if(ruleSet != null) {
 					for (Rule r : ruleSet) {
+						// Check if this rule was already processed. This is used
+						// to avoid entering an infinite loop
 						if (!newAppliedRules.contains(r)) {
 							ChartTransition t2 = new UnaryChartTransition(
 									t,
 									r.getMinusLogProb() + t.getProbability(),
 									r.getLHS().toString());
 							currentNewTransitions.add(t2);
-							n.addTransition(t2);
+							cn.addTransition(t2);
 							newAppliedRules.add(r);
 						}
 					}
@@ -145,6 +162,11 @@ public class Decode {
 		}
 	}
 
+	/**
+	 * Used to construct the parse tree
+	 * @param transition the current transition in the chart
+	 * @return a node constructed from the given transition
+	 */
 	public Node constructNodeFromTransition(ChartTransition transition){
 		Node n = new Node(transition.getVar());
 		for(ChartTransition t: transition.getTransitions()) {
@@ -153,12 +175,76 @@ public class Decode {
 		return n;
 	}
 
+	/**
+	 * A heuristic to tag terminal values
+	 * @param cn the current ChartNode to process
+	 * @param word the given word in the given sentence
+	 */
+	public void terminalTaggingHeuristic(ChartNode cn, String word){
+		TerminalTransition terminal = new TerminalTransition(word);
+		String wordSearched = "";
+		boolean foundWord = false;
+
+		// Check if the lexical rules contain the given word in the rhs of a rule.
+		// If not, check if the word ends in "IM" or "WT" (hebrew plural), and if so, look for the
+		// word without the two last letters in the lexical rules
+		if(m_mapLexicalRules.containsKey(word)) {
+			wordSearched = word;
+			foundWord = true;
+		} else if(word.length() > 2 &&
+				(word.substring(word.length() - 2).equals("IM") || word.substring(word.length() - 2).equals("WT")) &&
+				m_mapLexicalRules.containsKey(word.substring(0, word.length() - 2))){
+			wordSearched = word.substring(0, word.length() - 2);
+			foundWord = true;
+		}
+
+		// If such a word was found, add the unary transition to it
+		if(foundWord) {
+			for (Rule r : m_mapLexicalRules.get(wordSearched)) {
+				ChartTransition transition = new UnaryChartTransition(
+						terminal,
+						r.getMinusLogProb(),
+						r.getLHS().toString());
+				cn.addTransition(transition);
+			}
+		}
+		// Otherwise, the word has not been found, so we employ smoothing and give it all
+		// the possible tags with their respective probabilities
+		else{
+			boolean mightBeVerb = false;
+
+			// If the word is unseen and its first letter is an "AITN" letter, there is a high probability
+			// that this is a verb
+			if(word.charAt(0) == 'A' || word.charAt(0) == 'I' || word.charAt(0) == 'T' || word.charAt(0) == 'N' ||
+					word.charAt(0) == 'M') {
+				mightBeVerb = true;
+			}
+
+			// Get all rules of the form POS-->UNKNOWN as a smoothing technique
+			for(Rule r: m_mapLexicalRules.get("UNKNOWN")) {
+				double prob = r.getMinusLogProb();
+				String lhs = r.getLHS().toString();
+
+				// Judging by the given train and gold sets, unseen words are often adjectives,
+				// so if the current rule is JJ, or VB and the word starts with a "AITN" letter,
+				// it's probability is then divided by 2
+				if(lhs.equals("JJ") || (lhs.equals("VB") && mightBeVerb))
+					prob /= 2;
+
+				ChartTransition transition = new UnaryChartTransition(
+						terminal,
+						prob,
+						r.getLHS().toString());
+				cn.addTransition(transition);
+			}
+		}
+	}
+
 
 	public Tree decode(List<String> input){
-		
+
 		// Done: Baseline Decoder
-		//       Returns a flat tree with NN labels on all leaves 
-		
+		//       Returns a flat tree with NN labels on all leaves
 		Tree t = new Tree(new Node("TOP"));
 		Iterator<String> theInput = input.iterator();
 		while (theInput.hasNext()) {
@@ -169,71 +255,34 @@ public class Decode {
 			t.getRoot().addDaughter(preTerminal);
 		}
 
-		/*System.out.println("---------");
-		for(Rule r: m_setGrammarRules){
-			System.out.println(r);
-		}
-		System.out.println("---------");
-		for(Entry e: m_mapLexicalRules.entrySet()){
-			System.out.println(e.getKey()+" , " + e.getValue());
-		}
-		System.out.println("---------");
-		for(Entry e: m_mapUnaryRules.entrySet()){
-			System.out.println("xxx "+e.getKey()+" , " + e.getValue());
-		}
-		System.out.println("---------");
-		for(Entry e: m_mapGrammarRules.entrySet()){
-			System.out.println("yyy "+e.getKey()+" , " + e.getValue());
-		}
-		System.out.println("---------");*/
 
+		//CKY implementation
 		ChartNode[][] chart = new ChartNode[input.size() + 1][input.size() + 1];
 
 		for(int i = 1; i <= input.size(); i++) {
 			chart[i - 1][i] = new ChartNode();
-			TerminalTransition terminal = new TerminalTransition(input.get(i - 1));
-			if(m_mapLexicalRules.containsKey(input.get(i - 1))) {
-				for (Rule r : m_mapLexicalRules.get(input.get(i - 1))) {
-					ChartTransition transition = new UnaryChartTransition(
-							terminal,
-							r.getMinusLogProb(),
-							r.getLHS().toString());
-					chart[i - 1][i].addTransition(transition);
-				}
-			}
-			else {
-
-				for(Rule r: m_mapLexicalRules.get("UNKNOWN")) {
-					ChartTransition transition = new UnaryChartTransition(
-							terminal,
-							r.getMinusLogProb(),
-							r.getLHS().toString());
-					chart[i - 1][i].addTransition(transition);
-				}
-//				ChartTransition transition = new UnaryChartTransition(
-//						terminal,
-//						MAX_PROBABILITY,
-//						"NN");
-//				chart[i - 1][i].addTransition(transition);
-//				for(Map.Entry e: chart[i - 1][i].getTransitions().entrySet()){
-//					System.out.println(e.getKey() +", "+e.getValue() + ((ChartTransition)e.getValue()).getProbability());
-//				}
-			}
+			terminalTaggingHeuristic(chart[i - 1][i], input.get(i - 1));
 
 			addUnaryRules(chart[i - 1][i]);
-			chart[i - 1][i].calculateRuleArrays();
+			chart[i - 1][i].calculateRuleMaps();
 
 			for(int j = i - 2; j >= 0; j--){
 				chart[j][i] = new ChartNode();
 				for(int k = j + 1; k < i; k++){
 					if(chart[j][k] != null && chart[k][i] != null) {
+						// Get map of all rules which have the 1st symbol in the rhs of the rule
+						// as a transition in chart[j][k]
 						HashMap<Integer, ChartTransition> leftRules = chart[j][k].getLeftRules();
+
+						// Get map of all rules which have the 2nd symbol in the rhs of the rule
+						// as a transition in chart[k][i]
 						HashMap<Integer, ChartTransition> rightRules = chart[k][i].getRightRules();
 
-
+						// Intersect them to get all rules that can be derived from chart[j][k] and chart[k][i]
 						HashMap<Integer, Pair<ChartTransition, ChartTransition>> intersection =
 								intersectHashMaps(leftRules, rightRules);
 
+						// Add every rule in the intersection to chart[j][i]
 						for(Map.Entry<Integer, Pair<ChartTransition, ChartTransition>> e: intersection.entrySet()) {
 							Rule r = m_mapNumToRule.get(e.getKey());
 
@@ -249,22 +298,16 @@ public class Decode {
 						}
 					}
 				}
+				// Add all the possible unary rules that can be derived from chart[j][i]
 				addUnaryRules(chart[j][i]);
-				chart[j][i].calculateRuleArrays();
-//				System.out.println(chart[j][i].getTransitions().size());
+
+				// Calculate all rules that can be derived from chart[j][i] by having their 1st of 2nd
+				// symbol as a transition in chart[j][i]
+				chart[j][i].calculateRuleMaps();
 			}
 		}
 
-//		for(int i = 0; i < chart[0].length; i++) {
-//			for (int j = 0; j < chart.length; j++) {
-//				System.out.println(i + ", " + j);
-//				if(chart[j][i] != null)
-//				for (ChartTransition tr : chart[j][i].getTransitions().values()) {
-//					System.out.println(tr.getProbability() + "----- " + tr);
-//				}
-//			}
-//		}
-
+		// Look for the start symbol in chart[0][input.size()] which gives the minimum probability transition
 		double minProb = Double.MAX_VALUE;
 		ChartTransition bestTransition = null;
 		if(chart[0][input.size()] != null) {
@@ -276,9 +319,11 @@ public class Decode {
 			}
 		}
 
+		// If CKY returned no valid parse, return the result of the dummy parser
 		if(bestTransition == null)
 			return t;
 
+		// Construct the parse tree from the start symbol transition with smallest probability
 		Tree t2 = new Tree(new Node("TOP"));
 		t2.getRoot().addDaughter(constructNodeFromTransition(bestTransition));
 		return t2;
@@ -389,7 +434,7 @@ public class Decode {
 			nodeTransitions = new HashMap<String, ChartTransition>();
 		}
 
-		public void calculateRuleArrays(){
+		public void calculateRuleMaps(){
 			leftRules = new HashMap<Integer, ChartTransition>();
 			rightRules = new HashMap<Integer, ChartTransition>();
 

@@ -25,6 +25,33 @@ import utils.LineWriter;
 public class Parse {
 
 	/**
+	 * A reccursive function used to eliminate the binarization added earlier for the CKY algorithm
+	 * @param node a node of a binarized tree
+	 * @return a node after the de-binarization
+	 */
+	public static Node deTransformTree(Node node){
+		if(node.isLeaf())
+			return new Node(node.getLabel());
+
+		Node newNode = new Node(node.getLabel());
+		for(Node daughter: node.getDaughters()){
+			Node newDaughter = deTransformTree(daughter);
+
+			if(daughter.isLeaf() || !daughter.getLabel().contains(Train.MARKOVIZATION_SYMBOL)){
+				newNode.addDaughter(newDaughter);
+			} else {
+				// If the daughter is a binarized node, then de-binarize the current node taking its
+				// grand daughters instead of this daughter
+				for(Node daughter2: newDaughter.getDaughters()){
+					newNode.addDaughter(daughter2);
+				}
+			}
+
+		}
+		return newNode;
+	}
+
+	/**
 	 *
 	 * @author Reut Tsarfaty
 	 * @date 27 April 2013
@@ -43,10 +70,25 @@ public class Parse {
 		//*     Point-of-Entry     *//
 		//**************************//
 
+		// Horizontal markovization factor
+		int h = -1;
+
+		// Number of concurrent threads for faster processing
+		// the default is half the number of available CPUs to the JVM,
+		// but this can be set by a program argument as well
+		int nThreads = Runtime.getRuntime().availableProcessors() / 2;
+
 		if (args.length < 3)
 		{
-			System.out.println("Usage: Parse <goldset> <trainset> <experiment-identifier-string>");
+			System.out.println("Usage: Parse <goldset> <trainset> <experiment-identifier-string> " +
+					"[horizontal Markovization factor] [number-of-threads to run]");
 			return;
+		}
+
+		if (args.length >= 4) {
+			h = Integer.parseInt(args[3]);
+			if (args.length >= 5)
+				nThreads = Integer.parseInt(args[4]);
 		}
 
 		// 1. read input
@@ -54,20 +96,13 @@ public class Parse {
 		Treebank myTrainTreebank = TreebankReader.getInstance().read(true, args[1]);
 
 		// 2. transform trees
-		// TODO
+		// Implemented in the train method
 
 		// 3. train
-		Grammar myGrammar = Train.getInstance().train(myTrainTreebank);
-//		for(Rule r: myGrammar.getLexicalRules()) System.out.println(r);
-//		for(Rule r: myGrammar.getSyntacticRules()) System.out.println(r);
-//		for(java.util.Map.Entry e: myGrammar.getRuleCounts().entrySet()) {
-//			Rule r = (Rule) e.getKey();
-//			System.out.println(r.getMinusLogProb() +", " + r.isTop() + ", " + e.getKey() + ", " + e.getValue());
-//		}
+		Grammar myGrammar = Train.getInstance().train(myTrainTreebank, h);
 
 		// 4. decode
-
-		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(8);
+		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(nThreads);
 
 		Decode decodeInstance = Decode.getInstance(myGrammar);
 
@@ -75,16 +110,9 @@ public class Parse {
 		List<Tree> myParseTrees = new ArrayList<Tree>();
 		Task[] tasks = new Task[myGoldTreebank.size()];
 		for (int i = 0; i < myGoldTreebank.size(); i++) {
-			Long currentTime = System.currentTimeMillis();
 			List<String> mySentence = myGoldTreebank.getAnalyses().get(i).getYield();
 			tasks[i] = new Task(mySentence, decodeInstance);
 			executor.execute(tasks[i]);
-//			Tree myParseTree = Decode.getInstance(myGrammar).decode(mySentence);
-//			myParseTrees.add(myParseTree);
-//			if(i % 10 == 0)
-//				System.out.println("Finished processing " + i + " sentences");
-			//System.out.println((System.currentTimeMillis() - currentTime) + ", " + myParseTree);
-			//System.exit(0);
 		}
 		try {
 			executor.shutdown();
@@ -100,12 +128,6 @@ public class Parse {
 			Tree t2 = new Tree(deTransformTree(t.getTree().getRoot()));
 			myDeTransformedTrees.add(t2);
 		}
-//		List<Tree> myDeTransformedTrees = new ArrayList<Tree>();
-//		for(Tree t: myParseTrees){
-//			Tree t2 = new Tree(deTransformTree(t.getRoot()));
-//			myDeTransformedTrees.add(t2);
-//		//	System.out.println(t2);
-//		}
 		
 		// 6. write output
 		writeOutput(args[2], myGrammar, myDeTransformedTrees);
@@ -181,27 +203,5 @@ public class Parse {
 			writer.writeLine(sb.toString());
 		}
 	}
-
-	public static Node deTransformTree(Node node){
-		if(node.isLeaf())
-			return new Node(node.getLabel());
-
-		Node newNode = new Node(node.getLabel());
-		for(Node daughter: node.getDaughters()){
-			Node newDaughter = deTransformTree(daughter);
-			if(daughter.isLeaf() || !daughter.getLabel().contains(Train.MARKOVIZATION_SYMBOL)){
-				newNode.addDaughter(newDaughter);
-			} else {
-				for(Node daughter2: newDaughter.getDaughters()){
-					newNode.addDaughter(daughter2);
-				}
-			}
-
-		}
-		return newNode;
-	}
-
-	
-
 
 }

@@ -27,7 +27,6 @@ import utils.CountMap;
 public class Train {
 
 	public static final String MARKOVIZATION_SYMBOL = "@";
-	int h = -1;
 
     /**
      * Implementation of a singleton pattern
@@ -48,7 +47,7 @@ public class Train {
 
 	}
 	
-	public Grammar train(Treebank myTreebank)
+	public Grammar train(Treebank myTreebank, int h)
 	{
 		Grammar myGrammar = new Grammar();
 		Map<String, Integer> unknownCount = new HashMap<String, Integer>();
